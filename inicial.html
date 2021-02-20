@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site para estimular a troca ou doação de livros já usufruído pelo leitor">
+    <meta name="keywords" content="Livros, Quadrinhos, Revistas, Troca, Doação, Leitor">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Juan Axel">
+    <link rel="stylesheet" href="_css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="icon" href="_imagens/icone-do-site.png">
+    <title>Books Ahead - Leu? Troque Já!</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <div>
+            <h1>Books Ahead</h1>
+        </div>
+
+        <div>
+            <p>" Livro bom é livro que a gente passa à diante. O prazer da leitura não pode ser restrito. " -Caio Rossan</p>
+        </div>
+    </header>
+
+    <section id="corpo">
+        <h2>ENTRAR</h2>
+        
+        <input type="text" placeholder="Email ou nome do usuário" class="txtEmail"> <br> <br>
+        <input type="password" placeholder="Senha" class="txtSenha"> <br> <br>
+        <button class="btnEntrar">Entrar</button>
+
+        <p class=borda-corpo></p>
+
+        <p class="cadastrar">Se ainda não se cadastrou <button class="btnCadastrar">cadastre-se agora</button> </p> 
+    </section>
+
+    <nav class="tela-cadastrar"> <!--Tela cadastrar pra fazer o uso do CRUD inicialmente-->
+        <a class="btnFechar"> <i class="fa fa-times"></i> </a>
+
+        <h2>Cadastre-se</h2>
+
+        <p class=borda-cadastrar></p>
+
+        <input type="text" placeholder="Nome" class="txtNome">
+        <input type="text" placeholder="Sobrenome" class="txtSobrenome">
+        <input type="text" placeholder="Email" class="txtEmail">
+        <input type="password" placeholder="Senha" class="txtSenha">
+
+        <button class="btnCadastrar2">Cadastrar</button>
+
+        <p class="comentario-cadastrar">Clicando em cadastrar você concorda com os nossos termos de segurança e política. Você receberá notificações pelo seu email, mas poderá desativá-las quando desejar.</p>
+    </nav>
+
+    <footer id="rodape">
+        <div class="redes-sociais">
+            <a href="https://www.facebook.com/JuanSoulAxel" target="_blank"> <i class="fa fa-facebook"></i> </a>
+            <a href="https://twitter.com/JuanSoulAxel" target="_blank"> <i class="fa fa-twitter"></i> </a>
+            <a href="https://www.instagram.com/JuanSoulAxel/" target="_blank"> <i class="fa fa-instagram"></i> </a>
+            <a href="https://api.whatsapp.com/send?phone=558981478640" target="_blank"> <i class="fa fa-whatsapp"></i> </a>
+        </div>
+
+        <p class="borda-rodape"></p>
+
+        <p class="copyright">Juan Axel &copy; Copyright | Books Ahead - Leu? Troque Já! | 2021</p>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> <!--Jquery instalado no site-->
+   
+   <script> //As funções abaixo farão a interação do botão cadastrar
+        $(".btnCadastrar").click(function() { //Quando clicar no btnCadastrar
+            $(".tela-cadastrar").show() && $("#corpo").hide() && $("#rodape").hide(); //vai aparecer a tela-cadastrar e sumir com o corpo e rodape
+        } );
+
+        $(".btnFechar").click(function() { //Quando clicar no btnFechar
+            $(".tela-cadastrar").hide() && $("#corpo").show() && $("#rodape").show();; //vai aparecer com o corpo e rodape e sumir com a tela cadastrar
+        } );
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
