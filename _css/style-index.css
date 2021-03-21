@@ -63,7 +63,7 @@ img {
     width: 30%;
     height: 40%;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 35%;
     padding: 1%;
     border-radius: 2%;
@@ -129,7 +129,7 @@ p#cadastrar {
 
 .tela-cadastrar {
     display: none;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 30%;
     position: relative;
     text-align: center;
@@ -187,6 +187,7 @@ p#cadastrar {
 #comentario-cadastrar {
     margin-top: 10%;
     margin-left: 5%;
+    padding-bottom: 2%;
     width: 85%;
     color: #fff;
 }

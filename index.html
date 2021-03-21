@@ -8,7 +8,7 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="Juan Axel">
 
-    <link rel="stylesheet" href="_css/style-inicial.css" type="text/css"/>
+    <link rel="stylesheet" href="_css/style-index.css" type="text/css"/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,7 +24,7 @@
     <section class="corpo">
         <h2>ENTRAR</h2>
         
-        <input type="text" placeholder="Email ou nome do usuário" id="txtEmailEntrar"> <br> <br>
+        <input type="text" placeholder="Email ou Telefone" id="txtEmailEntrar"> <br> <br>
         <input type="password" placeholder="Senha" id="txtSenhaEntrar"> <br> <br>
         <button id="btnEntrar">Entrar</button>
 
@@ -40,13 +40,14 @@
 
         <p id=borda-cadastrar></p>
 
-        <input type="text" placeholder="Nome" id="txtNome" name="txtNome" required> <!--Required faz com que o campo seja obrigatório-->
-        <input type="text" placeholder="Sobrenome" id="txtSobrenome" name="txtSobrenome" required>
-        <input type="text" placeholder="Email" id="txtEmail" name="txtEmail">
-        <input type="text" placeholder="Telefone" id="txtTelefone" name="txtTelefone"> <!--Vou modificar para que o usuário cadastro o email ou telefone ou os dois-->
-        <input type="password" placeholder="Senha" id="txtSenha" name="txtSenha" required> 
+        <!--Ajustei o máximo de dígitos que poderão ser digitados para não dar problema com o banco de dados-->
+        <input type="text" placeholder="Nome" id="txtNome" name="txtNome" maxlength="30" required> <!--Required faz com que o campo seja obrigatório-->
+        <input type="text" placeholder="Sobrenome" id="txtSobrenome" name="txtSobrenome" maxlength="30" required>
+        <input type="text" placeholder="Email" id="txtEmail" name="txtEmail" maxlength="50">
+        <input type="text" placeholder="Telefone" id="txtTelefone" name="txtTelefone" maxlength="11"> <!--Vou modificar para que o usuário cadastro o email ou telefone ou os dois-->
+        <input type="password" placeholder="Senha" id="txtSenha" name="txtSenha" maxlength="20" required> 
 
-        <select id="sltSexo">
+        <select name="slcSexo">
             <option selected disabled value="">Selecione</option>
             <option value="F">Feminino</option>
             <option value="M">Masculino</option>
@@ -57,7 +58,6 @@
 
         <p id="comentario-cadastrar">Clicando em cadastrar você concorda com os nossos termos de segurança e política. Você receberá notificações pelo seu email, mas poderá desativá-las quando desejar.</p>
     </form>
-
 
     <footer class="rodape">
         <div id="redes-sociais">
@@ -72,18 +72,10 @@
         <p id="copyright">Juan Axel &copy; Copyright | Books Ahead - Leu? Troque Já! | 2021</p>
     </footer>
 
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> <!--Jquery instalado no site-->
-   
-   <script> //As funções abaixo farão a interação do botão cadastrar
-        $("#btnCadastrar").click(function() { //Quando clicar no btnCadastrar
-            $(".tela-cadastrar").show() && $(".corpo").hide() && $(".rodape").hide(); //vai aparecer a tela-cadastrar e sumir com o corpo e rodape
-        } );
-
-        $(".btnFechar").click(function() { //Quando clicar no btnFechar
-            $(".tela-cadastrar").hide() && $(".corpo").show() && $(".rodape").show();; //vai aparecer com o corpo e rodape e sumir com a tela cadastrar
-        } );
-    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="_javascript/script.js">
     
-    <script src="_javascript/script.js"></script> <!--Chamando _javascript-->
+    </script> <!--Chamando _javascript-->
 </body>
 </html>
