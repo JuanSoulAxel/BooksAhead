@@ -14,5 +14,9 @@ $sql = "INSERT INTO cadastro (nome, sobrenome, email, telefone, senha, sexo) VAL
 mysqli_query($strcon, $sql) or die("Erro ao tentar cadastrar registro");
 mysqli_close($strcon); //fechar connection
 
-echo "Cliente cadastrado com sucesso!";
+echo //abrindo com javascript em PHP!!!! 
+"<script language='javascript' type='text/javascript'>
+    alert('Usuário Cadastrado com sucesso'); 
+    window.location.href='index.html';
+</script>";
 ?>

@@ -22,15 +22,17 @@
     </header>
 
     <section class="corpo">
-        <h2>ENTRAR</h2>
-        
-        <input type="text" placeholder="Email ou Telefone" id="txtEmailEntrar"> <br> <br>
-        <input type="password" placeholder="Senha" id="txtSenhaEntrar"> <br> <br>
-        <button id="btnEntrar">Entrar</button>
+        <form name="login" class="tela-login" action="consultar.php">
+            <h2>ENTRAR</h2>
+              
+            <input type="text" placeholder="Email ou Usuário" id="txtEmailEntrar" name="txtEmailEntrar"> <br> <br>
+            <input type="password" placeholder="Senha" id="txtSenhaEntrar" name="txtSenhaEntrar"> <br> <br>
+            <button id="btnEntrar">Entrar</button>
 
-        <p id=borda-corpo></p>
-
-        <p id="cadastrar">Se ainda não se cadastrou <button id="btnCadastrar">cadastre-se agora</button> </p> 
+            <p id=borda-corpo></p>
+        </form>  
+        <!--Esse tem que ficar fora para não dar problema com o link consultar.php-->
+        <p id="cadastrar">Se ainda não se cadastrou <button id="btnCadastrar">cadastre-se agora</button> </p>     
     </section>
 
     <form name="cadastro" class="tela-cadastrar" action="cadastrar.php" method="POST">
