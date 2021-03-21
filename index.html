@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site para estimular a troca ou doação de livros já usufruído pelo leitor">
+    <meta name="keywords" content="Livros, Quadrinhos, Revistas, Troca, Doação, Leitor">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Juan Axel">
+
+    <link rel="stylesheet" href="_css/style-inicial.css" type="text/css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="icon" href="_imagens/icone-do-site.png">
+    <title>Books Ahead - Acesse já!</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Books Ahead</h1>
+    </header>
+
+    <section class="corpo">
+        <h2>ENTRAR</h2>
+        
+        <input type="text" placeholder="Email ou nome do usuário" id="txtEmailEntrar"> <br> <br>
+        <input type="password" placeholder="Senha" id="txtSenhaEntrar"> <br> <br>
+        <button id="btnEntrar">Entrar</button>
+
+        <p id=borda-corpo></p>
+
+        <p id="cadastrar">Se ainda não se cadastrou <button id="btnCadastrar">cadastre-se agora</button> </p> 
+    </section>
+
+    <form name="cadastro" class="tela-cadastrar" action="cadastrar.php" method="POST">
+        <a class="btnFechar"> <i class="fa fa-times"></i> </a>
+
+        <h2>Cadastre-se</h2>
+
+        <p id=borda-cadastrar></p>
+
+        <input type="text" placeholder="Nome" id="txtNome" name="txtNome" required> <!--Required faz com que o campo seja obrigatório-->
+        <input type="text" placeholder="Sobrenome" id="txtSobrenome" name="txtSobrenome" required>
+        <input type="text" placeholder="Email" id="txtEmail" name="txtEmail">
+        <input type="text" placeholder="Telefone" id="txtTelefone" name="txtTelefone"> <!--Vou modificar para que o usuário cadastro o email ou telefone ou os dois-->
+        <input type="password" placeholder="Senha" id="txtSenha" name="txtSenha" required> 
+
+        <select id="sltSexo">
+            <option selected disabled value="">Selecione</option>
+            <option value="F">Feminino</option>
+            <option value="M">Masculino</option>
+            <option value="N">Não declarado</option>
+        </select>
+
+        <input type="submit" id="btnCadastrar2" value="Cadastrar">
+
+        <p id="comentario-cadastrar">Clicando em cadastrar você concorda com os nossos termos de segurança e política. Você receberá notificações pelo seu email, mas poderá desativá-las quando desejar.</p>
+    </form>
+
+
+    <footer class="rodape">
+        <div id="redes-sociais">
+            <a href="https://www.facebook.com/JuanSoulAxel" target="_blank"> <i class="fa fa-facebook"></i> </a>
+            <a href="https://twitter.com/JuanSoulAxel" target="_blank"> <i class="fa fa-twitter"></i> </a>
+            <a href="https://www.instagram.com/JuanSoulAxel/" target="_blank"> <i class="fa fa-instagram"></i> </a>
+            <a href="https://api.whatsapp.com/send?phone=558981478640" target="_blank"> <i class="fa fa-whatsapp"></i> </a>
+        </div>
+
+        <p id="borda-rodape"></p>
+
+        <p id="copyright">Juan Axel &copy; Copyright | Books Ahead - Leu? Troque Já! | 2021</p>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> <!--Jquery instalado no site-->
+   
+   <script> //As funções abaixo farão a interação do botão cadastrar
+        $("#btnCadastrar").click(function() { //Quando clicar no btnCadastrar
+            $(".tela-cadastrar").show() && $(".corpo").hide() && $(".rodape").hide(); //vai aparecer a tela-cadastrar e sumir com o corpo e rodape
+        } );
+
+        $(".btnFechar").click(function() { //Quando clicar no btnFechar
+            $(".tela-cadastrar").hide() && $(".corpo").show() && $(".rodape").show();; //vai aparecer com o corpo e rodape e sumir com a tela cadastrar
+        } );
+    </script>
+    
+    <script src="_javascript/script.js"></script> <!--Chamando _javascript-->
+</body>
+</html>
