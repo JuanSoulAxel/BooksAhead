@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <link rel="stylesheet" href="_css/style-index.css">
+    <link rel="stylesheet" href="_css/style-principal.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,15 +15,26 @@
 </head>
 <body>
     <header class="cabecalho">
+        <img src="_imagens/icone-usuario.png" alt="Icone do Usuário" id="iconeUsuario">
         <nav id="menu">
             <ul>
-                <li> <a href="#">Inicio</a> </li>
-                <li> <a href="#">Doações</a> </li>
+                <li> <a href="#inicio">Inicio</a> </li>
+                <li> <a href="#doacoes">Doações</a> </li>
                 <li> <a href="#">Trocas</a> </li>
                 <li> <a href="#">Contato</a> </li>
             </ul>
-            <img src="_imagens/icone-usuario.png" alt="Icone do Usuário" id="iconeUsuario">
         </nav>
+        <button type="submit" id="btnSair">Sair</button>
     </header>
+    <section class="corpo">
+        <div id="inicio">
+            <img src="_imagens/Fundo-Principal.jpg" alt="Fundo">
+        </div>
+        <div id="doar-trocar">
+            <h1>FAÇA JÁ A SUA COLABORAÇÃO</h1>
+            <img src="_imagens/icone-doar.png" alt="Imagem Doar" id="imgDoar">
+            <img src="_imagens/icone-trocar.png" alt="Imagem Trocar" id="imgTrocar">
+        </div>
+    </section>
 </body>
 </html>

@@ -15,19 +15,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="icon" href="_imagens/icone-do-site.png">
     <title>Books Ahead - Acesse já!</title>
-</head>
+</head> 
 <body>
     <header class="cabecalho">
         <h1>Books Ahead</h1>
     </header>
 
     <section class="corpo">
-        <form name="login" class="tela-login" action="consultar.php">
+        <form name="login" class="tela-login" action="logar.php" method="POST">
             <h2>ENTRAR</h2>
               
             <input type="text" placeholder="Email ou Usuário" id="txtEmailEntrar" name="txtEmailEntrar"> <br> <br>
             <input type="password" placeholder="Senha" id="txtSenhaEntrar" name="txtSenhaEntrar"> <br> <br>
-            <button id="btnEntrar">Entrar</button>
+            <button type="submit" id="btnEntrar" name="btnEntrar">Entrar</button>
 
             <p id=borda-corpo></p>
         </form>  

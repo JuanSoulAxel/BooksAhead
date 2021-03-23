@@ -1,13 +1,12 @@
 <?php
+include('conexao.php'); //incluindo conexao ao banco de dados
+
 $nome = $_POST['txtNome'];
 $sobrenome = $_POST['txtSobrenome'];
 $email = $_POST['txtEmail'];
 $telefone = $_POST['txtTelefone'];
 $senha = $_POST['txtSenha'];
 $sexo = $_POST['slcSexo'];
-
-
-$strcon = mysqli_connect('127.0.0.1', 'juan', '123', 'booksahead') or die('Erro ao conectar no banco de dados');
 
 $sql = "INSERT INTO cadastro (nome, sobrenome, email, telefone, senha, sexo) VALUES ('$nome', '$sobrenome', '$email', '$telefone', '$senha', '$sexo');";
 
