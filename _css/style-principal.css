@@ -39,6 +39,11 @@ img {
     padding: 1%;
 }
 
+#usuarioLogado {
+    float: left;
+    padding: 1%;
+}
+
 #btnSair {
     float: right;
     font-size: 1.3em;

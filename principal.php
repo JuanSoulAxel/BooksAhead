@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '_conn/conexao.php'; //chamando conexão
+require 'verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
 
 //se existir e ela for diferente de vazio vai executar o código para a tela principal
 if(isset($_SESSION['id']) && !empty($_SESSION['id'])): 
@@ -23,7 +23,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
 </head>
 <body>
     <header class="cabecalho">
-        <img src="_imagens/icone-usuario.png" alt="Icone do Usuário" id="iconeUsuario">
+        <label id="usuarioLogado">Seja bem vindo, <?php echo $usuarioLogado ?>!</label> <!--Mostrando nome de usuário logado -->
         <nav id="menu">
             <ul>
                 <li> <a href="#inicio">Inicio</a> </li>
@@ -32,7 +32,6 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
                 <li> <a href="#">Contato</a> </li>
             </ul>
         </nav>
-        
         <a href="logout.php"><button type="submit" id="btnSair">Sair</button></a>
     </header>
     <section class="corpo">

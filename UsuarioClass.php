@@ -36,5 +36,23 @@ class Usuario {
         $sql->bindValue("sexo", $sexo);
         $sql->execute(); //executar
     }
+
+    public function verificacao($id) { //essa função verifica o usuário logado para mostrar na tela principal o nome dele
+        global $pdo;
+
+        $array = array(); //criando array
+       
+        $sql = "SELECT nome FROM cadastro WHERE id = :id";
+        $sql = $pdo->prepare($sql);
+        $sql->bindValue("id", $id);
+        $sql->execute();
+
+        if($sql->rowCount() > 0) //se for maior que 0
+        {
+            $array = $sql->fetch(); //pegando nome do db
+        }
+
+        return $array; //é obrigatório retornar o array
+    }
 }
 ?>
