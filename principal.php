@@ -1,6 +1,14 @@
+<?php
+session_start();
+require 'conexao.php'; //chamando conexão
+
+//se existir e ela for diferente de vazio vai executar o código para a tela principal
+if(isset($_SESSION['id']) && !empty($_SESSION['id'])): 
+?>
+
 <!DOCTYPE html>
 <html lang="PT-BR">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
@@ -24,7 +32,8 @@
                 <li> <a href="#">Contato</a> </li>
             </ul>
         </nav>
-        <button type="submit" id="btnSair">Sair</button>
+        
+        <a href="logout.php"><button type="submit" id="btnSair">Sair</button></a>
     </header>
     <section class="corpo">
         <div id="inicio">
@@ -38,3 +47,11 @@
     </section>
 </body>
 </html>
+
+
+<?php 
+//Senão, vai mandar novamente para a tela index
+else: 
+header("Location: index.php"); 
+endif; 
+?>

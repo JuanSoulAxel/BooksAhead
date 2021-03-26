@@ -1,21 +1,17 @@
 <?php
-include('conexao.php'); //incluindo conexao ao banco de dados
+session_start(); //iniciar sessão
+include_once 'conexao.php'; //incluir somente uma vez o arquivo conexão
 
-$nome = $_POST['txtNome'];
-$sobrenome = $_POST['txtSobrenome'];
-$email = $_POST['txtEmail'];
-$telefone = $_POST['txtTelefone'];
-$senha = $_POST['txtSenha'];
-$sexo = $_POST['slcSexo'];
+//Verificar se o usuário clicou no botão vai acessar o if caso contrário acessa o else
+$SendCadCont = filter_input(INPUT_POST, 'SendCadCont', FILTER_SANTIZE_STRING);
 
-$sql = "INSERT INTO cadastro (nome, sobrenome, email, telefone, senha, sexo) VALUES ('$nome', '$sobrenome', '$email', '$telefone', '$senha', '$sexo');";
+if($SendCadCont)
+{
 
-mysqli_query($strcon, $sql) or die("Erro ao tentar cadastrar registro");
-mysqli_close($strcon); //fechar connection
-
-echo //abrindo com javascript em PHP!!!! 
-"<script language='javascript' type='text/javascript'>
-    alert('Usuário Cadastrado com sucesso'); 
-    window.location.href='index.html';
-</script>";
+}
+else
+{
+    $_SESSION['msg'] = '<p> Mensagem não enviada </p>'; //criando variável global
+    header('Location: index.html');
+}
 ?>

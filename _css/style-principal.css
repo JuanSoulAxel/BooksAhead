@@ -31,7 +31,7 @@ img {
 
 .cabecalho {
     width: 100%;
-    height: 70px;
+    height: 50px;
 }
 
 #iconeUsuario {
@@ -43,6 +43,7 @@ img {
     float: right;
     font-size: 1.3em;
     color: #DC143C;
+    text-decoration: none;
     width: 6%;
     padding: 0.2%;
     margin-top: 1.75%;
@@ -95,8 +96,22 @@ nav#menu li a:hover {
     transition: 0.5;
 }
 
-/*Cabecalho - imagens doar e trocar*/
+/*Corpo - figure*/
 
+figcaption {
+    position: absolute
+}
+
+#inicio {
+    position: relative;
+}
+
+/*Corpo - imagens doar e trocar*/
+
+div#doar-trocar {
+    background-color: #FF0000;
+    color: #fff;
+}
 
 #doar-trocar h1 {
     font-size: 2em;
