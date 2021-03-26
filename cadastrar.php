@@ -1,17 +1,21 @@
 <?php
-session_start(); //iniciar sessão
-include_once 'conexao.php'; //incluir somente uma vez o arquivo conexão
+require '_conn/conexao.php'; //chamando conexão
+require 'UsuarioClass.php'; //chamando classe usuário
 
-//Verificar se o usuário clicou no botão vai acessar o if caso contrário acessa o else
-$SendCadCont = filter_input(INPUT_POST, 'SendCadCont', FILTER_SANTIZE_STRING);
+$nome = $_POST['txtNome'];
+$sobrenome = $_POST['txtSobrenome'];
+$email = $_POST['txtEmail'];
+$telefone = $_POST['txtTelefone'];
+$senha = $_POST['txtSenha'];
+$sexo = $_POST['slcSexo'];
 
-if($SendCadCont)
-{
+$u = new Usuario(); //instanciando classe usuário
 
-}
-else
-{
-    $_SESSION['msg'] = '<p> Mensagem não enviada </p>'; //criando variável global
-    header('Location: index.html');
-}
+$u->cadastro($nome, $sobrenome, $email, $telefone, $senha, $sexo);
+
+echo //abrindo com javascript em PHP!!!! 
+"<script language='javascript' type='text/javascript'>
+    alert('Usuário Cadastrado com sucesso'); 
+    window.location.href='index.php';
+</script>";
 ?>

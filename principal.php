@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'conexao.php'; //chamando conexão
+require '_conn/conexao.php'; //chamando conexão
 
 //se existir e ela for diferente de vazio vai executar o código para a tela principal
 if(isset($_SESSION['id']) && !empty($_SESSION['id'])): 

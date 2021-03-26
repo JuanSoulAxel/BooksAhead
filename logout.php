@@ -1,4 +1,4 @@
-<?php
+<?php //comando do botão sair da tela principal
 session_start();
 
 unset($_SESSION['id']); //esse comando serve para matar a sessão que criamos lá na classe usuário
