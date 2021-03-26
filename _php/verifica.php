@@ -1,5 +1,5 @@
 <?php
-require '_conn/conexao.php'; //chamando conexão
+require '_php/conexao.php'; //chamando conexão
 
 if(isset($_SESSION['id']) && !empty($_SESSION['id']))
 {

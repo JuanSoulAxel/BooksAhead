@@ -1,8 +1,8 @@
 <?php
 if(isset($_POST['txtEmailEntrar']) && !empty($_POST['txtEmailEntrar']) && isset($_POST['txtSenhaEntrar']) && !empty($_POST['txtSenhaEntrar'])) //se existir e for diferente de vazio
 {
-    require '_conn/conexao.php'; //chamando conexão
-    require 'UsuarioClass.php'; //chamando classe usuário
+    require '_php/conexao.php'; //chamando conexão
+    require '_php/UsuarioClass.php'; //chamando classe usuário
     
     $u = new Usuario(); //instanciando classe usuário
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
+require '_php/verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
 
 //se existir e ela for diferente de vazio vai executar o código para a tela principal
 if(isset($_SESSION['id']) && !empty($_SESSION['id'])): 
@@ -17,13 +17,14 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-   
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
     <link rel="icon" href="_imagens/icone-do-site.png">
     <title>Books Ahead - Leu? Troque Já!</title>
 </head>
 <body>
     <header class="cabecalho">
-        <label id="usuarioLogado">Seja bem vindo, <?php echo $usuarioLogado ?>!</label> <!--Mostrando nome de usuário logado -->
+        <label id="titulo">Books Ahead</label> <!--Mostrando nome de usuário logado -->
         <nav id="menu">
             <ul>
                 <li> <a href="#inicio">Inicio</a> </li>
@@ -32,7 +33,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
                 <li> <a href="#">Contato</a> </li>
             </ul>
         </nav>
-        <a href="logout.php"><button type="submit" id="btnSair">Sair</button></a>
+        <a href="logout.php"> <img id="btnSair" src="_imagens/botao-sair.png" alt="Botão Sair"> </a>
     </header>
     <section class="corpo">
         <div id="inicio">
