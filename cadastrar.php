@@ -1,6 +1,6 @@
 <?php
-require '_conn/conexao.php'; //chamando conexão
-require 'UsuarioClass.php'; //chamando classe usuário
+require '_php/conexao.php'; //chamando conexão
+require '_php/UsuarioClass.php'; //chamando classe usuário
 
 $nome = $_POST['txtNome'];
 $sobrenome = $_POST['txtSobrenome'];

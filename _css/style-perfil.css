@@ -32,11 +32,13 @@ img {
 .cabecalho {
     width: 100%;
     height: 80px;
+    border-bottom: 2px solid #000;
 }
 
-label#titulo {
+label#titulo a {
     float: left;
     font-family: Anton, sans-serif;
+    color: #000;
     font-size: 2em;
 	text-transform: uppercase;
     padding: 1%;
@@ -89,50 +91,41 @@ nav#menu li a:hover {
     transition: 0.5;
 }
 
-/*Corpo - figure*/
 
-figcaption {
-    position: absolute
-}
+/*CORPO*/
 
-#inicio {
-    position: relative;
-}
-
-/*Corpo - imagens doar e trocar*/
-
-div#doar-trocar {
-    color: #fff;
-}
-
-#doar-trocar h1 {
-    font-family: Anton, sans-serif;
-    background-color: #FF0000;
-    font-size: 2em;
+.corpo p#nomeUsuario {
     text-align: center;
-    margin-bottom: 2.5%;
-}
-
-#doar-trocar p {
-    float: left;
-    width: 53%;
-    font-family: 'Averia Serif Libre', sans-serif;
     font-size: 2em;
-    color: #000;
-    margin-left: 2%;
+    font-family: Oswald;
+    margin-top: 1%;
 }
 
-#imgDoar, #imgTrocar {
-    float: right;
-    background: linear-gradient(to right,#FF0000, #FFFF00);
-    border-radius: 10px;
-    padding: 1.5%;
-    margin-right: 5%;
-    margin-bottom: 1%;
-}
-
-#imgDoar:hover, #imgTrocar:hover {
+.corpo div#transacoes {
+    position: absolute;
+    width: 100%;
     background: linear-gradient(to right, #FFFF00, #FF0000);
 }
 
-/*RODAPE*/
+.corpo div#transacoes img {
+    float: right;
+    border: 3px solid #FFF;
+    border-radius: 20px;
+    margin: 0.5%;
+}
+
+.corpo div#transacoes img:hover {
+    background: #FFF;
+    transition: 1s;
+}
+
+.corpo img#iconeUsuario {
+    width: 10%;
+    margin-left: 5%;
+}
+
+.corpo img#fotoUsuario {
+    width: 10%;
+    height: 100px;
+    background: gray;
+}

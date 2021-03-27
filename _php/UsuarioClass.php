@@ -54,5 +54,15 @@ class Usuario {
 
         return $array; //é obrigatório retornar o array
     }
+
+    public function uplodacao($novo_nome, $id) { //esse id vai receber o id que vem pela sessão
+        global $pdo;
+
+        $sql = "INSERT INTO arquivo (arquivo, datta, iduser) VALUES (:novo_nome, NOW(), :iduser);"; // o NOW() pega a data atual
+        $sql = $pdo->prepare($sql); //preparar para consulta ao DB
+        $sql->bindValue("novo_nome", $novo_nome);
+        $sql->bindValue("iduser", $id);
+        $sql->execute();
+    }
 }
 ?>
