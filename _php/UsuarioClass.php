@@ -42,7 +42,7 @@ class Usuario {
 
         $array = array(); //criando array
        
-        $sql = "SELECT nome FROM cadastro WHERE id = :id";
+        $sql = "SELECT * FROM cadastro WHERE id = :id";
         $sql = $pdo->prepare($sql);
         $sql->bindValue("id", $id);
         $sql->execute();
@@ -58,11 +58,38 @@ class Usuario {
     public function uplodacao($novo_nome, $id) { //esse id vai receber o id que vem pela sessão
         global $pdo;
 
-        $sql = "INSERT INTO arquivo (arquivo, datta, iduser) VALUES (:novo_nome, NOW(), :iduser);"; // o NOW() pega a data atual
+        $sql = "INSERT INTO arquivo (arquivo, datta, iduser) VALUES (:novo_nome, NOW(), :iduser) WHER"; // o NOW() pega a data atual
         $sql = $pdo->prepare($sql); //preparar para consulta ao DB
         $sql->bindValue("novo_nome", $novo_nome);
         $sql->bindValue("iduser", $id);
         $sql->execute();
+    }
+
+    public function adicionarImagem($imagem, $id) {
+        global $pdo;
+
+        $sql = "UPDATE cadastro SET imagem = :imagem WHERE id= :id";
+        $sql = $pdo->prepare($sql);
+        $sql->bindValue("imagem", $imagem);
+        $sql->bindValue("id", $id);
+        
+        
+        if($sql->execute())
+        {
+            echo
+            "<script language='javascript' type='text/javascript'>
+                alert('Foto adicionada com sucesso!'); 
+                window.location.href='perfil.php';
+            </script>";
+        }
+        else
+        {
+            echo
+            "<script language='javascript' type='text/javascript'>
+                alert('Infelizmente algo deu errado... <br>Tente novamente mais tarde!'); 
+                window.location.href='perfil.php';
+            </script>";
+        }
     }
 }
 ?>

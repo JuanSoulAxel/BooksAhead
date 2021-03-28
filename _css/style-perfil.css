@@ -94,18 +94,18 @@ nav#menu li a:hover {
 
 /*CORPO*/
 
-.corpo p#nomeUsuario {
+.corpo p#mensagemInicial {
     text-align: center;
     font-size: 2em;
     font-family: Oswald;
-    margin-top: 1%;
+    margin: 1%;
 }
 
 .corpo div#transacoes {
     position: absolute;
     width: 100%;
     background: linear-gradient(to right, #FFFF00, #FF0000);
-}
+} 
 
 .corpo div#transacoes img {
     float: right;
@@ -119,13 +119,53 @@ nav#menu li a:hover {
     transition: 1s;
 }
 
-.corpo img#iconeUsuario {
-    width: 10%;
+.corpo div#perfil img {
+    max-width: 150px; 
+    max-height: 150px;
     margin-left: 5%;
+    float: left;
+    border-radius: 100%;
+    border: 3px solid #FFFF00;
 }
 
-.corpo img#fotoUsuario {
-    width: 10%;
-    height: 100px;
-    background: gray;
+.corpo div#perfil button {
+    float: left;
+}
+
+.corpo div#perfil label {
+    font-size: 2em;
+    font-family: Oswald;
+    margin: 5%;
+}
+
+.corpo div#perfil {
+    border-bottom: 2px solid #000;
+}
+
+.corpo form#cadastrarImagem {
+    text-align: center;
+    display: none; /*não mostrar essa tela inicialmente*/
+    width: 30%;
+    margin: 5%;
+    background-color: #FFFF00;
+}
+
+.corpo form#cadastrarImagem p {
+    font-family: Oswald, sans-serif;
+    font-size: 1.5em;
+}
+
+
+.corpo form#cadastrarImagem input#enviarArquivo {
+    width: 15%;
+    background-color: #FF0000;
+    color: #fff;
+    padding: 2%;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+
+.corpo form#cadastrarImagem a {
+    float: right;
+    padding: 1%;
 }

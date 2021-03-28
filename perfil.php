@@ -10,7 +10,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
 
 <!DOCTYPE html>
 <html lang="PT-BR">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
         <a href="logout.php"> <img id="btnSair" src="_imagens/botao-sair.png" alt="Botão Sair"> </a>
     </header>
     <section class="corpo">
-        <p id="nomeUsuario">Seja bem vindo, <?php echo $usuarioLogado?>! <br> Esse é seu perfil e você pode editá-lo como desejar.</p>
+        <p id="mensagemInicial">Esse é seu perfil e você pode editá-lo como desejar.</p>
 
         <div id="transacoes">
             <img src="_imagens/suas-doacoes.png" alt="Suas Doações">
@@ -48,14 +48,28 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
             <img src="_imagens/seus-desejados.png" alt="Seus Desejados">
         </div>   <br> <br> <br> <br>
         
-        <h1>Cadastrar Imagem</h1>
+        <div id="perfil">
+            <!--No img abaixo eu coloquei o diretório onde fica armazenado as fotos que os usuários cadastram, e após isso peguei com o php (verifica.php) a variável onde contém o nome do arquivo-->
+            <img id="fotoUsuario" src="_fotos-usuarios/<?php echo $imagemUsuario;?>" alt="Foto do Usuário"> <br> <br>
+            <label> <?php echo $nomeUsuario ." ". $sobrenomeUsuario ?> </label>
+            <label> <?php echo $emailUsuario ?> </label>
+            <label> <?php echo $telefoneUsuario ?> </label> <br> <br> <br> <br> <br>
+        </div>
 
         <!--Criando form para fazer upload de fotos-->
-        <form method="POST" action="upload.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
-            <input type="file" name="arquivo" required>
-            <input name="enviarArquivo" type="submit" value="Salvar">
+        <form id="cadastrarImagem" method="POST" action="foto-usuario.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
+            <a id="btnFechar"> <i class="fa fa-times"></i> </a> <br>
+            <p>Escolha a sua nova foto de perfil</p> <br>
+            <input type="file" name="arquivo" required> <br>
+            <input name="enviarArquivo" id="enviarArquivo" type="submit" value="Salvar">
         </form>
     </section>
+
+    <!--biblioteca geral do JQUERY--> 
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <!--Chamando _javascript-->
+    <script src="_javascript/script-perfil.js"> </script>
 </body>
 </html>
 

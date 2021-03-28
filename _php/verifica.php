@@ -9,7 +9,12 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id']))
 
     $logged = $u->verificacao($_SESSION['id']); //passando id para função verificação
 
-    $usuarioLogado = $logged['nome'];
+    //pegando valores do banco de dados
+    $nomeUsuario = $logged['nome']; 
+    $sobrenomeUsuario = $logged['sobrenome'];
+    $emailUsuario = $logged['email'];
+    $telefoneUsuario = $logged['telefone'];
+    $imagemUsuario = $logged['imagem'];
 }
 else
 {
