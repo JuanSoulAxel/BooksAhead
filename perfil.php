@@ -27,6 +27,20 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <title>Books Ahead - Seu Perfil</title>
 </head>
 <body>
+    <!--Esse fundo vai deixar a tela mais escura #gambiarra-->
+    <div class="telaFundo"> </div>
+
+    <!--Criando form para fazer upload de fotos-->
+    <form class="cadastrarImagem" method="POST" action="foto-usuario.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
+        <a id="btnFechar"> <i class="fa fa-times"></i> </a> <br>
+        <p>Escolha a sua nova foto de perfil</p> <br>
+        <img src="_imagens/icone-atualizar-imagem.png" alt="Icone Atualizar"> <br> <br> <br>
+        <input type="file" name="arquivo" id="escolherArquivo" required> <br> <br>
+        <input name="enviarArquivo" id="enviarArquivo" type="submit" value="Salvar">
+    </form>
+    
+
+
     <header class="cabecalho">
         <label id="titulo"> <a href="principal.php">Books Ahead</a> </label> <!--Mostrando nome de usuário logado -->
         <nav id="menu">
@@ -47,22 +61,14 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
             <img src="_imagens/suas-trocas.png" alt="Suas Trocas">
             <img src="_imagens/seus-desejados.png" alt="Seus Desejados">
         </div>   <br> <br> <br> <br>
-        
+
         <div id="perfil">
             <!--No img abaixo eu coloquei o diretório onde fica armazenado as fotos que os usuários cadastram, e após isso peguei com o php (verifica.php) a variável onde contém o nome do arquivo-->
-            <img id="fotoUsuario" src="_fotos-usuarios/<?php echo $imagemUsuario;?>" alt="Foto do Usuário"> <br> <br>
-            <label> <?php echo $nomeUsuario ." ". $sobrenomeUsuario ?> </label>
+            <img id="imagemUsuario" src="_fotos-usuarios/<?php echo $imagemUsuario;?>" alt="Foto do Usuário"> <br> <br>
+            <label id="nomeUsuario"> <?php echo $nomeUsuario ." ". $sobrenomeUsuario ?> </label>
             <label> <?php echo $emailUsuario ?> </label>
             <label> <?php echo $telefoneUsuario ?> </label> <br> <br> <br> <br> <br>
         </div>
-
-        <!--Criando form para fazer upload de fotos-->
-        <form id="cadastrarImagem" method="POST" action="foto-usuario.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
-            <a id="btnFechar"> <i class="fa fa-times"></i> </a> <br>
-            <p>Escolha a sua nova foto de perfil</p> <br>
-            <input type="file" name="arquivo" required> <br>
-            <input name="enviarArquivo" id="enviarArquivo" type="submit" value="Salvar">
-        </form>
     </section>
 
     <!--biblioteca geral do JQUERY--> 
