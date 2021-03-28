@@ -1,31 +1,3 @@
-/*=========== RESET ==========*/
-* {
-    margin: 0; 
-    padding: 0; 
-    font-size: 100%;  /*Unidades relativas coloca o font-size 100%*/
-    border: none; /*remover bordas*/
-    outline: none; /*remover esboço*/
-    font-weight: 300; 
-    box-sizing: border-box; /*Ou seja, quando usar um padding não vai alterar a dimensão do elemento*/
-    font-family: 'Lato', sans-serif; /*Definindo font padrão*/
-}
-
-body {
-    background-color: #f5f5f5;
-}
- 
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-}
-
 /*DIV PARA DEIXAR O FUNDO ESCURO QUANDO CLICAR NA FOTO DO PERFIL*/
 
 div.telaFundo {
@@ -82,71 +54,6 @@ form.cadastrarImagem input#escolherArquivo {
     color: #fff;
 } 
 
-/*Cabecalho*/
-
-.cabecalho {
-    width: 100%;
-    height: 80px;
-    border-bottom: 2px solid #000;
-}
-
-label#titulo a {
-    float: left;
-    font-family: Anton, sans-serif;
-    color: #000;
-    font-size: 2em;
-	text-transform: uppercase;
-    padding: 1%;
-    margin-top: 0.5%;
-}
-
-#btnSair {
-    float: right;
-    text-decoration: none;
-    margin: 1.8% 2%;
-    padding: 0.4%;
-    border-radius: 10px;
-}
-
-#btnSair:hover {
-    background: linear-gradient(to right, #FFFF00, #FF0000);
-    transition: 0.5s;
-}
-
-/*Formatando Menu*/
-
-nav#menu {
-	display: block;
-}
-
-nav#menu ul {
-	list-style: none;
-	text-transform: uppercase;
-	position: absolute;
-	top: 2.5%;
-	right: 15%;
-}
-
-nav#menu li {
-	font-size: 1.5em;
-	display: inline-block;
-	padding: 10px;
-	transition: 0.5s; /* Demora um segundo para aparecer  os LI aparecerem */
-}
-
-nav#menu li a {
-    font-family: 'Oswald', sans-serif;
-    color: #000;
-    border-radius: 10px;
-    padding: 5%;
-}
-
-nav#menu li a:hover {
-    background: linear-gradient(to right, #FFFF00, #FF0000);
-    transition: 0.5;
-}
-
-
 /*CORPO*/
 
 .corpo p#mensagemInicial {
@@ -171,7 +78,8 @@ nav#menu li a:hover {
 
 .corpo div#transacoes img:hover {
     background: #FFF;
-    transition: 1s;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .corpo div#perfil img {

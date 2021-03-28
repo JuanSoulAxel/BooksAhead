@@ -192,39 +192,6 @@ p#cadastrar {
     color: #fff;
 }
 
-/*RODAPE*/
-
-.rodape {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.85555);
-    position: relative;
-    margin-top: 20%;
-    text-align: center;
-}
-
-#redes-sociais i {
-    font-size: 2.5em;
-    padding: 3%;
-    color: #fff;
-}
-
-#redes-sociais i:hover {
-    color: #A9A9A9;
-}
-
-#borda-rodape {
-    border: 1px solid #fff;
-}
-
-.rodape p#copyright {
-    color: #fff;
-    font-size: 1.5em;
-    padding-top: 2%;
-    padding-bottom: 0.5%;
-}
-
-
-
 @media screen and (max-width: 700px) {
     /*CABECALHO*/
 

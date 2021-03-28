@@ -13,30 +13,18 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <link rel="stylesheet" href="_css/style-principal.css">
- 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@1,300&display=swap" rel="stylesheet">
-   
-    <link rel="icon" href="_imagens/icone-do-site.png">
+    <link rel="stylesheet" href="_modelos/style-geral.css">
+
+    <!--Chamando fontes e o ícone do site-->
+    <?php include "_modelos/fonts.php"; ?>
+    
     <title>Books Ahead - Leu? Troque Já!</title>
 </head>
 <body>
-    <header class="cabecalho">
-        <label id="titulo">Books Ahead</label> <!--Mostrando nome de usuário logado -->
-        <nav id="menu">
-            <ul>
-                <li> <a href="perfil.php">Perfil</a> </li>
-                <li> <a href="#doacoes">Doações</a> </li>
-                <li> <a href="#">Trocas</a> </li>
-                <li> <a href="#">Contato</a> </li>
-            </ul>
-        </nav>
-        <a href="logout.php"> <img id="btnSair" src="_imagens/botao-sair.png" alt="Botão Sair"> </a>
-    </header>
+    
+    <!--Chamando o header-->
+    <?php  include "_modelos/header.php"; ?>
+
     <section class="corpo">
         <div id="inicio">
             <img src="_imagens/Fundo-Principal.jpg" alt="Fundo">
@@ -50,6 +38,9 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
             <img src="_imagens/icone-trocar.png" alt="Imagem Trocar" id="imgTrocar">
         </div>
     </section>
+
+    <!--Chamando Footer-->
+    <?php include "_modelos/footer.php"; ?>
 </body>
 </html>
 

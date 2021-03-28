@@ -1,0 +1,130 @@
+/*=========== RESET ==========*/
+* {
+    margin: 0; 
+    padding: 0; 
+    font-size: 100%;  /*Unidades relativas coloca o font-size 100%*/
+    border: none; /*remover bordas*/
+    outline: none; /*remover esboço*/
+    font-weight: 300; 
+    box-sizing: border-box; /*Ou seja, quando usar um padding não vai alterar a dimensão do elemento*/
+    font-family: 'Lato', sans-serif; /*Definindo font padrão*/
+}
+
+body {
+    background-color: #f5f5f5;
+}
+ 
+a {
+    text-decoration: none;
+} 
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/*Cabecalho*/
+
+.cabecalho {
+    width: 100%;
+    height: 80px;
+}
+
+
+label#titulo {
+    float: left;
+    font-size: 2em;
+    padding: 1%;
+    margin-top: 0.5%;
+}
+
+label#titulo a {
+    font-family: Anton, sans-serif;
+	text-transform: uppercase;
+    color: #000;
+}
+
+#btnSair {
+    float: right;
+    text-decoration: none;
+    margin: 1.8% 2%;
+    padding: 0.4%;
+    border-radius: 10px;
+}
+
+#btnSair:hover {
+    background: linear-gradient(to right, #FFFF00, #FF0000);
+    transition: 0.5s;
+}
+
+
+
+/*Formatando Menu*/
+
+nav#menu {
+	display: block;
+}
+
+nav#menu ul {
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: 2.5%;
+	right: 15%;
+}
+
+nav#menu li {
+	font-size: 1.5em;
+	display: inline-block;
+	padding: 10px;
+	transition: 0.5s; /* Demora um segundo para aparecer  os LI aparecerem */
+}
+
+nav#menu li a {
+    font-family: 'Oswald', sans-serif;
+    color: #000;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+nav#menu li a:hover {
+    background: linear-gradient(to right, #FFFF00, #FF0000);
+    transition: 0.5;
+}
+
+
+
+/*RODAPE*/
+
+.rodape {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85555);
+    position: relative;
+    margin-top: 20%;
+    text-align: center;
+}
+
+#redes-sociais i {
+    font-size: 2.5em;
+    padding: 3%;
+    color: #fff;
+}
+
+#redes-sociais i:hover {
+    color: #A9A9A9;
+}
+
+#borda-rodape {
+    border: 1px solid #fff;
+}
+
+.rodape p#copyright {
+    color: #fff;
+    font-size: 1.5em;
+    padding-top: 2%;
+    padding-bottom: 0.5%;
+}

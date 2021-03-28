@@ -16,13 +16,10 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="_css/style-perfil.css">
+    <link rel="stylesheet" href="_modelos/style-geral.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!--Chamando fontes e o ícone do site-->
+    <?php include "_modelos/fonts.php"; ?>
 
     <title>Books Ahead - Seu Perfil</title>
 </head>
@@ -38,28 +35,15 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
         <input type="file" name="arquivo" id="escolherArquivo" required> <br> <br>
         <input name="enviarArquivo" id="enviarArquivo" type="submit" value="Salvar">
     </form>
-    
 
+    <!--Chamando o header-->
+    <?php  include "_modelos/header.php"; ?>
 
-    <header class="cabecalho">
-        <label id="titulo"> <a href="principal.php">Books Ahead</a> </label> <!--Mostrando nome de usuário logado -->
-        <nav id="menu">
-            <ul>
-                <li> <a href="perfil.php">Perfil</a> </li>
-                <li> <a href="#doacoes">Doações</a> </li>
-                <li> <a href="#">Trocas</a> </li>
-                <li> <a href="#">Contato</a> </li>
-            </ul>
-        </nav>
-        <a href="logout.php"> <img id="btnSair" src="_imagens/botao-sair.png" alt="Botão Sair"> </a>
-    </header>
     <section class="corpo">
-        <p id="mensagemInicial">Esse é seu perfil e você pode editá-lo como desejar.</p>
-
         <div id="transacoes">
-            <img src="_imagens/suas-doacoes.png" alt="Suas Doações">
-            <img src="_imagens/suas-trocas.png" alt="Suas Trocas">
-            <img src="_imagens/seus-desejados.png" alt="Seus Desejados">
+            <img id="suasDoacoes" src="_imagens/suas-doacoes.png" alt="Suas Doações">
+            <img id="suasTrocas" src="_imagens/suas-trocas.png" alt="Suas Trocas">
+            <img id="seusDesejados" src="_imagens/seus-desejados.png" alt="Seus Desejados">
         </div>   <br> <br> <br> <br>
 
         <div id="perfil">
@@ -70,6 +54,9 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
             <label> <?php echo $telefoneUsuario ?> </label> <br> <br> <br> <br> <br>
         </div>
     </section>
+
+    <!--Chamando Footer-->
+    <?php include "_modelos/footer.php"; ?>
 
     <!--biblioteca geral do JQUERY--> 
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>

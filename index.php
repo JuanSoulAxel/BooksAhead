@@ -9,11 +9,11 @@
     <meta name="author" content="Juan Axel">
 
     <link rel="stylesheet" href="_css/style-index.css" type="text/css"/>
+    <link rel="stylesheet" href="_modelos/style-geral.css" type="text/css"/>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="icon" href="_imagens/icone-do-site.png">
+    <!--Chamando fontes e o ícone do site-->
+    <?php include "_modelos/fonts.php"; ?>
+
     <title>Books Ahead - Acesse já!</title>
 </head> 
 <body>
@@ -61,18 +61,8 @@
         <p id="comentario-cadastrar">Clicando em cadastrar você concorda com os nossos termos de segurança e política. Você receberá notificações pelo seu email, mas poderá desativá-las quando desejar.</p>
     </form>
 
-    <footer class="rodape">
-        <div id="redes-sociais">
-            <a href="https://www.facebook.com/JuanSoulAxel" target="_blank"> <i class="fa fa-facebook"></i> </a>
-            <a href="https://twitter.com/JuanSoulAxel" target="_blank"> <i class="fa fa-twitter"></i> </a>
-            <a href="https://www.instagram.com/JuanSoulAxel/" target="_blank"> <i class="fa fa-instagram"></i> </a>
-            <a href="https://api.whatsapp.com/send?phone=558981478640" target="_blank"> <i class="fa fa-whatsapp"></i> </a>
-        </div>
-
-        <p id="borda-rodape"></p>
-
-        <p id="copyright">Juan Axel &copy; Copyright | Books Ahead - Leu? Troque Já! | 2021</p>
-    </footer>
+    <!--Chamando Footer-->
+    <?php include "_modelos/footer.php"; ?>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
