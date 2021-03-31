@@ -17,7 +17,10 @@
     <title>Books Ahead - Acesse já!</title>
 </head> 
 <body>
-    <header class="cabecalho">
+    <!--Esse fundo vai deixar a tela mais escura #gambiarra-->
+    <div class="telaFundo"></div>
+
+    <header class="cabecalhoTitulo">
         <h1>Books Ahead</h1>
     </header>
 

@@ -29,7 +29,8 @@ if(isset($_FILES['arquivo']))
     
     $u->adicionarImagem($novo_nome, $_SESSION['id']);
 }
-
-
-
+else
+{
+    header("Location: perfil.php");
+}
 ?>

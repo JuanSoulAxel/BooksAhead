@@ -1,0 +1,141 @@
+/*LADO DO SITE*/
+
+aside.lateral {
+    position: fixed;
+    width: 45vh;
+    float: left;
+}
+
+aside.lateral a {
+    color: #000;
+}
+
+aside.lateral:hover {
+    border-right: 5px solid rgba(0, 0, 0, 0.2);
+    transition: 0.1s;
+}
+
+
+aside.lateral img { /*Configurando tamanho das imagens*/
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 10vh;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+aside.lateral label {
+    font-size: 1.2em;
+    font-family: Oswald, sans-serif;
+}
+
+aside.lateral div {
+    margin-left: 4%;
+    padding: 1%;
+}
+
+aside.lateral div:hover { /*marcar a div toda quando passar o mouse*/
+    border-radius: 2vh;
+    background-color: #DCDCDC;
+    transition: 0.5s;
+}
+
+
+/*CORPO*/
+
+section.corpo {
+    width: 80vh;
+    height: 35vh;
+    margin-left: 70vh;
+    padding: 2%; /*Para jogar os itens que estavam um pouco para fora*/
+    background: #fff;
+    border-radius: 5vh;
+}
+
+
+section.corpo div#postagem-parte1 img#imagemUsuario {
+    float: left;
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 10vh;
+}
+
+section.corpo div#postagem-parte1 input {
+    float: right;
+    margin-right: 20%;
+    width: 50vh;
+    border-radius: 10vh;
+    padding: 2.5%;
+    margin-bottom: 1%;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+section.corpo div#postagem-parte1 button {
+    font-family: Oswald, sans-serif;
+    width: 30%;
+    margin-top: 2%;
+    margin-left: 30%;
+    background: #8B0000;
+    color: #FFF;
+    padding: 2%;
+    border-radius: 5vh;
+}
+
+section.corpo button:hover {
+    background: #800000;
+}
+
+section.corpo p#bordaCorpo {
+    border: 0.5px solid #DCDCDC;
+}
+
+section.corpo div#postagem-parte2 {
+    margin-left: 13%;
+}
+
+/*CORPO 2*/
+
+section.corpo2 {
+    width: 80vh;
+    height: 60vh;
+    margin-left: 70vh;
+    padding: 2%; /*Para jogar os itens que estavam um pouco para fora*/
+    background: #fff;
+    border-radius: 5vh;
+}
+
+section.corpo2 img#imagemUsuario {
+    float: left;
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 10vh;
+}
+
+section.corpo2 label#nomeUsuario {
+    font-size: 1.5em;
+    font-family: Oswald, sans-serif;
+    padding: 2%;
+}
+
+section.corpo2 p#horarioPostagem {
+    float: right;
+    text-decoration: underline;
+}
+
+section.corpo2 p#comentarioUsuario {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+section.corpo2 img#imagemLivro {
+    max-width: 190px;
+    max-height: 250px;
+    min-width: 190px;
+    min-height: 250px;
+    margin-left: 30%;
+}

@@ -49,20 +49,10 @@ class Usuario {
 
         if($sql->rowCount() > 0) //se for maior que 0
         {
-            $array = $sql->fetch(); //pegando nome do db
+            $array = $sql->fetch(); //pegando todos os valores do db
         }
 
         return $array; //é obrigatório retornar o array
-    }
-
-    public function uplodacao($novo_nome, $id) { //esse id vai receber o id que vem pela sessão
-        global $pdo;
-
-        $sql = "INSERT INTO arquivo (arquivo, datta, iduser) VALUES (:novo_nome, NOW(), :iduser) WHER"; // o NOW() pega a data atual
-        $sql = $pdo->prepare($sql); //preparar para consulta ao DB
-        $sql->bindValue("novo_nome", $novo_nome);
-        $sql->bindValue("iduser", $id);
-        $sql->execute();
     }
 
     public function adicionarImagem($imagem, $id) {
@@ -88,6 +78,34 @@ class Usuario {
             "<script language='javascript' type='text/javascript'>
                 alert('Infelizmente algo deu errado... <br>Tente novamente mais tarde!'); 
                 window.location.href='perfil.php';
+            </script>";
+        }
+    }
+
+    public function adicionarLivro($novo_nome, $comentario, $tipo, $id) {
+        global $pdo;
+
+        $sql = "INSERT INTO transacao (livro, comentario, tipo, datta, iduser) VALUES (:novo_nome, :comentario, :tipo, NOW(), :id);";
+        $sql = $pdo->prepare($sql);
+        $sql->bindValue("novo_nome", $novo_nome);
+        $sql->bindValue("comentario", $comentario);
+        $sql->bindValue("tipo", $tipo);
+        $sql->bindValue("id", $id);
+        
+        if($sql->execute())
+        {
+            echo
+            "<script language='javascript' type='text/javascript'>
+                alert('Livro adicionado com sucesso!'); 
+                window.location.href='doacoes.php';
+            </script>";
+        }
+        else
+        {
+            echo
+            "<script language='javascript' type='text/javascript'>
+                alert('Infelizmente algo deu errado... <br>Tente novamente mais tarde!'); 
+                window.location.href='doacoes.php';
             </script>";
         }
     }

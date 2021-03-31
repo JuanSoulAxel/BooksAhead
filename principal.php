@@ -23,7 +23,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
 <body>
     
     <!--Chamando o header-->
-    <?php  include "_modelos/header.php"; ?>
+    <?php  include "_modelos/header.php"; ?> <br> <br> <br> <br>
 
     <section class="corpo">
         <div id="inicio">
