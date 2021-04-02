@@ -8,9 +8,11 @@ div.telaFundo {
     background-color: rgba(0, 0, 0, 0.7);
 }
  
-/*ESSA PARTE VAI MOSTRAR A TELA PRA MODIFICAR IMAGENS*/
+/*ESSA PARTE VAI MOSTRAR A TELA PRA MODIFICAR IMAGENS E TELA ATUALIZAR DADOS*/
 
-form.cadastrarImagem {
+
+/*MODIFICAR IMAGEM E DADOS*/ 
+form.cadastrarImagem, form.atualizarDados {
     position: absolute;
     text-align: center;
     display: none; /*não mostrar essa tela inicialmente*/
@@ -21,21 +23,21 @@ form.cadastrarImagem {
     border-radius: 30px;
 }
 
-form.cadastrarImagem p {
+form.cadastrarImagem p, form.atualizarDados p {
     color: #000;
     text-decoration: underline;
     font-family: Oswald, sans-serif;
     font-size: 1.5em;
 }
 
-form.cadastrarImagem a#btnFechar {
+form.cadastrarImagem a#btnFechar, form.atualizarDados a#btnFechar2 {
     float: right;
     color: #000;
     font-size: 2em;
     padding: 2%;
 }
 
-form.cadastrarImagem input#enviarArquivo {
+form.cadastrarImagem input#enviarArquivo, form.atualizarDados input#enviarArquivo2 {
     width: 15%;
     background: linear-gradient(to right, #FF0000, #FFFF00);
     color: #000;
@@ -45,68 +47,94 @@ form.cadastrarImagem input#enviarArquivo {
     border: 2px solid #000;
 }
 
-form.cadastrarImagem input#enviarArquivo:hover {
-    background: linear-gradient(to right, #cc1010, #FFFF00);
+form.cadastrarImagem input#enviarArquivo:hover, form.atualizarDados input#enviarArquivo2:hover {
+    transform: scale(1.05);
+    transition: 1s;
 }
 
+/*TELA MODIFICAR IMAGEM*/
 form.cadastrarImagem input#escolherArquivo {
     color: #fff;
-} 
+}
+
+/*TELA ATUALIZAR DADOS*/ 
+form.atualizarDados input {
+    background: #000;
+    color: #fff;
+    width: 35%;
+    border-radius: 10vh;
+    padding: 0.8%;
+}
+
 
 /*CORPO*/
 
-.corpo p#mensagemInicial {
+.corpo-perfil p#mensagemInicial {
     text-align: center;
     font-size: 2em;
     font-family: Oswald;
     margin: 1%;
 }
 
-.corpo div#transacoes {
+.corpo-perfil div#transacoes {
     width: 100%;
-    height: 50px;
+    height: 7vh;
     background: linear-gradient(to right, #FFFF00, #FF0000);
 } 
 
-.corpo div#transacoes img {
+.corpo-perfil div#transacoes img {
     float: right;
     border: 3px solid #FFF;
     border-radius: 20px;
     margin: 0.5%;
 }
 
-.corpo div#transacoes img:hover {
+.corpo-perfil div#transacoes img:hover {
     background: #FFF;
     transform: scale(1.1);
     transition: 0.3s;
 } 
 
-.corpo div#perfil img {
+.corpo-perfil div#perfil {
+    margin-top: 2%;
+}
+
+.corpo-perfil div#perfil img {
     max-width: 150px;
     max-height: 150px;
     min-width: 150px;
     min-height: 150px;
-    margin-left: 2%;
+    margin-left: 25%;
     float: left;
     border-radius: 100%;
-    border: 3px solid #FFFF00;
+    border: 3px solid #FFF;
 }
 
-.corpo div#perfil img:hover {
+.corpo-perfil div#perfil img:hover {
     transform: scale(1.03);
     transition: 0.5s;
 }
 
-.corpo div#perfil button {
-    float: left;
-}
-
-.corpo div#perfil label {
-    font-size: 2em;
-    font-family: Oswald;
+.corpo-perfil div#perfil label#nomeUsuario {
+    font-size: 3em;
+    font-family: Oswald, sans-serif;
     margin: 3%;
 }
 
-.corpo div#perfil {
-    border-bottom: 2px solid #000;
+.corpo-perfil div#perfil label#contato {
+    font-family: Oswald, sans-serif;
+}
+
+.corpo-perfil div#perfil button#editarInformacoes {
+    margin-left: 5%;
+    background: #8B0000;
+    font-family: Oswald, sans-serif;
+    color: #fff;
+    border-radius: 10vh;
+    padding: 0.5%;
+}
+
+
+.corpo-perfil div#perfil button#editarInformacoes:hover {
+    transition: 5s;
 }

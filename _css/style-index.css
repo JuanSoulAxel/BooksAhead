@@ -41,7 +41,7 @@ div.telaFundo {
 
 /*CORPO*/
 
-.corpo {
+.corpo-index {
     background-color: rgba(0, 0, 0, 0.85555);
     width: 30%;
     height: 40%;
@@ -53,7 +53,7 @@ div.telaFundo {
     transition: 1.2s;
 }
 
-.corpo h2 {
+.corpo-index h2 {
     color: #fff;
     font-size: 2em;
     font-family: sans-serif;
@@ -61,7 +61,7 @@ div.telaFundo {
     text-decoration: underline #8B0000;
 }
 
-.corpo input {
+.corpo-index input {
     width: 70%;
     background-color: #363636;
     color: #fff;
@@ -69,7 +69,7 @@ div.telaFundo {
     border-radius: 10px;
 }
 
-.corpo button#btnEntrar {
+.corpo-index button#btnEntrar {
     width: 70%;
     background-color: #8B0000;
     color: #fff;
@@ -78,11 +78,11 @@ div.telaFundo {
     cursor: pointer;
 }
 
-.corpo button#btnEntrar:hover {
+.corpo-index button#btnEntrar:hover {
     background-color: #800000;
 }
 
-p#borda-corpo { /*formando linha para dividir a parte de entrar da parte de cadastrar*/
+p#borda-corpo-index { /*formando linha para dividir a parte de entrar da parte de cadastrar*/
     border: 1px solid #DCDCDC;
     margin-top: 20%;
     margin-bottom: 2%;
@@ -189,7 +189,7 @@ p#cadastrar {
 
     /*CORPO*/
 
-    .corpo {
+    .corpo-index {
         width: 100%;
         margin-left: 0%;
     }

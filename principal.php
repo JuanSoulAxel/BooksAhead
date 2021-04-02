@@ -23,9 +23,14 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
 <body>
     
     <!--Chamando o header-->
-    <?php  include "_modelos/header.php"; ?> <br> <br> <br> <br>
+    <?php  include "_modelos/header.php"; ?>
 
-    <section class="corpo">
+    <h2 id="tituloPrincipal">PRINCIPAL</h2>
+
+    <!--Chamando o aside-->
+    <?php include "_modelos/aside.php"; ?> <br> <br> <br> <br>
+
+    <section class="corpo-principal">
         <div id="inicio">
             <img src="_imagens/Fundo-Principal.jpg" alt="Fundo">
         </div>
@@ -34,10 +39,10 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
 
             <p>" Livro bom é aquele que a gente passa à diante o prazer da leitura não pode ser restrito. " -Ncholas</p>
 
-            <img src="_imagens/icone-doar.png" alt="Imagem Doar" id="imgDoar">
-            <img src="_imagens/icone-trocar.png" alt="Imagem Trocar" id="imgTrocar">
+            <a href="doacoes.php"> <img src="_imagens/icone-doar.png" alt="Imagem Doar" title="Doar" id="imgDoar"> </a>
+            <a href="trocas.php"> <img src="_imagens/icone-trocar.png" alt="Imagem Trocar" title="Trocar" id="imgTrocar"> </a>
         </div>
-    </section>
+    </section> <br> <br> <br> <br> <br>
 
     <!--Chamando Footer-->
     <?php include "_modelos/footer.php"; ?>

@@ -15,7 +15,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="_css/style-doacoes.css">
+    <link rel="stylesheet" href="_css/style-trocas.css">
     <link rel="stylesheet" href="_modelos/style-geral.css">
 
     <!--Chamando fontes e o ícone do site-->
@@ -27,17 +27,17 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <!--Chamando cabecalho do site-->
     <?php include "_modelos/header.php"; ?> 
 
-    <h2 id="tituloDoacoes">DOAÇÕES</h2>
+    <h2 id="tituloTrocas">TROCAS</h2>
 
     <!--Chamando lateral do site-->
     <?php include "_modelos/aside.php"; ?>
 
     <br> <br> <br> <br> <br>
     <section class="corpo">
-        <form class="cadastrarLivro" method="POST" action="foto-livro-doar.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
+        <form class="cadastrarLivro" method="POST" action="foto-livro-trocar.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
             <div id="postagem-parte1">
                 <img id="imagemUsuario" src="_fotos-usuarios/<?php echo $imagemUsuario;?>" alt="Foto do Usuário">
-                <input name="txtComentario" type="text" placeholder="Poste aqui o livro para doar">
+                <input name="txtComentario" type="text" placeholder="Poste aqui o livro para trocar">
                 <button id="btnPostar" type="submit">POSTAR</button>
             </div> <br>
 
@@ -53,7 +53,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
         global $pdo;
 
         //selecione de cadastro o nome, sobrenome e imagem. Selecione de transacao livro, comentario e data. Das tabalas juntas cadastro e transacao. Onde o id de cadastro for igual ao id de transacao e o tipo da tabela transacao seja igual a 'D'. Ordenar pelas mais recentes.
-        $sql = "SELECT cad.nome, cad.sobrenome, cad.imagem, tra.livro, tra.comentario, tra.datta FROM cadastro cad join transacao tra WHERE cad.id = tra.iduser AND tra.tipo = 'D' ORDER BY tra.id DESC";
+        $sql = "SELECT cad.nome, cad.sobrenome, cad.imagem, tra.livro, tra.comentario, tra.datta FROM cadastro cad join transacao tra WHERE cad.id = tra.iduser AND tra.tipo = 'T' ORDER BY tra.id DESC";
         $sql = $pdo->prepare($sql);
         $sql->execute();
 

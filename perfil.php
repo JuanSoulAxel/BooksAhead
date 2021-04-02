@@ -35,25 +35,42 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
         <input type="file" name="arquivo" id="escolherArquivo" required> <br> <br>
         <input name="enviarArquivo" id="enviarArquivo" type="submit" value="Salvar">
     </form>
+    
+    <!--Criando form para fazer atualização dos dados-->
+    <form class="atualizarDados" method="POST" action="dados-usuario.php"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
+        <a id="btnFechar2"> <i class="fa fa-times"></i> </a> <br>
+        <p>Modifique aqui os seus dados cadastrais</p> <br>
+        <img src="_imagens/icone-atualizar-imagem.png" alt="Icone Atualizar"> <br> <br> <br>
+        <input type="text" placeholder="Novo nome" name="txtAtualizarNome" maxlength="30">
+        <input type="text" placeholder="Novo sobrenome" name="txtAtualizarSobrenome" maxlength="30"> <br> <br>
+        <input type="text" placeholder="Novo email" name="txtAtualizarEmail" maxlength="50">
+        <input type="text" placeholder="Novo telefone" name="txtAtualizarTelefone" maxlength="11"> <br> <br>
+        <input name="enviarArquivo2" id="enviarArquivo2" type="submit" value="Salvar"> <br>
+    </form>
 
     <!--Chamando o header-->
     <?php  include "_modelos/header.php"; ?>
 
-    <section class="corpo">
-        <div id="transacoes">
+    <!--Chamando o aside-->
+    <?php include "_modelos/aside.php"; ?> <br> <br> <br> <br>
+    
+    <section class="corpo-perfil sumir">
+        <div id="transacoes"> 
             <img id="suasDoacoes" src="_imagens/suas-doacoes.png" alt="Suas Doações">
             <img id="suasTrocas" src="_imagens/suas-trocas.png" alt="Suas Trocas">
             <img id="seusDesejados" src="_imagens/seus-desejados.png" alt="Seus Desejados">
-        </div>   <br> <br> <br> <br>
-
+        </div> 
         <div id="perfil">
+            <!--Esse botão servirá para aparecer a tela editar dados-->
+            <button id="editarInformacoes">EDITAR DADOS</button>
             <!--No img abaixo eu coloquei o diretório onde fica armazenado as fotos que os usuários cadastram, e após isso peguei com o php (verifica.php) a variável onde contém o nome do arquivo-->
             <img id="imagemUsuario" src="_fotos-usuarios/<?php echo $imagemUsuario;?>" alt="Foto do Usuário"> <br> <br>
-            <label id="nomeUsuario"> <?php echo $nomeUsuario ." ". $sobrenomeUsuario ?> </label>
-            <label> <?php echo $emailUsuario ?> </label>
-            <label> <?php echo $telefoneUsuario ?> </label> <br> <br> <br> <br> <br>
+            <label id="nomeUsuario"> <?php echo $nomeUsuario ." ". $sobrenomeUsuario ?> </label> <br> <br>
+            <!--Usei os dois com o id contato para reutilizar o código no css-->
+            <label id="contato"> <?php echo "Email: ". $emailUsuario ?> </label>
+            <label id="contato"> <?php echo "| Telefone: ". $telefoneUsuario ?> </label>
         </div>
-    </section>
+    </section> <br> <br> <br> <br> <br>
 
     <!--Chamando Footer-->
     <?php include "_modelos/footer.php"; ?>

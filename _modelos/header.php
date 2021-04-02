@@ -1,4 +1,4 @@
-<header class="cabecalho">
+<header class="cabecalho sumir">
     <label id="titulo"> <a href="principal.php">Books Ahead</a> </label>
     <nav id="menu">
         <ul>
@@ -8,5 +8,5 @@
             <li> <a href="#rodape">Contato</a> </li>
         </ul>
     </nav>
-    <a href="logout.php"> <img id="btnSair" src="_imagens/botao-sair.png" alt="Botão Sair"> </a>
+    <a href="_php/logout.php"> <img id="btnSair" src="_imagens/botao-sair.png" alt="Botão Sair"> </a>
 </header>

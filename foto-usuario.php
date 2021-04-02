@@ -14,10 +14,10 @@ if(isset($_FILES['arquivo']))
 
     //strtolower = deixa tudo minúsculo
     //esse menos quatro é pra pegar os últimos quatro dígitos do nome do arquivo ex: "arquivo.jpg". Aí pegaria somente o ".jpg"
-    $extensao = strtolower(substr($_FILES['arquivo']['name'], -4 )); 
+    //$extensao = strtolower(substr($_FILES['arquivo']['name'], -4 )); 
 
     //o novo nome vai pegar o nome e sobrenome do usuario dar um underline e pegar o id do usuário e após isso colocar a extensão
-    $novo_nome = $nomeUsuario . $sobrenomeUsuario . "_" . $_SESSION['id'] . $extensao;
+    $novo_nome = $nomeUsuario . $sobrenomeUsuario . "_" . $_SESSION['id'] . '.jpg';
 
     //é para onde o nosso upload vai ser feito
     $diretorio = '_fotos-usuarios/';

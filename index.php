@@ -24,7 +24,7 @@
         <h1>Books Ahead</h1>
     </header>
 
-    <section class="corpo">
+    <section class="corpo-index">
         <form name="login" class="tela-login" action="logar.php" method="POST">
             <h2>ENTRAR</h2>
               
@@ -32,7 +32,7 @@
             <input type="password" placeholder="Senha" id="txtSenhaEntrar" name="txtSenhaEntrar"> <br> <br>
             <button type="submit" id="btnEntrar" name="btnEntrar">Entrar</button>
 
-            <p id=borda-corpo></p>
+            <p id=borda-corpo-index></p>
         </form>  
         <!--Esse tem que ficar fora para não dar problema com o link consultar.php-->
         <p id="cadastrar">Se ainda não se cadastrou <button id="btnCadastrar">cadastre-se agora</button> </p>     
@@ -69,8 +69,6 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-    <script src="_javascript/script-index.js">
-    
-    </script> <!--Chamando _javascript-->
+    <script src="_javascript/script-index.js"> </script> <!--Chamando _javascript-->
 </body>
 </html>
