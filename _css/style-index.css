@@ -54,9 +54,9 @@ div.telaFundo {
 }
 
 .corpo-index h2 {
-    color: #fff;
+    font-family: Oswald, sans-serif;
     font-size: 2em;
-    font-family: sans-serif;
+    color: #fff;
     margin-bottom: 5%;
     text-decoration: underline #8B0000;
 }
@@ -70,6 +70,7 @@ div.telaFundo {
 }
 
 .corpo-index button#btnEntrar {
+    font-family: Oswald, sans-serif;
     width: 70%;
     background-color: #8B0000;
     color: #fff;
@@ -93,12 +94,15 @@ p#cadastrar {
     font-size: 1.1em;
     color: #fff;
     text-decoration: none;
-    list-style: none;}
+    list-style: none;
+}
 
 #btnCadastrar {
+    font-family: Oswald, sans-serif;
     color: #fff;
     background-color: #32CD32;
-    border-radius: 10px;
+    padding: 0.8%;
+    border-radius: 10vh;
     cursor: pointer;
 }
 
@@ -124,7 +128,7 @@ p#cadastrar {
 
 .tela-cadastrar h2 {
     padding-top: 2%;
-    font-family: sans-serif;
+    font-family: Oswald, sans-serif;
     font-size: 2em;
     color: #fff;
     text-decoration: underline #006400;
@@ -161,6 +165,7 @@ p#cadastrar {
     border-radius: 5px;
     padding: 1%;
     margin-top: 5%;
+    cursor: pointer;
 }
 
 #btnCadastrar2:hover {

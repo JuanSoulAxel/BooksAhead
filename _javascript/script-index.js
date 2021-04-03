@@ -1,6 +1,3 @@
-//biblioteca geral do JQUERY
-src="//code.jquery.com/jquery-1.12.0.min.js";
-
 /*=================FUNÇÃO MOSTRAR BOTÃO COM JQUERY=================*/
 //As funções abaixo farão a interação do botão cadastrar
 

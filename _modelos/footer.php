@@ -11,6 +11,11 @@
 
     <p id="copyright">Juan Axel &copy; Copyright | Books Ahead - Leu? Troque Já! | 2021</p>
 
+    <!--biblioteca geral do JQUERY-->
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="_javascript/script-footer.js"> </script> <!--Chamando data e hora do sistema-->
 </footer>
 </body>

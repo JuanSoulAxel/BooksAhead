@@ -4,7 +4,7 @@ function carregarDataHora() {
     var mes = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
     
     var infDate = document.querySelector(`p#infDate`);
-    infDate.innerHTML = `${diaDaSemana[data.getDay()]}, ${mes[data.getMonth()]} ${data.getDate()}, ${data.getFullYear()}`;
+    infDate.innerHTML = `${data.getDate()} de ${mes[data.getMonth()]}, ${diaDaSemana[data.getDay()]} , ${data.getFullYear()}`;
     
     /*
     var dia     = data.getDate();           // 1-31

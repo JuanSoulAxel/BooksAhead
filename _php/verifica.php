@@ -10,12 +10,14 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id']))
     $logged = $u->verificacao($_SESSION['id']); //passando id para função verificação
 
     //pegando valores do banco de dados
+    $idUsuario = $_SESSION['id'];
     $nomeUsuario = $logged['nome']; 
     $sobrenomeUsuario = $logged['sobrenome'];
     $emailUsuario = $logged['email'];
     $telefoneUsuario = $logged['telefone'];
     $imagemUsuario = $logged['imagem'];
-    
+    $capaUsuario = $logged['capa'];
+
     if($imagemUsuario == null) //se não tiver foto de perfil cadastrada aí vai mostrar a imagem foto-usuario.png
     {
         $imagemUsuario = "foto-usuario.png";

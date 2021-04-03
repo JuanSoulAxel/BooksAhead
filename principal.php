@@ -30,6 +30,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <!--Chamando o aside-->
     <?php include "_modelos/aside.php"; ?> <br> <br> <br> <br>
 
+
     <section class="corpo-principal">
         <div id="inicio">
             <img src="_imagens/Fundo-Principal.jpg" alt="Fundo">
@@ -37,7 +38,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
         <div id="doar-trocar">
             <h1>FAÇA JÁ A SUA COLABORAÇÃO</h1>
 
-            <p>" Livro bom é aquele que a gente passa à diante o prazer da leitura não pode ser restrito. " -Ncholas</p>
+            <p>" Livro bom é aquele que a gente passa à diante o prazer da leitura não pode ser restrito. " -Caio Rossan</p>
 
             <a href="doacoes.php"> <img src="_imagens/icone-doar.png" alt="Imagem Doar" title="Doar" id="imgDoar"> </a>
             <a href="trocas.php"> <img src="_imagens/icone-trocar.png" alt="Imagem Trocar" title="Trocar" id="imgTrocar"> </a>

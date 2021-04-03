@@ -8,11 +8,11 @@ div.telaFundo {
     background-color: rgba(0, 0, 0, 0.7);
 }
  
-/*ESSA PARTE VAI MOSTRAR A TELA PRA MODIFICAR IMAGENS E TELA ATUALIZAR DADOS*/
+/*ESSA PARTE VAI MOSTRAR A TELA PRA MODIFICAR IMAGENS E TELA ATUALIZAR DADOS E CADASTRAR CAPA*/
 
 
-/*MODIFICAR IMAGEM E DADOS*/ 
-form.cadastrarImagem, form.atualizarDados {
+/*MODIFICAR IMAGEM E DADOS E CAPA*/ 
+form.cadastrarImagem, form.atualizarDados, form.cadastrarCapa {
     position: absolute;
     text-align: center;
     display: none; /*não mostrar essa tela inicialmente*/
@@ -23,21 +23,21 @@ form.cadastrarImagem, form.atualizarDados {
     border-radius: 30px;
 }
 
-form.cadastrarImagem p, form.atualizarDados p {
+form.cadastrarImagem p, form.atualizarDados p, form.cadastrarCapa p {
     color: #000;
     text-decoration: underline;
     font-family: Oswald, sans-serif;
     font-size: 1.5em;
 }
 
-form.cadastrarImagem a#btnFechar, form.atualizarDados a#btnFechar2 {
+form.cadastrarImagem a#btnFechar, form.atualizarDados a#btnFechar2, form.cadastrarCapa a#btnFechar3 {
     float: right;
     color: #000;
     font-size: 2em;
     padding: 2%;
 }
 
-form.cadastrarImagem input#enviarArquivo, form.atualizarDados input#enviarArquivo2 {
+form.cadastrarImagem input#enviarArquivo, form.atualizarDados input#enviarArquivo2, form.cadastrarCapa input#enviarArquivo3 {
     width: 15%;
     background: linear-gradient(to right, #FF0000, #FFFF00);
     color: #000;
@@ -47,7 +47,7 @@ form.cadastrarImagem input#enviarArquivo, form.atualizarDados input#enviarArquiv
     border: 2px solid #000;
 }
 
-form.cadastrarImagem input#enviarArquivo:hover, form.atualizarDados input#enviarArquivo2:hover {
+form.cadastrarImagem input#enviarArquivo:hover, form.atualizarDados input#enviarArquivo2:hover, form.cadastrarCapa input#enviarArquivo3:hover {
     transform: scale(1.05);
     transition: 1s;
 }
@@ -96,7 +96,11 @@ form.atualizarDados input {
 } 
 
 .corpo-perfil div#perfil {
-    margin-top: 2%;
+    margin-left: 25%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 90vh;
+    height: 40vh;
+    padding: 1%;
 }
 
 .corpo-perfil div#perfil img {
@@ -104,13 +108,12 @@ form.atualizarDados input {
     max-height: 150px;
     min-width: 150px;
     min-height: 150px;
-    margin-left: 25%;
     float: left;
     border-radius: 100%;
     border: 3px solid #FFF;
 }
 
-.corpo-perfil div#perfil img:hover {
+.corpo-perfil div#perfil img:active {
     transform: scale(1.03);
     transition: 0.5s;
 }
@@ -118,15 +121,17 @@ form.atualizarDados input {
 .corpo-perfil div#perfil label#nomeUsuario {
     font-size: 3em;
     font-family: Oswald, sans-serif;
-    margin: 3%;
+    margin-left: 5%;
 }
 
 .corpo-perfil div#perfil label#contato {
     font-family: Oswald, sans-serif;
+    margin-left: 15%;
 }
 
 .corpo-perfil div#perfil button#editarInformacoes {
-    margin-left: 5%;
+    margin-top: 1%;
+    float: right;
     background: #8B0000;
     font-family: Oswald, sans-serif;
     color: #fff;
@@ -134,7 +139,17 @@ form.atualizarDados input {
     padding: 0.5%;
 }
 
-
 .corpo-perfil div#perfil button#editarInformacoes:hover {
-    transition: 5s;
+    background-color: #800000;
+}
+
+.corpo-perfil img#capaPerfil {
+    width: 90vh;
+    height: 40vh;
+    margin-left: 25%;
+}
+
+.corpo-perfil img#capaPerfil:active {
+    transform: scale(1.01);
+    transition: 0.5s;
 }

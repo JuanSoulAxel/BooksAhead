@@ -14,7 +14,7 @@ if(isset($_POST['txtEmailEntrar']) && !empty($_POST['txtEmailEntrar']) && isset(
     {
         if(isset($_SESSION['id'])) //se existir a sessão (foi criada na classe)
         {
-            header("Location: principal.php");
+            header("Location: loading.php");
         }
         else
         {

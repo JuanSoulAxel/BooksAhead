@@ -1,6 +1,3 @@
-//biblioteca geral do JQUERY
-src="//code.jquery.com/jquery-1.12.0.min.js";
-
 /*=================FUNÇÃO MOSTRAR BOTÃO COM JQUERY=================*/
 //O ".sumir" eu usei dentro de classes já criadas para reutilizar os códigos
 
@@ -20,6 +17,14 @@ $("#editarInformacoes").click(function() {
 } );
 $("#btnFechar2").click(function() { //Quando clicar no btnFechar
     $(".atualizarDados").hide() && $(".telaFundo").hide() && $(".sumir").show(); //desaparecer tela
+} );
+
+//As funções abaixo farão a interação do botão editar capa perfil
+$("#capaPerfil").click(function() {
+    $(".sumir").hide() && $(".telaFundo").show() && $(".cadastrarCapa").show();
+} );
+$("#btnFechar3").click(function() { //Quando clicar no btnFechar
+    $(".cadastrarCapa").hide() && $(".telaFundo").hide() && $(".sumir").show(); //desaparecer tela
 } );
 
 /*=================USANDO MÁSCARA COM AJAX PARA TELEFONE=================*/

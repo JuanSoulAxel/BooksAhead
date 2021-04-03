@@ -26,6 +26,9 @@ img {
     max-width: 100%;
 }
 
+#imagemGif {
+    margin-left: 15%;
+}
 
 /*Cabecalho*/
 
@@ -202,7 +205,7 @@ h2#tituloDoacoes, h2#tituloTrocas, h2#tituloPrincipal {
 section.corpo {
     width: 80vh;
     height: 35vh;
-    margin-left: 70vh;
+    margin-left: 28%;
     padding: 1%; /*Para jogar os itens que estavam um pouco para fora*/
     background: #fff;
     border-radius: 2vh;
@@ -255,8 +258,8 @@ section.corpo div#postagem-parte2 {
 
 section.corpo2 {
     width: 80vh;
-    height: 67vh;
-    margin-left: 70vh;
+    height: 70vh;
+    margin-left: 28%;
     padding: 1%; /*Para jogar os itens que estavam um pouco para fora*/
     background: #fff;
     border-radius: 2vh;

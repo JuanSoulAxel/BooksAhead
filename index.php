@@ -65,10 +65,8 @@
     </form>
 
     <!--Chamando Footer-->
-    <?php include "_modelos/footer.php"; ?>
+    <?php include "_modelos/footer.php"; ?> <!--Ele vai chamar também as pastas do jQuery-->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="_javascript/script-index.js"> </script> <!--Chamando _javascript-->
 </body>
 </html>

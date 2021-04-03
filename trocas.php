@@ -21,7 +21,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <!--Chamando fontes e o ícone do site-->
     <?php include "_modelos/fonts.php"; ?>
 
-    <title>Books Ahead - Doações</title>
+    <title>Books Ahead - Trocas</title>
 </head>
 <body>
     <!--Chamando cabecalho do site-->

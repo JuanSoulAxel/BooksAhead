@@ -82,6 +82,32 @@ class Usuario {
         }
     }
 
+    public function adicionarCapa($capa, $id) {
+        global $pdo;
+
+        $sql = "UPDATE cadastro SET capa = :capa WHERE id= :id";
+        $sql = $pdo->prepare($sql);
+        $sql->bindValue("capa", $capa);
+        $sql->bindValue("id", $id);
+        
+        if($sql->execute())
+        {
+            echo
+            "<script language='javascript' type='text/javascript'>
+                alert('Capa adicionada com sucesso!'); 
+                window.location.href='perfil.php';
+            </script>";
+        }
+        else
+        {
+            echo
+            "<script language='javascript' type='text/javascript'>
+                alert('Infelizmente algo deu errado... <br>Tente novamente mais tarde!'); 
+                window.location.href='perfil.php';
+            </script>";
+        }
+    }
+
     public function adicionarLivro($novo_nome, $comentario, $tipo, $id) {
         global $pdo;
 
@@ -106,6 +132,35 @@ class Usuario {
             "<script language='javascript' type='text/javascript'>
                 alert('Infelizmente algo deu errado... <br>Tente novamente mais tarde!'); 
                 window.location.href='doacoes.php';
+            </script>";
+        }
+    }
+
+    public function atualizarDados($nome, $sobrenome, $email, $telefone, $id) {
+        global $pdo;
+
+        $sql = "UPDATE cadastro SET nome = :nome, sobrenome = :sobrenome, email = :email, telefone = :telefone WHERE id = :id";
+        $sql = $pdo->prepare($sql);
+        $sql->bindValue("nome", $nome);
+        $sql->bindValue("sobrenome", $sobrenome);
+        $sql->bindValue("email", $email);
+        $sql->bindValue("telefone", $telefone);
+        $sql->bindValue("id", $id);
+        
+        if($sql->execute())
+        {
+            echo
+            "<script language='javascript' type='text/javascript'>
+                alert('Dados atualizados com sucesso!'); 
+                window.location.href='perfil.php';
+            </script>";
+        }
+        else
+        {
+            echo
+            "<script language='javascript' type='text/javascript'>
+                alert('Dados não atualizados... Tente novamente depois.'); 
+                window.location.href='perfil.php';
             </script>";
         }
     }
