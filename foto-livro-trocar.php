@@ -24,7 +24,7 @@ if(isset($_FILES['livro']))
     $novo_nome = md5(time()) . $extensao; //isso evita que tenha nome de arquivos duplicados no servidor para que nenhum sobescreva o outro.
 
     //é para onde o nosso upload vai ser feito
-    $diretorio = '_fotos-livros-doar/';
+    $diretorio = '_fotos-livros-trocar/';
 
     //usando para criar a pasta
     mkdir($diretorio, 0755);

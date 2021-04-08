@@ -1,7 +1,7 @@
 <aside class="lateral sumir">
         <a href="perfil.php">
         <div id="lateral-parte1">
-            <img id="imagemUsuario-aside" src="_fotos-usuarios/<?php echo $imagemUsuario;?>" alt="Foto do Usuário">
+            <img id="imagemUsuario-aside" src="<?php echo $imagemUsuario;?>" alt="Foto do Usuário">
             <label id="nomeUsuario-aside"> <?php echo $nomeUsuario ." ". $sobrenomeUsuario ?> </label>
         </div> 
         </a>

@@ -36,7 +36,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <section class="corpo">
         <form class="cadastrarLivro" method="POST" action="foto-livro-doar.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
             <div id="postagem-parte1">
-                <img id="imagemUsuario" src="_fotos-usuarios/<?php echo $imagemUsuario;?>" alt="Foto do Usuário">
+                <img id="imagemUsuario" src="<?php echo $imagemUsuario;?>" alt="Foto do Usuário">
                 <input name="txtComentario" type="text" placeholder="Poste aqui o livro para doar">
                 <button id="btnPostar" type="submit">POSTAR</button>
             </div> <br>
@@ -49,31 +49,8 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
         </form>
     </section> <br> <br>
 
-    <?php //essa parte vai fazer aparecer todas as postagens feitas            
-        global $pdo;
-
-        //selecione de cadastro o nome, sobrenome e imagem. Selecione de transacao livro, comentario e data. Das tabalas juntas cadastro e transacao. Onde o id de cadastro for igual ao id de transacao e o tipo da tabela transacao seja igual a 'D'. Ordenar pelas mais recentes.
-        $sql = "SELECT cad.nome, cad.sobrenome, cad.imagem, tra.livro, tra.comentario, tra.datta FROM cadastro cad join transacao tra WHERE cad.id = tra.iduser AND tra.tipo = 'D' ORDER BY tra.id DESC";
-        $sql = $pdo->prepare($sql);
-        $sql->execute();
-
-        while($dados = $sql->fetch(PDO::FETCH_ASSOC)) {
-    ?>
-    <section class="corpo2">
-        <p id="dataPostagem"> <?php echo date("d/m/Y - H:i", strtotime($dados['datta'])); ?> </p> <br> <!--Essa função em PHP formata e pega somente a data -->
-        
-        <img id="imagemUsuario" src="_fotos-usuarios/<?php echo $dados['imagem']; ?>" alt="">
-        <label id="nomeUsuario"> <?php echo $dados['nome'] ." ". $dados['sobrenome']; ?> </label> <br> <br>
-
-        <p id="comentarioUsuario"> <?php echo $dados['comentario']; ?> </p>
-        <img id="imagemLivro" src="_fotos-livros-doar/<?php echo $dados['livro']; ?>" alt="Foto do Livro">
-
-        <p id="bordaCorpo2"> </p>
-
-        <p id="iconeDesejados"> <i class="fas fa-heart fa">  Eu Quero</i> </p> <!--Sempre se usa esse "fa" depois para pegar-->
-        <p id="iconeDenunciar"> <i class="fas fa-bullhorn fa"> Denunciar</i> </p>
-    </section> <br> <br>
-    <?php } ?> 
+    <!--Essa variável trocas vai verificar qual a página para listar corretamente as transações-->
+    <?php $pagina="doacoes"; include "_php/listar-transacoes.php"; ?>
 
     <!--Chamando footer-->
     <?php include "_modelos/footer.php"; ?>

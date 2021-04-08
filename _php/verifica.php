@@ -16,15 +16,25 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id']))
     $emailUsuario = $logged['email'];
     $telefoneUsuario = $logged['telefone'];
     $imagemUsuario = $logged['imagem'];
-    $capaUsuario = $logged['capa'];
+    $capaUsuario = $logged['capa'];    
 
-    if($imagemUsuario == null) //se não tiver foto de perfil cadastrada aí vai mostrar a imagem foto-usuario.png
+    //As linhas abaixo irão verificar se o usuário tem foto cadastrada
+    if($imagemUsuario == null) 
     {
-        $imagemUsuario = "foto-usuario.png";
+        $imagemUsuario = "_imagens/USER_PADRAO/Foto-Usuario.png";
+    } 
+    else 
+    {
+        $imagemUsuario = "_fotos-usuarios/". $logged['imagem'];
     }
-    else //se tiver foto vai pegar a foto
+    //Se não tiver fotos cadastradas vai substituir por uma padrão do site
+    if($capaUsuario == null)
     {
-        $imagemUsuario = $logged['imagem'];
+        $capaUsuario = "_imagens/USER_PADRAO/Fundo-Principal.jpg";
+    }
+    else
+    {
+        $capaUsuario = "_capas-usuarios/".$logged['capa'];    
     }
 }
 else

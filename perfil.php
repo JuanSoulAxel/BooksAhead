@@ -70,13 +70,13 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
             <img id="seusDesejados" src="_imagens/seus-desejados.png" alt="Seus Desejados">
         </div> 
 
-        <img id="capaPerfil" src="_capas-usuarios/<?php echo $capaUsuario;?>" alt="">
+        <img id="capaPerfil" src="<?php echo $capaUsuario;?>" alt="">
 
         <div id="perfil">
             <!--Esse botão servirá para aparecer a tela editar dados-->
             <button id="editarInformacoes">EDITAR DADOS</button>
             <!--No img abaixo eu coloquei o diretório onde fica armazenado as fotos que os usuários cadastram, e após isso peguei com o php (verifica.php) a variável onde contém o nome do arquivo-->
-            <img id="imagemUsuario" src="_fotos-usuarios/<?php echo $imagemUsuario;?>" alt="Foto do Usuário"> <br> <br>
+            <img id="imagemUsuario" src="<?php echo $imagemUsuario;?>" alt="Foto do Usuário"> <br> <br>
             <label id="nomeUsuario"> <?php echo $nomeUsuario ." ". $sobrenomeUsuario ?> </label> <br> <br> <br> <br> <br>
             <!--Usei os dois com o id contato para reutilizar o código no css-->
             <label id="contato"> <?php echo "Email: ". $emailUsuario ?> </label>
@@ -84,31 +84,9 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
         </div>
     </section> <br> <br> <br> <br> <br>
     
-    <?php //essa parte vai fazer aparecer todas as postagens feitas            
-        global $pdo;
 
-        //selecione de cadastro o nome, sobrenome e imagem. Selecione de transacao livro, comentario e data. Das tabalas juntas cadastro e transacao. Onde o id de cadastro for igual ao id de transacao e o tipo da tabela transacao seja igual a 'D'. Ordenar pelas mais recentes.
-        $sql = "SELECT cad.nome, cad.sobrenome, cad.imagem, tra.livro, tra.comentario, tra.datta FROM cadastro cad join transacao tra WHERE cad.id = tra.iduser AND tra.iduser = $idUsuario ORDER BY tra.id DESC";
-        $sql = $pdo->prepare($sql);
-        $sql->execute();
-
-        while($dados = $sql->fetch(PDO::FETCH_ASSOC)) {
-    ?>
-    <section class="corpo2">
-        <p id="dataPostagem"> <?php echo date("d/m/Y - H:i", strtotime($dados['datta'])); ?> </p> <br> <!--Essa função em PHP formata e pega somente a data -->
-        
-        <img id="imagemUsuario" src="_fotos-usuarios/<?php echo $dados['imagem']; ?>" alt="">
-        <label id="nomeUsuario"> <?php echo $dados['nome'] ." ". $dados['sobrenome']; ?> </label> <br> <br>
-
-        <p id="comentarioUsuario"> <?php echo $dados['comentario']; ?> </p>
-        <img id="imagemLivro" src="_fotos-livros-doar/<?php echo $dados['livro']; ?>" alt="Foto do Livro">
-
-        <p id="bordaCorpo2"> </p>
-
-        <p id="iconeDesejados"> <i class="fas fa-heart fa">  Eu Quero</i> </p> <!--Sempre se usa esse "fa" depois para pegar-->
-        <p id="iconeDenunciar"> <i class="fas fa-bullhorn fa"> Denunciar</i> </p>
-    </section> <br> <br>
-    <?php } ?> 
+    <!--Essa variável trocas vai verificar qual a página para listar corretamente as transações-->
+    <?php $pagina="perfil"; include "_php/listar-transacoes.php"; ?>
 
     <!--Chamando Footer-->
     <?php include "_modelos/footer.php"; ?> <!--Ele vai chamar também as pastas do jQuery-->
