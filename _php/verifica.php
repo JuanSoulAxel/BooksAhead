@@ -25,7 +25,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id']))
     } 
     else 
     {
-        $imagemUsuario = "_fotos-usuarios/". $logged['imagem'];
+        $imagemUsuario = "_fotos-transacao/fotos-usuarios/".$_SESSION['id'].')'.$nomeUsuario.'/'.$logged['imagem'];
     }
     //Se não tiver fotos cadastradas vai substituir por uma padrão do site
     if($capaUsuario == null)
@@ -34,7 +34,8 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id']))
     }
     else
     {
-        $capaUsuario = "_capas-usuarios/".$logged['capa'];    
+        $capaUsuario = "_fotos-transacao/capas-usuarios/".$_SESSION['id'].')'.$nomeUsuario.'/'.$logged['capa'];
+  
     }
 }
 else

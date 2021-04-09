@@ -23,11 +23,23 @@ if(isset($_FILES['livro']))
     //e por último a extensão
     $novo_nome = md5(time()) . $extensao; //isso evita que tenha nome de arquivos duplicados no servidor para que nenhum sobescreva o outro.
 
-    //é para onde o nosso upload vai ser feito
-    $diretorio = '_fotos-livros-trocar/';
+     //primeiro diretorio
+     $diretorio0 = '_fotos-transacao/';
 
-    //usando para criar a pasta
-    mkdir($diretorio, 0755);
+     //usando para criar a pasta
+     mkdir($diretorio0, 0755);
+ 
+     //segundo diretorio dentro do primeiro
+     $diretorio00 = $diretorio0.'livros/';
+ 
+     //usando para criar a pasta
+     mkdir($diretorio00, 0755);
+ 
+     //criando diretorio final
+     $diretorio = $diretorio00.$_SESSION['id'].')'.$nomeUsuario.'/';
+ 
+     //usando para criar a pasta
+     mkdir($diretorio, 0755);
     
     //quando o php recebe um arquivo esse arquivo é automaticamente enviado para uma pasta temporária
     //para acessar a pasta se usa a função abaixo
@@ -42,6 +54,6 @@ if(isset($_FILES['livro']))
 }
 else
 {
-    header("Location: doacoes.php");
+    header("Location: trocas.php");
 }
 ?>

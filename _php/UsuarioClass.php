@@ -123,7 +123,7 @@ class Usuario {
             echo
             "<script language='javascript' type='text/javascript'>
                 alert('Livro adicionado com sucesso!'); 
-                window.location.href='doacoes.php';
+                window.location.href='perfil.php';
             </script>";
         }
         else
@@ -131,7 +131,7 @@ class Usuario {
             echo
             "<script language='javascript' type='text/javascript'>
                 alert('Infelizmente algo deu errado... <br>Tente novamente mais tarde!'); 
-                window.location.href='doacoes.php';
+                window.location.href='perfil.php';
             </script>";
         }
     }

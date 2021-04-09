@@ -19,8 +19,20 @@ if(isset($_FILES['arquivo']))
     //o novo nome vai pegar o nome e sobrenome do usuario dar um underline e pegar o id do usuário e após isso colocar a extensão
     $novo_nome = $nomeUsuario . $sobrenomeUsuario . "_perfil_" . $_SESSION['id'] . '.jpg';
 
-    //é para onde o nosso upload vai ser feito
-    $diretorio = '_fotos-usuarios/';
+    //primeiro diretorio
+    $diretorio0 = '_fotos-transacao/';
+
+    //usando para criar a pasta
+    mkdir($diretorio0, 0755);
+
+    //segundo diretorio dentro do primeiro
+    $diretorio00 = $diretorio0.'fotos-usuarios/';
+
+    //usando para criar a pasta
+    mkdir($diretorio00, 0755);
+
+    //criando diretorio final
+    $diretorio = $diretorio00.$_SESSION['id'].')'.$nomeUsuario.'/';
 
     //usando para criar a pasta
     mkdir($diretorio, 0755);
