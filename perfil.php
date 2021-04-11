@@ -62,7 +62,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
 
     <!--Chamando o aside-->
     <?php include "_modelos/aside.php"; ?> <br> <br> <br> <br>
-    
+
     <section class="corpo-perfil sumir">
         <div id="transacoes"> 
             <img id="suasDoacoes" src="_imagens/suas-doacoes.png" alt="Suas Doações">
@@ -82,9 +82,9 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
             <label id="contato"> <?php echo "Email: ". $emailUsuario ?> </label>
             <label id="contato"> <?php echo "Telefone: ". $telefoneUsuario ?> </label>
         </div>
-    </section> <br> <br> <br> <br> <br>
-    
+    </section> 
 
+    <br> <br> <br> <br> <br>
     <!--Essa variável trocas vai verificar qual a página para listar corretamente as transações-->
     <?php $pagina="perfil"; include "_php/listar-transacoes.php"; ?>
 

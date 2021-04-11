@@ -32,6 +32,11 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <!--Chamando lateral do site-->
     <?php include "_modelos/aside.php"; ?>
 
+    <aside class="lateral-direita">
+        <img id="removerMarginTop" src="_imagens/doar-coracao.png" alt="Coração Doar 1"> <br>
+        <img src="_imagens/doar-coracao2.png" alt="Coração Doar 2"> <br>
+    </aside> 
+    
     <br> <br> <br> <br> <br>
     <section class="corpo">
         <form class="cadastrarLivro" method="POST" action="foto-livro-doar.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->

@@ -17,13 +17,9 @@ div.telaFundo {
 .cabecalhoTitulo h1 {
     font-family: 'Lobster', sans-serif; /*caso não suporte essa fonte usa a sans-serif*/
     font-size: 4em;
-    color: #FF0000;
+    color: #e00707;
     padding: 1%;
     transition: 1s;
-}
-
-.cabecalhoTitulo h1:hover {
-    color: #FF4500;
 }
 
 .cabecalhoTitulo p {

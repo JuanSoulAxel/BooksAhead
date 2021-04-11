@@ -3,7 +3,7 @@
 section.corpo-principal {
     width: 100vh;
     height: 35vh;
-    margin-left: 60vh;
+    margin-left: 50vh;
     color: #fff;
 }
 
@@ -41,4 +41,12 @@ div#doar-trocar {
     transition: 0.6s;
     background: linear-gradient(to right, #FFFF00, #FF0000);
     border-radius: 10vh;
+}
+
+aside.outra-lateral p {
+    position: fixed;
+    float: right;
+    width: 20vh;
+    background: linear-gradient(to right, #FFFF00, #FF0000);
+
 }
