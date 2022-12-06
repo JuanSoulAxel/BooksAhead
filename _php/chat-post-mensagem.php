@@ -1,5 +1,5 @@
 <?php
-include("_php/verifica.php");
+include("verifica.php");
 
 $mensagem = $_POST['mensagem'];
 
@@ -9,6 +9,6 @@ $u -> mandarMensagem($nomeUsuario, $sobrenomeUsuario, $telefoneUsuario, $mensage
 
 echo
             "<script language='javascript' type='text/javascript'>
-                window.location.href='chat.php';
+                window.location.href='../chat.php';
             </script>";
 ?>

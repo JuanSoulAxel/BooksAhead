@@ -1,6 +1,6 @@
 <?php 
 
-include("_php/verifica.php");
+include("verifica.php");
 
 $sql = $pdo->query("SELECT * FROM chat");
 

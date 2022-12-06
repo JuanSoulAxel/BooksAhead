@@ -39,7 +39,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
                 document.getElementById('baloesdeconversa').innerHTML = req.responseText;
             }
         }
-        req.open('GET', 'chat-select-db.php', true);
+        req.open('GET', '_php/chat-select-db.php', true);
         req.send();
     }
     
@@ -69,7 +69,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
             <img id="emoticonMensagens" src="_imagens/emoticon-mensagens.png" alt="Emoticon Mensagens">
             <img id="anexoMensagens" src="_imagens/anexo-mensagens.png" alt="Emoticon Mensagens">
 
-            <form method="POST" action="chat-post-mensagem.php">
+            <form method="POST" action="_php/chat-post-mensagem.php">
               <input type="text" id="mensagem" name="mensagem" placeholder="mensagem" required>
               <input type="submit" id="botaoMensagem"  name="botaoMensagem" value="enviar">
             </form>
