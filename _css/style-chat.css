@@ -1,0 +1,102 @@
+section#blocoConversa {
+    background-color: #363636;
+    width: 50%;
+    height: 85%;
+    margin-top: 2%;
+    top: 50%; /*essa e as duas outras linhas fazem o bloco ficar no centro de tudo e responsivo*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+div#p1-blocoConversa {
+    background-color: #808080;
+    padding: 1.5%;
+}
+div#p1-blocoConversa label#chatGeral {
+    font-family: fantasy;
+    font-size: 7vh;
+}
+
+div#baloesdeconversa {
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    background-color: #DCDCDC;
+    font-size: 3%;
+    overflow-y: scroll;
+}
+
+div#p3-blocoConversa {
+    position: fixed;
+    bottom: 0;
+    background-color: #D3D3D3;
+    width: 100%;
+    height: 9%;
+    padding: 1%;
+}
+
+div#p3-blocoConversa img#anexoMensagens, img#emoticonMensagens {
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 2%;
+    float: left;
+}
+
+div#p3-blocoConversa input#mensagem {
+    width: 70%;
+    background-color: #FFF;
+    padding: 1.2%;
+    border-radius: 10vh;
+}
+
+div#p3-blocoConversa input#botaoMensagem {
+    background-color: #800000;
+    color: #FFF;
+    width: 9%;
+    margin-left: 2%;
+    padding: 1.2%;
+    border-radius: 10vh;
+}
+
+/*BALÃO DE MENSAGEM: NOME E A MENSAGEM DO USUÁRIO NO CHAT*/
+
+img#imagemUsuarioMensagem {
+    float: left;
+    margin-right: 5%;
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 10vh;
+}
+
+div#balaoMensagemUsuario, div#balaoMensagemOutros {
+    width: 50%;
+    padding: 2%;
+    margin: 1%;
+    border-radius: 5vh;
+}
+
+div#balaoMensagemUsuario {
+    float: right;  
+    background-color: #98FB98;
+}
+
+div#balaoMensagemOutros {
+    float: left;
+    background-color: #FFF;
+
+}
+
+h1#nomeUsuarioMensagem {
+    font-weight: bold;
+    font-size: 3vh;
+}
+ 
+p#mensagemUsuario {
+    margin: 2%;
+    font-size: 2vh;
+}

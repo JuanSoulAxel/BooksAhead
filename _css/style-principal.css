@@ -1,0 +1,52 @@
+/*Corpo - imagens doar e trocar*/
+
+section.corpo-principal {
+    width: 100vh;
+    height: 35vh;
+    margin-left: 50vh;
+    color: #fff;
+}
+
+div#doar-trocar {
+    background: #fff;
+}
+
+#doar-trocar h1 {
+    font-family: Anton, sans-serif;
+    background-color: #FF0000;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2.5%;
+}
+
+#doar-trocar p {
+    float: left;
+    width: 53%;
+    font-family: 'Averia Serif Libre', sans-serif;
+    font-size: 1.4em;
+    color: #000;
+    margin-left: 2%;
+}
+
+#imgDoar, #imgTrocar {
+    float: right;
+    background: linear-gradient(to right,#FF0000, #FFFF00);
+    border-radius: 10px;
+    padding: 1.5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+}
+
+#imgDoar:hover, #imgTrocar:hover {
+    transition: 0.6s;
+    background: linear-gradient(to right, #FFFF00, #FF0000);
+    border-radius: 10vh;
+}
+
+aside.outra-lateral p {
+    position: fixed;
+    float: right;
+    width: 20vh;
+    background: linear-gradient(to right, #FFFF00, #FF0000);
+
+}

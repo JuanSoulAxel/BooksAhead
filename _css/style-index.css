@@ -1,0 +1,210 @@
+body {
+    background-image: url(../_imagens/Fundo-Inicial.jpg);
+}
+
+/*DIV PARA DEIXAR O FUNDO ESCURO QUANDO CLICAR NA FOTO DO PERFIL*/
+
+div.telaFundo {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh; /*vai pegar 100%*/
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*CABECALHO*/
+
+.cabecalhoTitulo h1 {
+    font-family: 'Lobster', sans-serif; /*caso não suporte essa fonte usa a sans-serif*/
+    font-size: 4em;
+    color: #e00707;
+    padding: 1%;
+    transition: 1s;
+}
+
+.cabecalhoTitulo p {
+    width: 15%;
+    position: absolute;
+    margin-left: 3.5%;
+    color: #fff;
+    font-family: 'Lobster', sans-serif;
+    font-size: 1.5em;
+}
+
+.cabecalhoTitulo p:hover {
+    color: #FFE4C4;
+}
+
+/*CORPO*/
+
+.corpo-index {
+    background-color: rgba(0, 0, 0, 0.85555);
+    width: 30%;
+    height: 40%;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 35%;
+    padding: 1%;
+    border-radius: 2%;
+    transition: 1.2s;
+}
+
+.corpo-index h2 {
+    font-family: Oswald, sans-serif;
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 5%;
+    text-decoration: underline #8B0000;
+}
+
+.corpo-index input {
+    width: 70%;
+    background-color: #363636;
+    color: #fff;
+    padding: 4%;
+    border-radius: 10px;
+}
+
+.corpo-index button#btnEntrar {
+    font-family: Oswald, sans-serif;
+    width: 70%;
+    background-color: #8B0000;
+    color: #fff;
+    padding: 2%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.corpo-index button#btnEntrar:hover {
+    background-color: #800000;
+}
+
+p#borda-corpo-index { /*formando linha para dividir a parte de entrar da parte de cadastrar*/
+    border: 1px solid #DCDCDC;
+    margin-top: 20%;
+    margin-bottom: 2%;
+}
+
+p#cadastrar {
+    width: 100%;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+}
+
+#btnCadastrar {
+    font-family: Oswald, sans-serif;
+    color: #fff;
+    background-color: #32CD32;
+    padding: 0.8%;
+    border-radius: 10vh;
+    cursor: pointer;
+}
+
+#btnCadastrar:hover {
+    background-color: #006400;
+    color: #fff;
+}
+
+
+/*TELA CADASTRO*/
+
+.tela-cadastrar {
+    display: none;
+    margin-top: 5%;
+    margin-left: 30%;
+    position: relative;
+    text-align: center;
+    width: 40%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.85555);
+    transition: 2s;
+}
+
+.tela-cadastrar h2 {
+    padding-top: 2%;
+    font-family: Oswald, sans-serif;
+    font-size: 2em;
+    color: #fff;
+    text-decoration: underline #006400;
+    
+}
+
+#borda-cadastrar {
+    margin: 5%;
+    border: 1px solid #fff;
+}
+
+.tela-cadastrar a {
+    float: right;
+    font-size: 2em;
+    color: #fff;
+    padding-right: 1%;
+    padding-top: 1%;
+    cursor: pointer;
+}
+
+.tela-cadastrar input, select {
+    width: 40%;
+    background-color: #363636;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+}
+
+#btnCadastrar2 {
+    width: 50%;
+    background-color: #32CD32;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1%;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+#btnCadastrar2:hover {
+    background-color: #006400;
+}
+
+#comentario-cadastrar {
+    margin-top: 10%;
+    margin-left: 5%;
+    padding-bottom: 2%;
+    width: 85%;
+    color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+    /*CABECALHO*/
+
+    .cabecalhoTitulo h1 {
+        width: 100%;
+        font-size: 4em;
+    } 
+
+    .cabecalhoTitulo p {
+        display: none;
+    }
+
+    /*CORPO*/
+
+    .corpo-index {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    /*TELA CADASTRAR*/
+    .tela-cadastrar {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    /*RODAPE*/
+
+    .rodape {
+        position: absolute;
+        bottom: 0%;
+    }
+}
