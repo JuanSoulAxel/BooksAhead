@@ -25,7 +25,11 @@
     </header>
 
     <section class="corpo-index">
+<<<<<<< HEAD
         <form name="login" class="tela-login" action="_php/logar.php" method="POST">
+=======
+        <form name="login" class="tela-login" action="logar.php" method="POST">
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
             <h2>ENTRAR</h2>
               
             <input type="text" placeholder="Email ou Usuário" id="txtEmailEntrar" name="txtEmailEntrar"> <br> <br>
@@ -38,7 +42,11 @@
         <p id="cadastrar">Se ainda não se cadastrou <button id="btnCadastrar">cadastre-se agora</button> </p>     
     </section>
 
+<<<<<<< HEAD
     <form name="cadastro" class="tela-cadastrar" action="_php/cadastrar.php" method="POST">
+=======
+    <form name="cadastro" class="tela-cadastrar" action="cadastrar.php" method="POST">
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
         <a class="btnFechar"> <i class="fa fa-times"></i> </a>
 
         <h2>Cadastre-se</h2>
@@ -52,7 +60,11 @@
         <input type="text" placeholder="Telefone" id="txtTelefone" name="txtTelefone" maxlength="11"> <!--Vou modificar para que o usuário cadastro o email ou telefone ou os dois-->
         <input type="password" placeholder="Senha" id="txtSenha" name="txtSenha" maxlength="20" required> 
 
+<<<<<<< HEAD
         <select name="slcSexo" required>
+=======
+        <select name="slcSexo">
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
             <option selected disabled value="">Selecione</option>
             <option value="F">Feminino</option>
             <option value="M">Masculino</option>

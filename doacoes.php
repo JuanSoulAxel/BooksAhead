@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+=======
+session_start();
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
 
 require '_php/verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
 require_once '_php/UsuarioClass.php'; //chamar somente uma vez o arquivo
@@ -38,7 +42,11 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     
     <br> <br> <br> <br> <br>
     <section class="corpo">
+<<<<<<< HEAD
         <form class="cadastrarLivro" method="POST" action="_php/foto-livro-doar.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
+=======
+        <form class="cadastrarLivro" method="POST" action="foto-livro-doar.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
             <div id="postagem-parte1">
                 <img id="imagemUsuario" src="<?php echo $imagemUsuario;?>" alt="Foto do Usuário">
                 <input name="txtComentario" type="text" placeholder="Poste aqui o livro para doar">

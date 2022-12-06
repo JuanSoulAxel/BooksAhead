@@ -14,7 +14,11 @@
 
     <p id="infDate">CARREGANDO . . . . .</p>
 
+<<<<<<< HEAD
     <p id="copyright">Juan Axel &copy; Copyright | Books Ahead - Leu? Troque Já! | 2021</p>
+=======
+    <p id="copyright">Alison, Jefferson, Juan &copy; Copyright | Books Ahead - Leu? Troque Já! | 2021</p>
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
 
     <!--biblioteca geral do JQUERY-->
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>

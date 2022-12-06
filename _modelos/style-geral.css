@@ -43,7 +43,10 @@ img {
 
 label#titulo {
     float: left;
+<<<<<<< HEAD
     position: fixed;
+=======
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
     font-size: 2em;
     padding: 1%;
     margin-top: 0.5%;
@@ -58,7 +61,11 @@ label#titulo a {
 #btnSair {
     float: right;
     text-decoration: none;
+<<<<<<< HEAD
     margin: 1.4%;
+=======
+    margin: 1.8% 2%;
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
     padding: 0.4%;
     border-radius: 10px;
 }
@@ -79,7 +86,11 @@ nav#menu {
 nav#menu ul {
 	list-style: none;
 	text-transform: uppercase;
+<<<<<<< HEAD
 	position: fixed;
+=======
+	position: absolute;
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
 	margin-top: 1%;
 	right: 15%;
 }
@@ -87,7 +98,11 @@ nav#menu ul {
 nav#menu li {
 	font-size: 1.5em;
 	display: inline-block;
+<<<<<<< HEAD
 	padding: 2vh;
+=======
+	padding: 10px;
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
 	transition: 0.5s; /* Demora um segundo para aparecer  os LI aparecerem */
 }
 
@@ -262,9 +277,18 @@ a.socialIcon:hover,
     transition: all 0.8s
 }
 
+<<<<<<< HEAD
 /*TITULO GERAIS*/
 
 h2#tituloDoacoes, h2#tituloTrocas, h2#tituloPrincipal, h2#tituloPerfil, h2#tituloChat {
+=======
+
+/*GERAL DAS PÁGINAS TROCAS E DOACOES*/
+
+/*TITULO*/
+
+h2#tituloDoacoes, h2#tituloTrocas, h2#tituloPrincipal {
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
     position: fixed;
     float: left;
     font-size: 2em;
@@ -275,6 +299,7 @@ h2#tituloDoacoes, h2#tituloTrocas, h2#tituloPrincipal, h2#tituloPerfil, h2#titul
     text-decoration: underline;
 }
 
+<<<<<<< HEAD
 /*GERAL DAS PÁGINAS TROCAS E DOACOES*/
 
 /*CORPO*/
@@ -282,6 +307,13 @@ h2#tituloDoacoes, h2#tituloTrocas, h2#tituloPrincipal, h2#tituloPerfil, h2#titul
 section.corpo {
     width: 38%;
     height: 30vh;
+=======
+/*CORPO*/
+
+section.corpo {
+    width: 80vh;
+    height: 35vh;
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
     margin-left: 28%;
     padding: 1%; /*Para jogar os itens que estavam um pouco para fora*/
     background: #fff;
@@ -334,7 +366,11 @@ section.corpo div#postagem-parte2 {
 
 
 section.corpo2 {
+<<<<<<< HEAD
     width: 38%;
+=======
+    width: 80vh;
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
     height: 70vh;
     margin-left: 28%;
     padding: 1%; /*Para jogar os itens que estavam um pouco para fora*/
@@ -345,15 +381,26 @@ section.corpo2 {
 
 section.corpo2 img#imagemUsuario {
     float: left;
+<<<<<<< HEAD
     max-width: 8%;
     max-height: 8%;
     min-width: 8%;
     min-height: 8%;
+=======
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
     border-radius: 10vh;
 }
 
 section.corpo2 label#nomeUsuario {
+<<<<<<< HEAD
     font-size: 150%;
+=======
+    font-size: 1.5em;
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
     font-family: Oswald, sans-serif;
     padding: 2%;
 }
@@ -365,7 +412,10 @@ section.corpo2 p#dataPostagem {
 }
 
 section.corpo2 p#comentarioUsuario {
+<<<<<<< HEAD
     width: 100%;
+=======
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
     text-align: center;
     margin-bottom: 2%;
 }

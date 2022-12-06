@@ -16,7 +16,11 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id']))
     $emailUsuario = $logged['email'];
     $telefoneUsuario = $logged['telefone'];
     $imagemUsuario = $logged['imagem'];
+<<<<<<< HEAD
     $capaUsuario = $logged['capa'];  
+=======
+    $capaUsuario = $logged['capa'];    
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
 
     //As linhas abaixo irão verificar se o usuário tem foto cadastrada
     if($imagemUsuario == null) 
@@ -37,8 +41,11 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id']))
         $capaUsuario = "_fotos-transacao/capas-usuarios/".$_SESSION['id'].')'.$nomeUsuario.'/'.$logged['capa'];
   
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
 }
 else
 {
