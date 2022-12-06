@@ -19,9 +19,7 @@
         
         $sql->execute();
 
-        while($dados = $sql->fetch(PDO::FETCH_ASSOC)) {
-<<<<<<< HEAD
-        
+        while($dados = $sql->fetch(PDO::FETCH_ASSOC)) {        
         //Código específico pra colocar foto USER PADRÃO NAS LISTAGENS DOS LIVROS
          if($dados['imagem'] == null) 
         {
@@ -31,17 +29,13 @@
         {
             $imagemUsuarioListagemLivros = "_fotos-transacao/fotos-usuarios/".$dados['iduser'].")".$dados['nome']."/".$dados['imagem'];
         }
-=======
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
+
     ?>
     <section class="corpo2 sumir"> <!--o jquery vai pegar esse sumir e desaparecer quando clicado em alguns itens-->
         <p id="dataPostagem"> <?php echo date("d/m/Y - H:i", strtotime($dados['datta'])); ?> </p> <br> <!--Essa função em PHP formata e pega somente a data -->
         
-<<<<<<< HEAD
         <img id="imagemUsuario" src="<?php echo $imagemUsuarioListagemLivros; ?>" alt="Foto do Usuário">
-=======
-        <img id="imagemUsuario" src="_fotos-transacao/fotos-usuarios/<?php echo $dados['iduser']; ?>)<?php echo $dados['nome']; ?>/<?php echo $dados['imagem']; ?>" alt="">
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
+
         <label id="nomeUsuario"> <?php echo $dados['nome'] ." ". $dados['sobrenome']; ?> </label> <br> <br>
 
         <p id="comentarioUsuario"> <?php echo $dados['comentario']; ?> </p>

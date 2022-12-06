@@ -5,11 +5,8 @@
             <li> <a href="perfil.php">Perfil</a> </li>
             <li> <a href="doacoes.php">Doações</a> </li>
             <li> <a href="trocas.php">Trocas</a> </li>
-<<<<<<< HEAD
             <li> <a href="chat.php">Chat</a> </li>
-=======
-            <li> <a href="#rodape">Contato</a> </li>
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
+
         </ul>
     </nav>
     <a href="_php/logout.php"> <img id="btnSair" src="_imagens/botao-sair.png" alt="Botão Sair"> </a>

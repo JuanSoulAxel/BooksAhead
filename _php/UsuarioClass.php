@@ -54,10 +54,6 @@ class Usuario {
 
         return $array; //é obrigatório retornar o array
     }
-<<<<<<< HEAD
-    
-=======
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
 
     public function adicionarImagem($imagem, $id) {
         global $pdo;
@@ -73,11 +69,7 @@ class Usuario {
             echo
             "<script language='javascript' type='text/javascript'>
                 alert('Foto adicionada com sucesso!'); 
-<<<<<<< HEAD
                 window.location.href='../perfil.php';
-=======
-                window.location.href='perfil.php';
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
             </script>";
         }
         else
@@ -85,11 +77,7 @@ class Usuario {
             echo
             "<script language='javascript' type='text/javascript'>
                 alert('Infelizmente algo deu errado... <br>Tente novamente mais tarde!'); 
-<<<<<<< HEAD
                 window.location.href='../perfil.php';
-=======
-                window.location.href='perfil.php';
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
             </script>";
         }
     }
@@ -107,11 +95,7 @@ class Usuario {
             echo
             "<script language='javascript' type='text/javascript'>
                 alert('Capa adicionada com sucesso!'); 
-<<<<<<< HEAD
                 window.location.href='../perfil.php';
-=======
-                window.location.href='perfil.php';
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
             </script>";
         }
         else
@@ -119,11 +103,7 @@ class Usuario {
             echo
             "<script language='javascript' type='text/javascript'>
                 alert('Infelizmente algo deu errado... <br>Tente novamente mais tarde!'); 
-<<<<<<< HEAD
                 window.location.href='../perfil.php';
-=======
-                window.location.href='perfil.php';
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
             </script>";
         }
     }
@@ -143,11 +123,7 @@ class Usuario {
             echo
             "<script language='javascript' type='text/javascript'>
                 alert('Livro adicionado com sucesso!'); 
-<<<<<<< HEAD
                 window.location.href='../perfil.php';
-=======
-                window.location.href='perfil.php';
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
             </script>";
         }
         else
@@ -155,11 +131,7 @@ class Usuario {
             echo
             "<script language='javascript' type='text/javascript'>
                 alert('Infelizmente algo deu errado... <br>Tente novamente mais tarde!'); 
-<<<<<<< HEAD
                 window.location.href='../perfil.php';
-=======
-                window.location.href='perfil.php';
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
             </script>";
         }
     }
@@ -180,11 +152,7 @@ class Usuario {
             echo
             "<script language='javascript' type='text/javascript'>
                 alert('Dados atualizados com sucesso!'); 
-<<<<<<< HEAD
                 window.location.href='../perfil.php';
-=======
-                window.location.href='perfil.php';
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
             </script>";
         }
         else
@@ -192,16 +160,15 @@ class Usuario {
             echo
             "<script language='javascript' type='text/javascript'>
                 alert('Dados não atualizados... Tente novamente depois.'); 
-<<<<<<< HEAD
                 window.location.href='../perfil.php';
             </script>";
         }
     }
 
-    public function mandarMensagem($nome, $sobrenome, $telefone, $mensagem, $imagem, $idUsuario) {
+    public function mandarMensagem($nome, $sobrenome, $telefone, $mensagem, $imagem, $datta, $idUsuario) {
         global $pdo;
 
-        $sql = "INSERT INTO chat (nome, sobrenome, telefone, mensagem, imagem, iduser) VALUES (:nome, :sobrenome, :telefone, :mensagem, :imagem, :iduser)";
+        $sql = "INSERT INTO chat (nome, sobrenome, telefone, mensagem, imagem, datta, iduser) VALUES (:nome, :sobrenome, :telefone, :mensagem, :imagem, NOW(), :iduser)";
         $sql = $pdo->prepare($sql);
         $sql->bindValue("nome", $nome);
         $sql->bindValue("sobrenome", $sobrenome);
@@ -219,8 +186,6 @@ class Usuario {
             echo
             "<script language='javascript' type='text/javascript'>
                 alert('Infelizmente algo deu errado... <br>Tente novamente mais tarde!'); 
-=======
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
                 window.location.href='perfil.php';
             </script>";
         }

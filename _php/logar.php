@@ -23,15 +23,11 @@ if(isset($_POST['txtEmailEntrar']) && !empty($_POST['txtEmailEntrar']) && isset(
     }
     else
     {
-        echo
-        "<script language='javascript' type='text/javascript'>
-            alert('Email ou senha inválido'); 
-            window.location.href='../index.php';
-        </script>";
+        header("Location: ../index.php");
     }
 } 
 else
 {
-    header("Location: index.php");
+    header("Location: ../index.php");
 }
 ?>

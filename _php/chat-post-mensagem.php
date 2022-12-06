@@ -5,7 +5,7 @@ $mensagem = $_POST['mensagem'];
 
 $u = new Usuario(); //instanciando para pegar o nome e sobrenome para pôr no nome da foto
 
-$u -> mandarMensagem($nomeUsuario, $sobrenomeUsuario, $telefoneUsuario, $mensagem, $imagemUsuario, $idUsuario);
+$u -> mandarMensagem($nomeUsuario, $sobrenomeUsuario, $telefoneUsuario, $mensagem, $imagemUsuario, $datta, $idUsuario);
 
 echo
             "<script language='javascript' type='text/javascript'>

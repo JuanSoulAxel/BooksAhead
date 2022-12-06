@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-=======
-session_start();
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
 
 require '_php/verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
 require_once '_php/UsuarioClass.php'; //chamar somente uma vez o arquivo
@@ -31,11 +27,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <div class="telaFundo"> </div>
 
     <!--Criando form para fazer upload de fotos-->
-<<<<<<< HEAD
     <form class="cadastrarImagem" method="POST" action="_php/foto-usuario.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
-=======
-    <form class="cadastrarImagem" method="POST" action="foto-usuario.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
         <a id="btnFechar"> <i class="fa fa-times"></i> </a> <br>
         <p>Escolha a sua nova foto de perfil</p> <br>
         <img src="_imagens/icone-atualizar-imagem.png" alt="Icone Atualizar"> <br> <br> <br>
@@ -44,11 +36,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     </form>
      
     <!--Criando form para fazer atualização dos dados-->
-<<<<<<< HEAD
     <form class="atualizarDados" method="POST" action="_php/dados-usuario.php"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
-=======
-    <form class="atualizarDados" method="POST" action="dados-usuario.php"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
         <a id="btnFechar2"> <i class="fa fa-times"></i> </a> <br>
         <p>Modifique aqui os seus dados cadastrais</p> <br>
         <img src="_imagens/icone-atualizar-imagem.png" alt="Icone Atualizar"> <br> <br> <br>
@@ -60,11 +48,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     </form>
 
     <!--Criando form para fazer atualização da foto de capa-->
-<<<<<<< HEAD
     <form class="cadastrarCapa" method="POST" action="_php/capa-usuario.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
-=======
-    <form class="cadastrarCapa" method="POST" action="capa-usuario.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
         <a id="btnFechar3"> <i class="fa fa-times"></i> </a> <br>
         <p>Escolha a sua foto de capa</p> <br>
         <img src="_imagens/icone-atualizar-imagem.png" alt="Icone Atualizar"> <br> <br> <br>
@@ -75,23 +59,12 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <!--Chamando o header-->
     <?php  include "_modelos/header.php"; ?>
 
-<<<<<<< HEAD
     <h2 id="tituloPerfil" class="tituloPerfil sumir">PERFIL</h2>
 
-=======
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
     <!--Chamando o aside-->
     <?php include "_modelos/aside.php"; ?> <br> <br> <br> <br>
 
     <section class="corpo-perfil sumir">
-<<<<<<< HEAD
-=======
-        <div id="transacoes"> 
-            <img id="suasDoacoes" src="_imagens/suas-doacoes.png" alt="Suas Doações">
-            <img id="suasTrocas" src="_imagens/suas-trocas.png" alt="Suas Trocas">
-            <img id="seusDesejados" src="_imagens/seus-desejados.png" alt="Seus Desejados">
-        </div> 
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
 
         <img id="capaPerfil" src="<?php echo $capaUsuario;?>" alt="">
 

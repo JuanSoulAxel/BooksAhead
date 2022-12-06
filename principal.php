@@ -1,10 +1,7 @@
 <?php
-<<<<<<< HEAD
 
-=======
-session_start();
->>>>>>> 0dd3e75e09e30a497b8da83755bbd2289863fb3f
 require '_php/verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
+
 
 //se existir e ela for diferente de vazio vai executar o código para a tela principal
 if(isset($_SESSION['id']) && !empty($_SESSION['id'])): 

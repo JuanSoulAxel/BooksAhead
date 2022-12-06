@@ -100,3 +100,8 @@ p#mensagemUsuario {
     margin: 2%;
     font-size: 2vh;
 }
+
+p#dataMensagemUsuario {
+    float: right;
+    font-size: 1.5vh;
+}
