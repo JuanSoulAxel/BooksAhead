@@ -38,7 +38,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
             if (req.readyState == 4 && req.status == 200) {
                 document.getElementById('baloesdeconversa').innerHTML = req.responseText;
             }
-        }
+        } 
         req.open('GET', '_php/chat-select-db.php', true);
         req.send();
     }
