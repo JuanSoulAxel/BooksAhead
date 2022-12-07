@@ -58,7 +58,8 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <section id="blocoConversa">
     
         <div id="p1-blocoConversa">
-            <label id="chatGeral">CHAT GERAL</label>
+            <img id="chatGeral-icone" src="_imagens/chat-geral-icone.png" alt="Icone do Chat">
+            <label id="chatGeral">Chat Geral</label>
         </div>
 
         <div id="baloesdeconversa">

@@ -7,12 +7,12 @@ $sql = $pdo->query("SELECT * FROM chat");
 foreach ($sql->fetchAll() as $key) {
     if($key['nome'] == $nomeUsuario) { //Se o nome da pessoa que enviou a mensagem for o mesmo que o do usuário atual, aparecerá o nome "Você" na mensagem.
         echo "<div id='balaoMensagemUsuario'> <img id='imagemUsuarioMensagem' src='" . $key['imagem'] . "'></img> <h1 id='nomeUsuarioMensagem'>" . "Você" . "</h1>";
-        echo "<p id='dataMensagemUsuario'>". date('d/m/Y - H:i', strtotime($key['datta']));
     }
     else {
         echo "<div id='balaoMensagemOutros'> <img id='imagemUsuarioMensagem' src='" . $key['imagem'] . "'></img> <h1 id='nomeUsuarioMensagem'>" . $key['nome'] . " " . $key['sobrenome']. "</h1>";
-        echo "<p id='dataMensagemOutros'>". date('d/m/Y - H:i', strtotime($key['datta']));
     }
-    echo "<p id='mensagemUsuario'>" . $key['mensagem'] . "</p> </div> <br> <br> <br>";
+    echo "<p id='mensagemUsuario'>" . $key['mensagem'] . "</p>  <br>";
+    echo "<p id='dataMensagemUsuario'>". date('d/m/Y - H:i', strtotime($key['datta']))."</div>";
+
 }
 ?>

@@ -1,13 +1,3 @@
-/*DIV PARA DEIXAR O FUNDO ESCURO QUANDO CLICAR NA FOTO DO PERFIL*/
-
-div.telaFundo {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-}
- 
 /*ESSA PARTE VAI MOSTRAR A TELA PRA MODIFICAR IMAGENS E TELA ATUALIZAR DADOS E CADASTRAR CAPA*/
 
 

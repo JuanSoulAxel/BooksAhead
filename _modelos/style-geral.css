@@ -145,6 +145,17 @@ aside.lateral div:hover { /*marcar a div toda quando passar o mouse*/
     transition: 0.5s;
 }
 
+
+/*DIV PARA DEIXAR O FUNDO ESCURO QUANDO CLICAR NA FOTO DO PERFIL*/
+
+div.telaFundo {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 /*LADO DO SITE DIREITO*/
 
 aside.lateral-direita {
@@ -280,7 +291,7 @@ h2#tituloDoacoes, h2#tituloTrocas, h2#tituloPrincipal, h2#tituloPerfil, h2#titul
 
 section.corpo {
     width: 38%;
-    height: 30vh;
+    height: 35vh;
     margin-left: 28%;
     padding: 1%; /*Para jogar os itens que estavam um pouco para fora*/
     background: #fff;
@@ -334,7 +345,7 @@ section.corpo div#postagem-parte2 {
 
 section.corpo2 {
     width: 38%;
-    height: 70vh;
+    height: 80vh;
     margin-left: 28%;
     padding: 1%; /*Para jogar os itens que estavam um pouco para fora*/
     background: #fff;
@@ -377,26 +388,98 @@ section.corpo2 img#imagemLivro {
     margin-left: 30%;
 }
 
-section.corpo2 p#bordaCorpo2 {
+section.corpo2 p#bordaCorpo2-2, section.corpo2 p#bordaCorpo2-1 {
     width: 100%;
-    margin-top: 3%;
+    margin-bottom: 2%;
+    margin-top: 2%;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-section.corpo2 p#iconeDesejados, section.corpo2 p#iconeDenunciar  {
+/*icones de reações das transações*/
+a#interacaoEuQuero {
+    color: #000;
     float: left;
-    width: 50%;
-    margin-top: 3.5%;
+}
+
+a#interacaoEuQuero:active {
+    color: #fff;
+    background-color: #1E90FF	;
+    border-color: #000;
+}
+
+a#interacaoDeletar, a#interacaoDenunciar {
+    color: #000;
+    float: right;
+}
+
+a#interacaoDeletar:active, a#interacaoDenunciar:active {
+    color: #fff;
+    background-color: #DC143C		;
+    border-color: #000;
+}
+
+a#interacaoEuQuero, a#interacaoDeletar, a#interacaoDenunciar {
+    font-size: 3.5vh;
+    font-weight: bold;
+    margin: 5%;
+    padding: 2%;
+    border-radius: 10vh;
+    background-color: #fff;
+    border: 2px solid;
+}
+
+/*Deletar Transação*/
+
+section#confirmarDeletar {
+    top: 50%; /*essa e as duas outras linhas fazem o bloco ficar no centro de tudo e responsivo*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+#telaDeConfirmacaoDeletar {
+    position: absolute;
+    top: 50%; /*essa e as duas outras linhas fazem o bloco ficar no centro de tudo e responsivo*/
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 1.6em;
+    width: 40%;
+    height: vh;
+    background: linear-gradient(to right, #FFFF00, #FF0000);
+    border-radius: 10vh;    
+    color: #000;
+}   
+
+#telaDeConfirmacaoDeletar p {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: #000;
+    text-decoration: underline;
+    font-family: Oswald, sans-serif;
+    font-size: 1.5em;
 }
 
-section.corpo2 p#iconeDesejados i:hover {
-    color: #e60000;
-    cursor: pointer;
+#telaDeConfirmacaoDeletar a {
+    width: 20%;
+    margin-bottom: 3%;
+    padding: 2.5%;
+    background: linear-gradient(to right, #FF0000, #FFFF00);
+    color: #000;
+    border-radius: 10px;
+    border: 2px solid #000;
 }
 
-section.corpo2 p#iconeDenunciar i:hover {
-    color: #1e07a0;
-    cursor: pointer;
+#telaDeConfirmacaoDeletar a#botaoSimDeletar {
+    float: left;
+    margin-left: 20%;
+}
+
+#telaDeConfirmacaoDeletar a#botaoNaoDeletar {
+    float: right;
+    margin-right: 20%;
+}
+
+#telaDeConfirmacaoDeletar a#botaoNaoDeletar:hover, #telaDeConfirmacaoDeletar a#botaoSimDeletar:hover {
+    transform: scale(1.05);
+    transition: 1s;
 }

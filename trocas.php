@@ -25,19 +25,24 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
 <body>
     <!--Chamando cabecalho do site-->
     <?php include "_modelos/header.php"; ?> 
+    
+    <!--Esse fundo vai deixar a tela mais escura #gambiarra-->
+    <div class="telaFundo aparecer"> </div>
 
-    <h2 id="tituloTrocas">TROCAS</h2>
+    <? include("_modelos/conf-del-post.php"); ?>
+
+    <h2 class="sumir" id="tituloTrocas">TROCAS</h2>
 
     <!--Chamando lateral do site-->
     <?php include "_modelos/aside.php"; ?>
 
-    <aside class="lateral-direita">
+    <aside class="lateral-direita sumir">
         <img id="removerMarginTop" src="_imagens/trocar-coracao.png" alt="Coração Trocar 1"> <br>
         <img src="_imagens/trocar-coracao2.png" alt="Coração Trocar 2"> <br>
     </aside> 
 
     <br> <br> <br> <br> <br>
-    <section class="corpo">
+    <section class="corpo sumir">
 
         <form class="cadastrarLivro" method="POST" action="_php/foto-livro-trocar.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
 
@@ -60,6 +65,9 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
 
     <!--Chamando footer-->
     <?php include "_modelos/footer.php"; ?>
+
+    <script src="_javascript/script-perfil.js"> </script> <!--Chamando _javascript-->
+
 </body>
 </html>
 

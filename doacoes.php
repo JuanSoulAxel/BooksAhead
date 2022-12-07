@@ -1,5 +1,6 @@
 <?php
 
+
 require '_php/verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
 require_once '_php/UsuarioClass.php'; //chamar somente uma vez o arquivo
 
@@ -26,18 +27,24 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <!--Chamando cabecalho do site-->
     <?php include "_modelos/header.php"; ?> 
 
-    <h2 id="tituloDoacoes">DOAÇÕES</h2>
+    <!--Esse fundo vai deixar a tela mais escura #gambiarra-->
+    <div class="telaFundo aparecer"> </div>
+
+    <? include("_modelos/conf-del-post.php"); ?>
+
+
+    <h2 class="sumir" id="tituloDoacoes">DOAÇÕES</h2>
 
     <!--Chamando lateral do site-->
     <?php include "_modelos/aside.php"; ?>
 
-    <aside class="lateral-direita">
+    <aside class="lateral-direita sumir">
         <img id="removerMarginTop" src="_imagens/doar-coracao.png" alt="Coração Doar 1"> <br>
         <img src="_imagens/doar-coracao2.png" alt="Coração Doar 2"> <br>
     </aside> 
     
     <br> <br> <br> <br> <br>
-    <section class="corpo">
+    <section class="corpo sumir">
         <form class="cadastrarLivro" method="POST" action="_php/foto-livro-doar.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
 
             <div id="postagem-parte1">
@@ -59,6 +66,9 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
 
     <!--Chamando footer-->
     <?php include "_modelos/footer.php"; ?>
+
+    <script src="_javascript/script-perfil.js"> </script> <!--Chamando _javascript-->
+
 </body>
 </html>
 

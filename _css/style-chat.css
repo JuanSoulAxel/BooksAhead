@@ -2,7 +2,7 @@ section#blocoConversa {
     background-color: #363636;
     width: 50%;
     height: 85%;
-    margin-top: 2%;
+    margin-top: 3%;
     top: 50%; /*essa e as duas outras linhas fazem o bloco ficar no centro de tudo e responsivo*/
     left: 50%;
     transform: translate(-50%, -50%);
@@ -15,7 +15,8 @@ div#p1-blocoConversa {
 }
 div#p1-blocoConversa label#chatGeral {
     font-family: fantasy;
-    font-size: 7vh;
+    margin-left: 1%;
+    font-size: 6.5vh;
 }
 
 div#baloesdeconversa {
