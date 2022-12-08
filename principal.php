@@ -1,10 +1,7 @@
 <?php
+require '_utility/verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
 
-require '_php/verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
-
-
-//se existir e ela for diferente de vazio vai executar o código para a tela principal
-if(isset($_SESSION['id']) && !empty($_SESSION['id'])): 
+if(isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for diferente de vazio vai executar o código para a tela principal
 ?>
 
 <!DOCTYPE html>
@@ -14,29 +11,24 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <link rel="stylesheet" href="_css/style-principal.css">
-    <link rel="stylesheet" href="_modelos/style-geral.css">
+    <link rel="stylesheet" href="_css/style-geral.css">
 
-    <!--Chamando fontes e o ícone do site-->
-    <?php include "_modelos/fonts.php"; ?>
+    <?php include "_modelos/fonts.php"; ?> <!--Chamando fontes e o ícone do site-->
     
     <title>Books Ahead - Leu? Troque Já!</title>
 </head>
 <body>
     
-    <!--Chamando o header-->
-    <?php  include "_modelos/header.php"; ?>
+    <?php  include "_modelos/header.php"; ?> <!--Chamando o header-->
 
     <h2 id="tituloPrincipal">PRINCIPAL</h2>
 
-    <!--Chamando o aside-->
-    <?php include "_modelos/aside.php"; ?> <br> <br> <br> <br>
-
+    <?php include "_modelos/aside.php"; ?> <br> <br> <br> <br> <!--Chamando o aside-->
 
     <section class="corpo-principal">
-        <div id="inicio">
-            <img src="_imagens/Fundo-Principal.jpg" alt="Fundo">
-        </div>
-        <div id="doar-trocar">
+        <div id="fundoPrincipal"> <img src="_imagens/Fundo-Principal.jpg" alt="Fundo"> </div>
+
+        <div id="doarTrocar">
             <h1>FAÇA JÁ A SUA COLABORAÇÃO</h1>
 
             <p>" Livro bom é aquele que a gente passa à diante o prazer da leitura não pode ser restrito. " -Caio Rossan</p>
@@ -46,14 +38,12 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
         </div>
     </section> <br> <br> <br> <br> <br>
 
-    <!--Chamando Footer-->
-    <?php include "_modelos/footer.php"; ?>
+    <?php include "_modelos/footer.php"; ?> <!--Chamando Footer-->
 </body>
 </html>
 
 <?php 
-//Senão, vai mandar novamente para a tela index
-else: 
+else: //Senão, vai mandar novamente para a tela index
 header("Location: index.php"); 
 endif; 
 ?>

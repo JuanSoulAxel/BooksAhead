@@ -9,5 +9,5 @@
 
         </ul>
     </nav>
-    <a href="_php/logout.php"> <img id="btnSair" src="_imagens/botao-sair.png" alt="Botão Sair"> </a>
+    <a href="_utility/logout.php"> <img id="btnSair" src="_imagens/botao-sair.png" alt="Botão Sair"> </a>
 </header>

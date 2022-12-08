@@ -1,0 +1,140 @@
+/*CORPO*/
+
+section.corpo {
+    width: 38%;
+    height: 35vh;
+    margin-left: 28%;
+    padding: 1%; /*Para jogar os itens que estavam um pouco para fora*/
+    background: #fff;
+    border-radius: 2vh;
+}
+
+section.corpo div#postagem-parte1 img#imagemUsuario-postagem {
+    float: left;
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 10vh;
+}
+
+section.corpo div#postagem-parte1 input {
+    float: right;
+    margin-right: 20%;
+    width: 50vh;
+    border-radius: 10vh;
+    padding: 2.5%;
+    margin-bottom: 1%;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+section.corpo div#postagem-parte1 button {
+    width: 30%;
+    margin-top: 2%;
+    margin-left: 30%;
+    background: #8B0000;
+    color: #FFF;
+    padding: 2%;
+    border-radius: 5vh;
+}
+
+section.corpo button:hover {
+    background: #800000;
+}
+
+section.corpo p#bordaCorpo {
+    border: 0.5px solid #DCDCDC;
+}
+
+section.corpo div#postagem-parte2 {
+    margin-left: 13%;
+}
+
+
+
+/*CORPO 2*/
+
+section.corpo2 {
+    width: 38%;
+    height: 80vh;
+    margin-left: 28%;
+    padding: 1%; /*Para jogar os itens que estavam um pouco para fora*/
+    background: #fff;
+    border-radius: 2vh;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+section.corpo2 img#imagemUsuario-postagem {
+    float: left;
+    max-width: 8%;
+    max-height: 8%;
+    min-width: 8%;
+    min-height: 8%;
+    border-radius: 10vh;
+}
+
+section.corpo2 label#nomeUsuario-postagem {
+    font-size: 150%;
+    padding: 2%;
+}
+
+section.corpo2 p#data-postagem {
+    float: right;
+    text-decoration: underline;
+    text-align: center;
+}
+
+section.corpo2 p#comentarioUsuario-postagem {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+section.corpo2 img#imagemLivro {
+    max-width: 190px;
+    max-height: 250px;
+    min-width: 190px;
+    min-height: 250px;
+    margin-left: 30%;
+}
+
+section.corpo2 p#bordaCorpo2 {
+    width: 100%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+/*icones de reações das transações*/
+a#interacaoEuQuero {
+    color: #000;
+    float: left;
+}
+
+a#interacaoEuQuero:active {
+    color: #fff;
+    background-color: #1E90FF	;
+    border-color: #000;
+}
+
+a#interacaoDeletar, a#interacaoDenunciar {
+    color: #000;
+    float: right;
+}
+
+a#interacaoDeletar:active, a#interacaoDenunciar:active {
+    color: #fff;
+    background-color: #DC143C;
+    border-color: #000;
+}
+
+a#interacaoEuQuero, a#interacaoDeletar, a#interacaoDenunciar {
+    font-size: 3.5vh;
+    font-weight: bold;
+    margin: 5%;
+    padding: 2%;
+    border-radius: 10vh;
+    background-color: #fff;
+    border: 2px solid;
+}

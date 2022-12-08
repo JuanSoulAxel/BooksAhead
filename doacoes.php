@@ -1,11 +1,8 @@
 <?php
+require '_utility/verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
+require_once '_utility/UsuarioClass.php'; //chamar somente uma vez o arquivo
 
-
-require '_php/verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
-require_once '_php/UsuarioClass.php'; //chamar somente uma vez o arquivo
-
-//se existir e ela for diferente de vazio vai executar o código para a tela principal
-if(isset($_SESSION['id']) && !empty($_SESSION['id'])): 
+if(isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for diferente de vazio vai executar o código para a tela principal
 ?>
 
 <!DOCTYPE html>
@@ -15,42 +12,32 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="_css/style-doacoes.css">
-    <link rel="stylesheet" href="_modelos/style-geral.css">
+    <link rel="stylesheet" href="_css/style-doacoes-e-trocas.css">
+    <link rel="stylesheet" href="_css/style-geral.css">
 
-    <!--Chamando fontes e o ícone do site-->
-    <?php include "_modelos/fonts.php"; ?>
+    <?php include "_modelos/fonts.php"; ?> <!--Chamando fontes e o ícone do site-->
 
     <title>Books Ahead - Doações</title>
 </head>
 <body>
-    <!--Chamando cabecalho do site-->
-    <?php include "_modelos/header.php"; ?> 
+    <?php include "_modelos/header.php"; ?> <!--Chamando cabecalho do site-->
 
-    <!--Esse fundo vai deixar a tela mais escura #gambiarra-->
-    <div class="telaFundo aparecer"> </div>
+    <h2 id="tituloDoacoes">DOAÇÕES</h2>
 
-    <? include("_modelos/conf-del-post.php"); ?>
+    <?php include "_modelos/aside.php"; ?> <!--Chamando lateral do site-->
 
-
-    <h2 class="sumir" id="tituloDoacoes">DOAÇÕES</h2>
-
-    <!--Chamando lateral do site-->
-    <?php include "_modelos/aside.php"; ?>
-
-    <aside class="lateral-direita sumir">
+    <aside class="lateralDireita">
         <img id="removerMarginTop" src="_imagens/doar-coracao.png" alt="Coração Doar 1"> <br>
         <img src="_imagens/doar-coracao2.png" alt="Coração Doar 2"> <br>
     </aside> 
     
     <br> <br> <br> <br> <br>
-    <section class="corpo sumir">
-        <form class="cadastrarLivro" method="POST" action="_php/foto-livro-doar.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
-
+    <section class="corpo">
+        <form class="cadastrarLivro" method="POST" action="_utility/foto-livro-doar.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
             <div id="postagem-parte1">
-                <img id="imagemUsuario" src="<?php echo $imagemUsuario;?>" alt="Foto do Usuário">
-                <input name="txtComentario" type="text" placeholder="Poste aqui o livro para doar">
-                <button id="btnPostar" type="submit">POSTAR</button>
+                <img id="imagemUsuario-postagem" src="<?php echo $imagemUsuario; ?>" alt="Foto do Usuário">
+                <input name="txtComentario" id="comentario" type="text" placeholder="Poste aqui o livro para doar">
+                <button id="btnPostar-postagem" type="submit">POSTAR</button>
             </div> <br>
 
             <p id="bordaCorpo"> </p> <br> <br>
@@ -61,20 +48,14 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
         </form>
     </section> <br> <br>
 
-    <!--Essa variável trocas vai verificar qual a página para listar corretamente as transações-->
-    <?php $pagina="doacoes"; include "_php/listar-transacoes.php"; ?>
+    <?php $pagina="doacoes"; include "_utility/listar-transacoes.php"; ?> <!--Essa variável página vai verificar qual a página para listar corretamente as transações-->
 
-    <!--Chamando footer-->
-    <?php include "_modelos/footer.php"; ?>
-
-    <script src="_javascript/script-perfil.js"> </script> <!--Chamando _javascript-->
-
+    <?php include "_modelos/footer.php"; ?> <!--Chamando footer-->
 </body>
 </html>
 
 <?php 
-//Senão, vai mandar novamente para a tela index
-else: 
+else: //Senão, vai mandar novamente para a tela index
 header("Location: index.php"); 
 endif; 
 ?>

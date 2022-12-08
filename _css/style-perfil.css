@@ -1,6 +1,5 @@
 /*ESSA PARTE VAI MOSTRAR A TELA PRA MODIFICAR IMAGENS E TELA ATUALIZAR DADOS E CADASTRAR CAPA*/
 
-
 /*MODIFICAR IMAGEM E DADOS E CAPA*/ 
 form.cadastrarImagem, form.atualizarDados, form.cadastrarCapa {
     position: absolute;
@@ -10,13 +9,12 @@ form.cadastrarImagem, form.atualizarDados, form.cadastrarCapa {
     margin-left: 30%;
     margin-top: 10%;
     background: linear-gradient(to right, #FFFF00, #FF0000);
-    border-radius: 30px;
+    border-radius: 6vh;
 }
 
 form.cadastrarImagem p, form.atualizarDados p, form.cadastrarCapa p {
     color: #000;
     text-decoration: underline;
-    font-family: Oswald, sans-serif;
     font-size: 1.5em;
 }
 
@@ -33,7 +31,7 @@ form.cadastrarImagem input#enviarArquivo, form.atualizarDados input#enviarArquiv
     color: #000;
     padding: 2%; 
     margin-bottom: 5%;
-    border-radius: 10px;
+    border-radius: 2vh;
     border: 2px solid #000;
 }
 
@@ -59,13 +57,6 @@ form.atualizarDados input {
 
 /*CORPO*/
 
-.corpo-perfil p#mensagemInicial {
-    text-align: center;
-    font-size: 2em;
-    font-family: Oswald;
-    margin: 1%;
-}
-
 .corpo-perfil div#perfil {
     margin-left: 25%;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -74,7 +65,7 @@ form.atualizarDados input {
     padding: 1%;
 }
 
-.corpo-perfil div#perfil img {
+.corpo-perfil div#perfil img#imagemUsuario{
     max-width: 150px;
     max-height: 150px;
     min-width: 150px;
@@ -85,13 +76,11 @@ form.atualizarDados input {
 }
 
 .corpo-perfil div#perfil label#nomeUsuario {
-    font-size: 3em;
-    font-family: Oswald, sans-serif;
+    font-size: 2em;
     margin-left: 5%;
 }
 
 .corpo-perfil div#perfil label#contato {
-    font-family: Oswald, sans-serif;
     margin-left: 15%;
 }
 
@@ -99,7 +88,6 @@ form.atualizarDados input {
     margin-top: 1%;
     float: right;
     background: #8B0000;
-    font-family: Oswald, sans-serif;
     color: #fff;
     border-radius: 10vh;
     padding: 0.5%;

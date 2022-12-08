@@ -1,10 +1,8 @@
 <?php
+require '_utility/verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
+require_once '_utility/UsuarioClass.php'; //chamar somente uma vez o arquivo
 
-require '_php/verifica.php'; //chamando verificacao (nao e preciso chamar conexao pq ja tem ela dentro de verificacao)
-require_once '_php/UsuarioClass.php'; //chamar somente uma vez o arquivo
-
-//se existir e ela for diferente de vazio vai executar o código para a tela principal
-if(isset($_SESSION['id']) && !empty($_SESSION['id'])): 
+if(isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for diferente de vazio vai executar o código para a tela principal
 ?>
 
 <!DOCTYPE html>
@@ -18,33 +16,11 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
     <meta name="author" content="Juan Axel">
 
     <link rel="stylesheet" href="_css/style-chat.css" type="text/css"/>
-    <link rel="stylesheet" href="_modelos/style-geral.css" type="text/css"/>
+    <link rel="stylesheet" href="_css/style-geral.css" type="text/css"/>
 
-
-    <!--Chamando fontes e o ícone do site-->
-    <?php include "_modelos/fonts.php"; ?>
+    <?php include "_modelos/fonts.php"; ?> <!--Chamando fontes e o ícone do site-->
 
     <title>Books Ahead - Acesse já!</title>
-
-
-    <script type="text/javascript">  
-
-        /*essa função, através do document.getElementById, vai pegar e mostrar
-        o chat (chat.php), vai carregar e vai mandar pra dentro da div, atualizando
-        sempre que chegar mensagem nova*/
-       function ajax() {
-       var req = new XMLHttpRequest();
-        req.onreadystatechange = function(){
-            if (req.readyState == 4 && req.status == 200) {
-                document.getElementById('baloesdeconversa').innerHTML = req.responseText;
-            }
-        } 
-        req.open('GET', '_php/chat-select-db.php', true);
-        req.send();
-    }
-    
-    setInterval(function(){ajax();}, 1000)
-    </script>
 
 </head>
 <body>
@@ -57,33 +33,32 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])):
 
     <section id="blocoConversa">
     
-        <div id="p1-blocoConversa">
+        <div id="blocoConversa-parte1">
             <img id="chatGeral-icone" src="_imagens/chat-geral-icone.png" alt="Icone do Chat">
-            <label id="chatGeral">Chat Geral</label>
+            <label id="chatGeral-titulo">Chat Geral</label>
         </div>
 
-        <div id="baloesdeconversa">
+        <div id="blocoConversa-parte2"> </div>
 
-        </div>
-
-        <div id="p3-blocoConversa">
+        <div id="blocoConversa-parte3">
             <img id="emoticonMensagens" src="_imagens/emoticon-mensagens.png" alt="Emoticon Mensagens">
             <img id="anexoMensagens" src="_imagens/anexo-mensagens.png" alt="Emoticon Mensagens">
 
-            <form method="POST" action="_php/chat-post-mensagem.php">
+            <form method="POST" action="_utility/chat-post-mensagem.php">
               <input type="text" id="mensagem" name="mensagem" placeholder="mensagem" required>
               <input type="submit" id="botaoMensagem"  name="botaoMensagem" value="enviar">
             </form>
         </div>
-        
     </section>
+
+
+    <script src="_javascript/script-chat.js"> </script> <!--Chamando _javascript-->
 
 </body>
 </html>
 
 <?php 
-//Senão, vai mandar novamente para a tela index
-else: 
+else: //Senão, vai mandar novamente para a tela index
 header("Location: index.php"); 
 endif; 
 ?>

@@ -1,0 +1,317 @@
+/*=========== RESET ==========*/
+* {
+    margin: 0; 
+    padding: 0; 
+    font-size: 100%;  /*Unidades relativas coloca o font-size 100%*/
+    border: none; /*remover bordas*/
+    outline: none; /*remover esboço*/
+    font-weight: 300; 
+    box-sizing: border-box; /*Ou seja, quando usar um padding não vai alterar a dimensão do elemento*/
+    font-family: Oswald, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+ 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+#imagemGif {
+    margin-left: 15%;
+}
+
+/*Cabecalho*/
+
+.cabecalho {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+
+
+label#titulo {
+    position: fixed;
+    float: left;
+    font-size: 2em;
+    padding: 1%;
+    margin-top: 0.2%;
+}
+
+label#titulo a {
+    font-family: Anton, sans-serif;
+	text-transform: uppercase;
+    color: #000;
+}
+
+#btnSair {
+    float: right;
+    text-decoration: none;
+    margin: 1.4%;
+    padding: 0.4%;
+    border-radius: 2vh;
+}
+
+#btnSair:hover {
+    background: linear-gradient(to right, #FFFF00, #FF0000);
+    transition: 0.5s;
+}
+
+
+
+/*Formatando Menu*/
+
+nav#menu {
+	display: block;
+}
+
+nav#menu ul {
+	list-style: none;
+	text-transform: uppercase;
+	position: fixed;
+	margin-top: 1%;
+	right: 15%;
+}
+
+nav#menu li {
+	font-size: 1.5em;
+	display: inline-block;
+	padding: 2vh;
+	transition: 0.5s; /* Demora um segundo para aparecer  os LI aparecerem */
+}
+
+nav#menu li a {
+    color: #000;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+nav#menu li a:hover {
+    background: linear-gradient(to right, #FFFF00, #FF0000);
+    transition: 0.5;
+}
+
+/*LADO DO SITE*/
+
+aside.lateral {
+    position: fixed;
+    float: left;
+    width: 45vh;
+    margin-top: 11%;
+}
+
+aside.lateral a {
+    color: #000;
+}
+
+aside.lateral:hover {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+aside.lateral img { /*Configurando tamanho das imagens*/
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 10vh;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+aside.lateral label {
+    font-size: 1.2em;
+}
+
+aside.lateral div {
+    margin-left: 4%;
+    padding: 1%;
+}
+
+aside.lateral div:hover { /*marcar a div toda quando passar o mouse*/
+    border-radius: 2vh;
+    background-color: #DCDCDC;
+    transition: 0.5s;
+}
+
+
+/*DIV PARA DEIXAR O FUNDO ESCURO QUANDO CLICAR NA FOTO DO PERFIL*/
+
+div.telaFundo {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh; /*vai pegar 100%*/
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*LADO DO SITE DIREITO*/
+
+aside.lateralDireita {
+    float: right;
+    padding: 10%;
+}
+
+aside.lateralDireita img {
+    margin-top: 25%;
+}
+
+aside.lateralDireita img#removerMarginTop {
+    margin-top: 0;
+}
+
+/*RODAPE*/
+
+.rodape {
+    width: 100%;
+    background: linear-gradient(to right, #FFFF00, #FF0000);
+    position: relative;
+    margin-top: 20%;
+    text-align: center;
+}
+
+.rodape p {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.rodape p#infDate {
+    width: 100%;
+    color: #fff;
+    border: 1px solid #fff;
+    opacity: 0.8;
+}
+
+.rodape p#copyright {
+    padding-top: 2%;
+    padding-bottom: 0.5%;
+}
+
+/*BOOTSTRAP - RODAPE REDES SOCIAIS*/
+
+div.col-md-12 {
+    padding: 2%;
+}
+
+div.col-md-12 li{
+    margin-right: 2%;
+}
+
+
+ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+}
+
+ul.social-network li {
+    display: inline;
+    margin-top: 10%;
+}
+
+.social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+}
+
+.social-network a.icoTwitter:hover {
+    background-color: #33ccff;
+}
+
+.social-network a.icoInstagram:hover {
+    background-color: #BD3518;
+}
+
+.social-network a.icoWhatsapp:hover {
+    background-color: #34af23;
+}
+
+a.socialIcon:hover,
+.socialHoverClass {
+    color: #44BCDD;
+}
+
+.social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    border-radius: 50%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 2.5em;
+}
+
+.social-circle li i {
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+    transform: rotate(360deg);
+    transition: all 0.2s;
+}
+
+.social-circle i {
+    color: #fff;
+    transition: all 0.8s;
+}
+
+/*TITULO GERAIS*/
+
+h2#tituloDoacoes, h2#tituloTrocas, h2#tituloPrincipal, h2#tituloPerfil, h2#tituloChat {
+    position: fixed;
+    float: left;
+    font-size: 2em;
+    margin-top: 6.5%;
+    margin-left: 1%;
+    color: #8B0000;
+    text-decoration: underline;
+}
+
+
+
+/*icones de reações das transações*/
+a#interacaoEuQuero {
+    color: #000;
+    float: left;
+}
+
+a#interacaoEuQuero:active {
+    color: #fff;
+    background-color: #1E90FF	;
+    border-color: #000;
+}
+
+a#interacaoDeletar, a#interacaoDenunciar {
+    color: #000;
+    float: right;
+}
+
+a#interacaoDeletar:active, a#interacaoDenunciar:active {
+    color: #fff;
+    background-color: #DC143C		;
+    border-color: #000;
+}
+
+a#interacaoEuQuero, a#interacaoDeletar, a#interacaoDenunciar {
+    font-size: 3.5vh;
+    font-weight: bold;
+    margin: 5%;
+    padding: 2%;
+    border-radius: 10vh;
+    background-color: #fff;
+    border: 2px solid;
+}
