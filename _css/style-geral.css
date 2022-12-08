@@ -175,9 +175,8 @@ aside.lateralDireita img#removerMarginTop {
 .rodape {
     width: 100%;
     background: linear-gradient(to right, #FFFF00, #FF0000);
-    position: relative;
+    text-align: center; 
     margin-top: 20%;
-    text-align: center;
 }
 
 .rodape p {

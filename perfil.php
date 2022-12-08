@@ -79,10 +79,8 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for d
         </div>
     </section>
 
-    <br> <br> <br> <br> <br>
-    <?php $pagina = "perfil"; include "_utility/listar-transacoes.php"; ?> <!--Essa variável página vai verificar qual a página para listar corretamente as transações-->
-
-    <?php include "_modelos/footer.php"; ?> <!--Chamando Footer--> <!--Ele vai chamar também as pastas do jQuery--> 
+    <br>
+    <?php include "_utility/listar-transacoes-em-abas.php"; ?> <!--Essa variável página vai verificar qual a página para listar corretamente as transações-->
 
     <script src="_javascript/script-perfil.js"> </script> <!--Chamando _javascript-->
 </body>

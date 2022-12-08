@@ -106,7 +106,7 @@ section.corpo2 p#bordaCorpo2 {
 }
 
 
-/*icones de reações das transações*/
+/*icones de reações das ações*/
 a#interacaoEuQuero {
     color: #000;
     float: left;
@@ -137,4 +137,58 @@ a#interacaoEuQuero, a#interacaoDeletar, a#interacaoDenunciar {
     border-radius: 10vh;
     background-color: #fff;
     border: 2px solid;
+}
+
+/*Listagem de Transações por Abas*/
+
+body {
+    background-color: #ddd;
+    font-family: 'Arial';
+}
+
+.nav_tabs ul {
+    list-style: none;
+}
+
+.nav_tabs ul li{
+    width: 100vh;
+    display: inline-block;
+    vertical-align: top;    
+}
+
+.nav_tabs label#lblTitulo1, .nav_tabs label#lblTitulo2 { /*Vai determinar o tamanho dos botoes das abas*/
+    background-color: #363b48;
+    padding: 0.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10vh;
+}
+.nav_tabs label#lblTitulo1 {
+    margin-left: 70%;
+}
+
+.rd_tabs:checked ~ label#lblTitulo1, .rd_tabs:checked ~ label#lblTitulo2 {
+    background-color: #e54e43;
+}
+
+.rd_tabs { /*sumir com os radios buttons*/
+    display: none;
+}
+
+.content {
+    display: none;
+}
+
+.rd_tabs:checked ~ .content {
+    display: block;
+}   
+
+.content article.art1, .content article.art2 {
+    width: 200%;
+}
+.content article.art2 {
+    margin-left: -100.55%;
 }
