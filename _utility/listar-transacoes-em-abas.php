@@ -11,22 +11,48 @@ global $pdo;
             <label  id="lblTitulo1" for="tab1">Minhas Doações</label>
             <div class="content"> 
                 <?php
-                $tipos = "D";
+                $tipo = "D";
+                
+                $pagina = 1;
 
-                $sql = "SELECT cad.nome, cad.sobrenome, cad.imagem, tra.id, tra.livro, tra.comentario, tra.datta, tra.iduser FROM cadastro cad join transacao tra WHERE cad.id = tra.iduser AND tra.iduser = :idUsuario AND tra.tipo = :tipo ORDER BY tra.id DESC";
-                $sql = $pdo->prepare($sql);
-                $sql->bindValue("idUsuario", $idUsuario); //Esse idUsuario é da página verifica.php que está sendo incluída no perfil.php
-                $sql->bindValue("tipo", $tipos);
-                $sql->execute();
+                if(isset($_GET['pagina']))
+                    $pagina = filter_input(INPUT_GET, "pagina", FILTER_VALIDATE_INT);
 
-                while ($dados = $sql->fetch(PDO::FETCH_ASSOC)) {
+                if (!$pagina)
+                    $pagina = 1;
+
+                $limite = 10; //quantidade de itens em cada página
+
+                $inicio = ($pagina * $limite) - $limite;
+
+                $registros = $pdo->query("SELECT COUNT(*) count FROM cadastro cad join transacao tra WHERE tipo = '$tipo' AND cad.id = tra.iduser")->fetch()["count"]; //contar quantos registros tem na tabela
+
+                $paginas = ceil($registros / $limite); //pra saber o número de páginas vai pegar os registros e dividir pelo limite = 4. o ceil vai fazer o retorno ser inteiro: arredonda pra cima.
+
+                $result = $pdo->query("SELECT cad.nome, cad.sobrenome, cad.imagem, tra.tipo, tra.id, tra.livro, tra.comentario, tra.datta, tra.iduser FROM cadastro cad join transacao tra WHERE cad.id = tra.iduser AND tra.tipo = '$tipo' AND tra.iduser = '$idUsuario' ORDER BY tra.id DESC LIMIT $inicio, $limite ")->fetchAll(); //LIMIT indice, quantidade de linhas que vai mostrar a partir dessa
+
+                foreach($result as $item):
                 ?>
                 <article class="art1">
                     <?php include("_modelos/corpo-postagem2.php"); ?>
                 </article>
-                    <?php
-                    }
-                    ?>
+                <?php
+                endforeach; 
+                ?>
+                <div id="paginacaoPerfilDoacoes" >
+                    <a id="primeiraPaginacao" href="?pagina=1"> Primeira </a>
+
+                    <?php if($pagina>1): ?>
+                    <a id="voltarPaginacao" href="?pagina= <?=$pagina-1 ?>"> << </a>
+                    <?php endif; ?>
+
+                    <a id="numeroPaginacao"> <?=$pagina?> </a>
+
+                    <?php if($pagina<$paginas): ?>
+                    <a id="passarPaginacao" href="?pagina= <?=$pagina+1 ?>"> >> </a>
+                    <?php endif; ?> 
+                    <a id="ultimaPaginacao" href="?pagina= <?=$paginas ?>"> Última </a>
+                </div>
                 </div>
             </li>
             <li>
@@ -35,22 +61,48 @@ global $pdo;
                 <div class="content">
                     
                     <?php
-                    $tipow = "T";
-                    
-                    $sql = "SELECT cad.nome, cad.sobrenome, cad.imagem, tra.id, tra.livro, tra.comentario, tra.datta, tra.iduser FROM cadastro cad join transacao tra WHERE cad.id = tra.iduser AND tra.iduser = :idUsuario AND tra.tipo = :tipo ORDER BY tra.id DESC";
-                    $sql = $pdo->prepare($sql);
-                    $sql->bindValue("idUsuario", $idUsuario); //Esse idUsuario é da página verifica.php que está sendo incluída no perfil.php
-                    $sql->bindValue("tipo", $tipow);
-                    
-                    $sql->execute();
-                    while ($dados = $sql->fetch(PDO::FETCH_ASSOC)) {
-                    ?>
-                    <article class="art2">
+                    $tipo = "T";
+
+                    $pagina = 1;
+
+                if(isset($_GET['pagina']))
+                    $pagina = filter_input(INPUT_GET, "pagina", FILTER_VALIDATE_INT);
+
+                if (!$pagina)
+                    $pagina = 1;
+
+                $limite = 10; //quantidade de itens em cada página
+
+                $inicio = ($pagina * $limite) - $limite;
+
+                $registros = $pdo->query("SELECT COUNT(*) count FROM cadastro cad join transacao tra WHERE tipo = '$tipo' AND cad.id = tra.iduser")->fetch()["count"]; //contar quantos registros tem na tabela
+
+                $paginas = ceil($registros / $limite); //pra saber o número de páginas vai pegar os registros e dividir pelo limite = 4. o ceil vai fazer o retorno ser inteiro: arredonda pra cima.
+
+                $result = $pdo->query("SELECT cad.nome, cad.sobrenome, cad.imagem, tra.tipo, tra.id, tra.livro, tra.comentario, tra.datta, tra.iduser FROM cadastro cad join transacao tra WHERE cad.id = tra.iduser AND tra.tipo = '$tipo' AND tra.iduser = '$idUsuario' ORDER BY tra.id DESC LIMIT $inicio, $limite ")->fetchAll(); //LIMIT indice, quantidade de linhas que vai mostrar a partir dessa
+
+                foreach($result as $item):
+                ?>
+                    <article class="art2">      
                         <?php include("_modelos/corpo-postagem2.php"); ?>
                     </article>
-                    <?php
-                    }
-                    ?>  
+                <?php
+                endforeach; 
+                ?>
+                <div id="paginacaoPerfilTrocas" >
+                    <a id="primeiraPaginacao" href="?pagina=1"> Primeira </a>
+
+                    <?php if($pagina>1): ?>
+                    <a id="voltarPaginacao" href="?pagina= <?=$pagina-1 ?>"> << </a>
+                    <?php endif; ?>
+
+                    <a id="numeroPaginacao"> <?=$pagina?> </a>
+
+                    <?php if($pagina<$paginas): ?>
+                    <a id="passarPaginacao" href="?pagina= <?=$pagina+1 ?>"> >> </a>
+                    <?php endif; ?> 
+                    <a id="ultimaPaginacao" href="?pagina= <?=$paginas ?>"> Última </a>
+                </div>
                 </div>
             </li>
         </ul>

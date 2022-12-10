@@ -1,26 +1,25 @@
 /*Corpo - imagens doar e trocar*/
 
-section.corpo-principal {
-    width: 100vh;
-    height: 35vh;
-    margin-left: 50vh;
+section.corpo-principal, section.pdfsLinkados-dc, section.pdfsLinkados-marvel{
+    width: 50%;
+    margin-left: 23%;
     color: #fff;
+    text-align: center;
 }
 
-div#doarTrocar {
-    background: #fff;
+section.pdfsLinkados-dc, section.pdfsLinkados-marvel {
+    background-color: #fff;
 }
 
 #doarTrocar h1 {
     font-family: Anton, sans-serif;
     background-color: #FF0000;
     font-size: 2em;
-    text-align: center;
     margin-bottom: 2.5%;
 }
 
 #doarTrocar p {
-    float: left;
+    display: inline-block;
     width: 53%;
     font-family: 'Averia Serif Libre', sans-serif;
     font-size: 1.4em;
@@ -43,10 +42,46 @@ div#doarTrocar {
     border-radius: 10vh;
 }
 
-aside.outra-lateral p {
-    position: fixed;
-    float: right;
-    width: 20vh;
-    background: linear-gradient(to right, #FFFF00, #FF0000);
+#leiaPDFTitulo {
+    margin-top: 5%;
+    font-family: Anton, sans-serif;
+    background-color: #FF0000;
+    font-size: 2em;
+}
 
+section.pdfsLinkados-dc, section.pdfsLinkados-marvel {
+    height: 80vh;
+    text-align: left;
+    padding: 1%;
+}
+
+section.pdfsLinkados-dc h1, section.pdfsLinkados-marvel h1 {
+    color:blue;
+    font-size: 1.2em;
+}
+
+p#bordaPdfDownload {
+    border: 0.5px solid #D3D3D3;
+}
+
+img#dcPDF {
+    max-width: 120px;
+    max-height: 150px;
+    min-width: 120px;
+    min-height: 150px;
+}
+
+.pdfsLinkados-dc a, .pdfsLinkados-marvel a {
+    width: 20%;
+    margin-top: 5%;
+    margin-left: 3%;
+    float: left;
+}
+
+#tituloHQ {
+    text-align: center;
+}
+
+.pdfsLinkados-dc a:hover, .pdfsLinkados-marvel a:hover{
+    color: #FF0000;
 }

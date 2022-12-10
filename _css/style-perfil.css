@@ -27,17 +27,17 @@ form.cadastrarImagem a#btnFechar, form.atualizarDados a#btnFechar2, form.cadastr
 
 form.cadastrarImagem input#enviarArquivo, form.atualizarDados input#enviarArquivo2, form.cadastrarCapa input#enviarArquivo3 {
     width: 15%;
-    background: linear-gradient(to right, #FF0000, #FFFF00);
-    color: #000;
-    padding: 2%; 
+    background-color: #8B0000;
+    color: #fff;
+    padding: 1%; 
     margin-bottom: 5%;
     border-radius: 2vh;
     border: 2px solid #000;
 }
 
 form.cadastrarImagem input#enviarArquivo:hover, form.atualizarDados input#enviarArquivo2:hover, form.cadastrarCapa input#enviarArquivo3:hover {
-    transform: scale(1.05);
-    transition: 1s;
+    background-color: #800000;  
+    transition: 0.5s;
 }
 
 /*TELA MODIFICAR IMAGEM*/

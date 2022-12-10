@@ -30,7 +30,7 @@ body { background-color: rgba(0, 0, 0, 0.7); }
     width: 20%;
     margin-bottom: 3%;
     padding: 2.5%;
-    background: linear-gradient(to right, #FF0000, #FFFF00);
+    background-color: #8B0000;
     color: #000;
     border-radius: 10px;
     border: 2px solid #000;

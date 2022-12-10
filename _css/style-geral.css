@@ -106,21 +106,25 @@ nav#menu li a:hover {
 
 aside.lateral {
     position: fixed;
-    float: left;
+    left: 0;
     width: 45vh;
     margin-top: 11%;
+}
+
+aside.lateral-direita {
+    position: fixed;
+    right: 0;
+    width: 45vh;
+    height: 1%;
+    margin-top: 7%;
 }
 
 aside.lateral a {
     color: #000;
 }
 
-aside.lateral:hover {
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-}
 
-
-aside.lateral img { /*Configurando tamanho das imagens*/
+aside.lateral img, aside.lateral-direita img { /*Configurando tamanho das imagens*/
     max-width: 40px;
     max-height: 40px;
     min-width: 40px;
@@ -129,16 +133,20 @@ aside.lateral img { /*Configurando tamanho das imagens*/
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-aside.lateral label {
+aside.lateral label, aside.lateral-direita label {
     font-size: 1.2em;
 }
 
-aside.lateral div {
+aside.lateral div  {
     margin-left: 4%;
-    padding: 1%;
+    padding: 3%;
+}
+aside.lateral-direita div {
+    margin-right: 4%;
+    padding: 3%;
 }
 
-aside.lateral div:hover { /*marcar a div toda quando passar o mouse*/
+aside.lateral div:hover, aside.lateral-direita div:hover { /*marcar a div toda quando passar o mouse*/
     border-radius: 2vh;
     background-color: #DCDCDC;
     transition: 0.5s;
@@ -155,33 +163,18 @@ div.telaFundo {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/*LADO DO SITE DIREITO*/
-
-aside.lateralDireita {
-    float: right;
-    padding: 10%;
-}
-
-aside.lateralDireita img {
-    margin-top: 25%;
-}
-
-aside.lateralDireita img#removerMarginTop {
-    margin-top: 0;
-}
-
 /*RODAPE*/
 
 .rodape {
     width: 100%;
     background: linear-gradient(to right, #FFFF00, #FF0000);
-    text-align: center; 
-    margin-top: 20%;
+    text-align: center;
+    margin-top: 50%;
 }
 
 .rodape p {
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .rodape p#infDate {
@@ -192,14 +185,15 @@ aside.lateralDireita img#removerMarginTop {
 }
 
 .rodape p#copyright {
-    padding-top: 2%;
-    padding-bottom: 0.5%;
+    padding-top: 1%;
+    padding-bottom: 0.2%;
 }
+
 
 /*BOOTSTRAP - RODAPE REDES SOCIAIS*/
 
 div.col-md-12 {
-    padding: 2%;
+    padding: 0.5%;
 }
 
 div.col-md-12 li{
@@ -216,7 +210,6 @@ ul.social-network {
 
 ul.social-network li {
     display: inline;
-    margin-top: 10%;
 }
 
 .social-network a.icoFacebook:hover {
@@ -248,7 +241,7 @@ a.socialIcon:hover,
     text-align: center;
     width: 50px;
     height: 50px;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .social-circle li i {

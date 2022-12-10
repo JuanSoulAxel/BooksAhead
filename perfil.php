@@ -39,10 +39,10 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for d
         <a id="btnFechar2"> <i class="fa fa-times"></i> </a> <br>
         <p>Modifique aqui os seus dados cadastrais</p> <br>
         <img src="_imagens/icone-atualizar-imagem.png" alt="Icone Atualizar"> <br> <br> <br>
-        <input type="text" placeholder="Novo nome" id="txtAtualizarNome" name="txtAtualizarNome" maxlength="30" required>
-        <input type="text" placeholder="Novo sobrenome" id="txtAtualizarSobrenome" name="txtAtualizarSobrenome" maxlength="30" required> <br> <br>
-        <input type="text" placeholder="Novo email" id="txtAtualizarEmail" name="txtAtualizarEmail" maxlength="50" required>
-        <input type="text" placeholder="Novo telefone" id="txtAtualizarTelefone" name="txtAtualizarTelefone" maxlength="11" required> <br> <br>
+        <input type="text" value="<?php echo $nomeUsuario ?>" id="txtAtualizarNome" name="txtAtualizarNome" maxlength="30" required>
+        <input type="text" value="<?php echo $sobrenomeUsuario ?>" placeholder="Novo sobrenome" id="txtAtualizarSobrenome" name="txtAtualizarSobrenome" maxlength="30" required> <br> <br>
+        <input type="text" value="<?php echo $emailUsuario ?>" placeholder="Novo email" id="txtAtualizarEmail" name="txtAtualizarEmail" maxlength="50" required>
+        <input type="text" value="<?php echo $telefoneUsuario ?>" placeholder="Novo telefone" id="txtAtualizarTelefone" name="txtAtualizarTelefone" maxlength="11" required> <br> <br>
         <input name="enviarArquivo2" id="enviarArquivo2" type="submit" value="Salvar"> <br>
     </form>
 
@@ -59,7 +59,8 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for d
 
     <h2 id="tituloPerfil" class="tituloPerfil sumir">PERFIL</h2>
 
-    <?php include "_modelos/aside.php"; ?> <br> <br> <br> <br> <!--Chamando o aside-->
+    <?php include "_modelos/aside.php"; ?> <!--Chamando o aside-->
+    <?php include "_modelos/aside-direito.php"; ?> <br> <br> <br> <br> <!--Chamando o aside-direito-->
 
     <section class="corpo-perfil sumir">
 
@@ -88,6 +89,6 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for d
 
 <?php
 else: //Senão, vai mandar novamente para a tela index
-    header("Location: index.php");
+    header("Location: ../index.php");
 endif;
 ?>

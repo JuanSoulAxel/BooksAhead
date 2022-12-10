@@ -30,7 +30,11 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for di
     <h2 id="tituloChat">CHAT</h2>
 
     <?php  include "_modelos/aside.php"; ?>
+    <?php include "_modelos/aside-direito.php"; ?> <br> <br> <br> <br> <!--Chamando o aside-direito-->
 
+    <section id="ludibriarChat">
+
+    </section>
     <section id="blocoConversa">
     
         <div id="blocoConversa-parte1">
@@ -46,14 +50,12 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for di
 
             <form method="POST" action="_utility/chat-post-mensagem.php">
               <input type="text" id="mensagem" name="mensagem" placeholder="mensagem" required>
-              <input type="submit" id="botaoMensagem"  name="botaoMensagem" value="enviar">
+              <input type="submit" id="botaoMensagem"  name="botaoMensagem" value="Enviar">
             </form>
         </div>
     </section>
 
-
     <script src="_javascript/script-chat.js"> </script> <!--Chamando _javascript-->
-
 </body>
 </html>
 

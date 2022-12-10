@@ -25,13 +25,8 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for di
     <h2 id="tituloTrocas">TROCAS</h2>
 
     <?php include "_modelos/aside.php"; ?> <!--Chamando lateral do site-->
+    <?php include "_modelos/aside-direito.php"; ?> <br> <br> <br> <br> <br> <!--Chamando o aside-direito-->
 
-    <aside class="lateralDireita">
-        <img id="removerMarginTop" src="_imagens/trocar-coracao.png" alt="Coração Trocar 1"> <br>
-        <img src="_imagens/trocar-coracao2.png" alt="Coração Trocar 2"> <br>
-    </aside> 
-
-    <br> <br> <br> <br> <br>
     <section class="corpo">
 
         <form class="cadastrarLivro" method="POST" action="_utility/foto-livro-trocar.php" enctype="multipart/form-data"> <!--O enctype avisa pro sistema que um arquivo está sendo enviado-->
@@ -58,6 +53,6 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for di
 
 <?php 
 else: //Senão, vai mandar novamente para a tela index
-header("Location: index.php"); 
+header("Location: ../index.php"); 
 endif; 
 ?>

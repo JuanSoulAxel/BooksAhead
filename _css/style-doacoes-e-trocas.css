@@ -38,8 +38,8 @@ section.corpo div#postagem-parte1 button {
     border-radius: 5vh;
 }
 
-section.corpo button:hover {
-    background: #800000;
+section.corpo div#postagem-parte1 button:hover {
+    background-color: #800000;
 }
 
 section.corpo p#bordaCorpo {
@@ -189,6 +189,49 @@ body {
 .content article.art1, .content article.art2 {
     width: 200%;
 }
-.content article.art2 {
-    margin-left: -100.55%;
+
+.content article.art1 {
+    margin-left: 4.6%;
 }
+
+.content article.art2 {
+    margin-left: -96%;
+}
+
+
+/*PAGINAÇÃO*/
+
+div#paginacao {
+    margin-top: 5%;
+    margin-left: 38%;
+}
+
+div#paginacao a, div#paginacaoPerfilTrocas a, div#paginacaoPerfilDoacoes a {
+    color:#fff;
+    list-style: none;
+    border-radius: 10vh;
+    padding: 0.6%;
+    margin-right: 2%;
+}
+
+div#paginacao a#numeroPaginacao, div#paginacaoPerfilTrocas a#numeroPaginacao, div#paginacaoPerfilDoacoes a#numeroPaginacao {
+    color:#000;
+}
+
+a#voltarPaginacao, a#passarPaginacao, a#primeiraPaginacao, a#ultimaPaginacao {
+    background-color: #8B0000;
+}
+
+div#paginacaoPerfilTrocas {
+    position: relative;
+    margin-top: 5%;
+    left: -18%;
+}
+
+div#paginacaoPerfilDoacoes {
+    position: relative;
+    margin-top: 5%;
+    left: 82.59%;
+
+}
+

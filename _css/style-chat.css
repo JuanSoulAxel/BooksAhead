@@ -55,12 +55,16 @@ div#blocoConversa-parte3 input#mensagem {
 }
 
 div#blocoConversa-parte3 input#botaoMensagem {
-    background-color: #800000;
+    background-color: #8B0000;
     color: #FFF;
     width: 9%;
     margin-left: 2%;
     padding: 1.2%;
     border-radius: 10vh;
+}
+
+div#blocoConversa-parte3 input#botaoMensagem:hover {
+    background-color: #800000;
 }
 
 /*BALÃO DE MENSAGEM: NOME E A MENSAGEM DO USUÁRIO NO CHAT*/
