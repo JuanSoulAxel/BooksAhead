@@ -32,7 +32,7 @@ if(isset($_FILES['arquivo']))
     mkdir($diretorio00, 0755);
 
     //criando diretorio final
-    $diretorio = $diretorio00.$_SESSION['id'].')'.$nomeUsuario.'/';
+    $diretorio = $diretorio00.$_SESSION['id'].')'.'/';
 
     //usando para criar a pasta
     mkdir($diretorio, 0755);

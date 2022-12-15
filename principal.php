@@ -27,20 +27,11 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for di
     <?php include "_modelos/aside-direito.php"; ?> <br> <br> <br> <!--Chamando o aside-direito-->
 
     <section class="corpo-principal">
-        <div id="fundoPrincipal"> <img src="_imagens/Fundo-Principal.jpg" alt="Fundo"> </div>
-
-        <div id="doarTrocar">
-            <h1>FAÇA JÁ A SUA COLABORAÇÃO</h1>
-
-            <p>" Livro bom é aquele que a gente passa à diante o prazer da leitura não pode ser restrito. " -Caio Rossan</p>
-
-            <a href="doacoes.php"> <img src="_imagens/icone-doar.png" alt="Imagem Doar" title="Doar" id="imgDoar"> </a>
-            <a href="trocas.php"> <img src="_imagens/icone-trocar.png" alt="Imagem Trocar" title="Trocar" id="imgTrocar"> </a>
-        </div>
-        <div>
-            <h1 id="leiaPDFTitulo">LEIA ONLINE À VONTADE</h1>
-        </div>
-    </section> <br> <br> <br>
+        <p id="fraseLivros">" Livro bom é aquele que a gente passa à diante o prazer da leitura não pode ser restrito. " - Caio Rossan</p>
+        
+        <img src="_imagens/livros-principal.png"> <br> <br> <br> <br>
+        
+    </section>
     <section class="pdfsLinkados-dc">
             <h1>Histórias DC Download</h1>
             <p id="bordaPdfDownload"></p>

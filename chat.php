@@ -20,7 +20,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for di
 
     <?php include "_modelos/fonts.php"; ?> <!--Chamando fontes e o ícone do site-->
 
-    <title>Books Ahead - Acesse já!</title>
+    <title>Books Ahead - Bate-Papo</title>
 
 </head>
 <body>
@@ -32,9 +32,7 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for di
     <?php  include "_modelos/aside.php"; ?>
     <?php include "_modelos/aside-direito.php"; ?> <br> <br> <br> <br> <!--Chamando o aside-direito-->
 
-    <section id="ludibriarChat">
 
-    </section>
     <section id="blocoConversa">
     
         <div id="blocoConversa-parte1">

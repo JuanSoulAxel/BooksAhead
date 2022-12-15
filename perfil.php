@@ -89,6 +89,6 @@ if (isset($_SESSION['id']) && !empty($_SESSION['id'])): //se existir e ela for d
 
 <?php
 else: //Senão, vai mandar novamente para a tela index
-    header("Location: ../index.php");
+    header("Location: index.php");
 endif;
 ?>

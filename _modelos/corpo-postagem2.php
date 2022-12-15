@@ -7,7 +7,7 @@
     } 
     else 
     {
-        $imagemUsuarioListagemLivros = "_fotos-transacao/fotos-usuarios/" . $item['iduser'] . ")" . $item['nome'] . "/" . $item['imagem'];
+        $imagemUsuarioListagemLivros = "_fotos-transacao/fotos-usuarios/" . $item['iduser'] . ")". "/" . $item['imagem'];
     }
 ?>
 
@@ -26,22 +26,41 @@
 
     <p id="bordaCorpo2"> </p>
 
-    <a id="interacaoEuQuero" href="">Eu Quero</a>
-
     <?php
-        if ($_SESSION['id'] == $item['iduser']) //se o usuário atual for igual ao usuário que fez a postagem 
-        { 
+        //curtidas
+        $id = $item['id'];
+        $contaCurtidas = $pdo->query("SELECT COUNT(*) count FROM curtidas WHERE id_post = '$id' ")->fetch()["count"]; //contar quantos registros tem na tabela
     ?>
-        <!--Enviando o ID por GET-->
-        <a href="_modelos/conf-del-post.php?id=<?php echo $item['id']; ?>" id="interacaoDeletar">Deletar</a>
+
+    <div id="interacaoQuantidades">
+        <p id="quantidadeCurtidas"><?php echo $contaCurtidas; ?> likes</p>
+
+        <p id="quantidadeComentarios">10 comentarios</p>
+    </div>
+
+    <div id="interacao">
+        
+        
+
+        <a href="_utility/curtir.php?id=<?php echo $id?>" id="interacaoCurtir">Curtir</a>
+
+        <a id="interacaoComentar">Comentar</a>
 
         <?php
-        } 
-        else 
-        {
+            if ($_SESSION['id'] == $item['iduser']) //se o usuário atual for igual ao usuário que fez a postagem 
+            { 
         ?>
-            <a id="interacaoDenunciar" href="">Denunciar</a>
-        <?php
-        }
-        ?>
+            <!--Enviando o ID por GET-->
+            <a href="_modelos/conf-del-post.php?id=<?php echo $item['id']; ?>" id="interacaoDeletar">Deletar</a>
+
+            <?php
+            } 
+            else 
+            {
+            ?>
+                <a id="interacaoDenunciar">Denunciar</a>
+            <?php
+            }
+            ?>
+    </div> <br> <br> <br>
 </section> <br> <br>

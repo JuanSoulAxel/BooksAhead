@@ -120,11 +120,21 @@ class Usuario {
         
         if($sql->execute())
         {
-            echo
-            "<script language='javascript' type='text/javascript'>
+            if ($tipo == "D") {
+                echo
+                "<script language='javascript' type='text/javascript'>
                 alert('Livro adicionado com sucesso!'); 
-                window.location.href='../perfil.php';
+                window.location.href='../doacoes.php';
             </script>";
+            }
+            else if($tipo == "T")
+            {
+                echo
+                "<script language='javascript' type='text/javascript'>
+                alert('Livro adicionado com sucesso!'); 
+                window.location.href='../trocas.php';
+                </script>";
+            }
         }
         else
         {
@@ -189,6 +199,107 @@ class Usuario {
                 window.location.href='perfil.php';
             </script>";
         }
+    }
+
+    public function alterarSenha($senhaAtual, $novaSenha, $confirmarNovaSenha, $id) {
+        global $pdo;
+
+        $sqlSenha = $pdo->query("SELECT id, senha FROM cadastro WHERE id = '$id'")->fetch();
+        
+        if($senhaAtual == $sqlSenha['senha'])
+        {
+            if($novaSenha == $confirmarNovaSenha)
+            {
+                if($novaSenha != $sqlSenha['senha'])
+                {
+                    $sql = "UPDATE cadastro SET senha = :senha WHERE id= :id";
+                    $sql = $pdo->prepare($sql);
+                    $sql->bindValue("senha", $novaSenha);
+                    $sql->bindValue("id", $id);
+                    $sql->execute();
+
+                    echo
+                    "<script language='javascript' type='text/javascript'>
+                    alert('Senha atualizada!'); 
+                    window.location.href='../configuracao.php';
+                    </script>";
+                }
+                else
+                {
+                    echo
+                    "<script language='javascript' type='text/javascript'>
+                    alert('Você não pode escolher a mesma senha!'); 
+                    window.location.href='../configuracao.php';
+                    </script>";
+                }
+            }
+            else
+            {
+                echo
+                "<script language='javascript' type='text/javascript'>
+                alert('Senha não bate!'); 
+                window.location.href='../configuracao.php';
+                </script>";
+            }
+        }
+        else
+        {
+            echo
+            "<script language='javascript' type='text/javascript'>
+                alert('Senha inválida!'); 
+                window.location.href='../configuracao.php';
+            </script>";
+        }
+
+    }
+
+    public function curtirPostagem($idPost, $idUser, $curtirDescurtir) {
+        include_once("conexao.php");
+        global $pdo;
+
+        if($curtirDescurtir == "curtir") //se usuário não curtiu nada, vai curtir, se já, vai utilizar o else if
+        {
+            $sql = "INSERT INTO curtidas (id_post, iduser) VALUES (:idPost, :idUser)";
+            $sql = $pdo->prepare($sql);
+            $sql->bindValue("idPost", $idPost);
+            $sql->bindValue("idUser", $idUser);
+
+
+            if($sql->execute()) 
+            {
+                echo
+                "<script language='javascript' type='text/javascript'>
+                    alert('curtida feita'); 
+                    window.location.href='../perfil.php';
+                </script>";
+            }
+            else
+            {
+                echo
+                "<script language='javascript' type='text/javascript'>
+                    alert('Erro ao curtir!'); 
+                    window.location.href='../configuracao.php';
+                </script>";
+            }
+        }
+        else if($curtirDescurtir == "descurtir") //se usuário tentar curtir algo que já curtiu, irá discurtir
+        {
+            $sql = "DELETE FROM curtidas WHERE id_post = :idPost AND iduser = :idUser";
+            $sql = $pdo->prepare($sql);
+            $sql->bindValue("idPost", $idPost);
+            $sql->bindValue("idUser", $idUser);
+
+            if($sql->execute()) 
+            {
+                echo
+                "<script language='javascript' type='text/javascript'>
+                    alert('Descurtiu!'); 
+                    window.location.href='../perfil.php';
+                </script>";
+            }
+        }
+
+        
     }
 }
 ?>

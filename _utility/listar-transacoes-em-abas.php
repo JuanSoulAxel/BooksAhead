@@ -25,7 +25,7 @@ global $pdo;
 
                 $inicio = ($pagina * $limite) - $limite;
 
-                $registros = $pdo->query("SELECT COUNT(*) count FROM cadastro cad join transacao tra WHERE tipo = '$tipo' AND cad.id = tra.iduser")->fetch()["count"]; //contar quantos registros tem na tabela
+                $registros = $pdo->query("SELECT COUNT(*) count FROM transacao WHERE tipo = '$tipo' AND iduser = '$idUsuario' ")->fetch()["count"]; //contar quantos registros tem na tabela
 
                 $paginas = ceil($registros / $limite); //pra saber o número de páginas vai pegar os registros e dividir pelo limite = 4. o ceil vai fazer o retorno ser inteiro: arredonda pra cima.
 
@@ -75,7 +75,7 @@ global $pdo;
 
                 $inicio = ($pagina * $limite) - $limite;
 
-                $registros = $pdo->query("SELECT COUNT(*) count FROM cadastro cad join transacao tra WHERE tipo = '$tipo' AND cad.id = tra.iduser")->fetch()["count"]; //contar quantos registros tem na tabela
+                $registros = $pdo->query("SELECT COUNT(*) count FROM transacao WHERE tipo = '$tipo' AND iduser = '$idUsuario' ")->fetch()["count"]; //contar quantos registros tem na tabela
 
                 $paginas = ceil($registros / $limite); //pra saber o número de páginas vai pegar os registros e dividir pelo limite = 4. o ceil vai fazer o retorno ser inteiro: arredonda pra cima.
 

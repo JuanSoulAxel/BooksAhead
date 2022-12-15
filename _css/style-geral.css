@@ -33,38 +33,33 @@ img {
 /*Cabecalho*/
 
 .cabecalho {
+    position: fixed;
     width: 100%;
     height: 80px;
     background: #fff;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    position: fixed;
+}
+
+img#logo {
+    max-width: 150px;
 }
 
 
-label#titulo {
+img#logo {
     position: fixed;
     float: left;
-    font-size: 2em;
-    padding: 1%;
+    margin-left: 2%;
     margin-top: 0.2%;
-}
-
-label#titulo a {
-    font-family: Anton, sans-serif;
-	text-transform: uppercase;
-    color: #000;
 }
 
 #btnSair {
     float: right;
     text-decoration: none;
-    margin: 1.4%;
-    padding: 0.4%;
-    border-radius: 2vh;
+    margin: 2.2%;
 }
 
 #btnSair:hover {
-    background: linear-gradient(to right, #FFFF00, #FF0000);
+    transform: scale(1.1);
     transition: 0.5s;
 }
 
@@ -85,7 +80,7 @@ nav#menu ul {
 }
 
 nav#menu li {
-	font-size: 1.5em;
+	font-size: 1.6em;
 	display: inline-block;
 	padding: 2vh;
 	transition: 0.5s; /* Demora um segundo para aparecer  os LI aparecerem */
@@ -93,12 +88,11 @@ nav#menu li {
 
 nav#menu li a {
     color: #000;
-    border-radius: 10px;
     padding: 5%;
 }
 
 nav#menu li a:hover {
-    background: linear-gradient(to right, #FFFF00, #FF0000);
+    border-bottom: 2px solid;
     transition: 0.5;
 }
 
@@ -134,7 +128,8 @@ aside.lateral img, aside.lateral-direita img { /*Configurando tamanho das imagen
 }
 
 aside.lateral label, aside.lateral-direita label {
-    font-size: 1.2em;
+    margin-left: 2%;
+    font-size: 1.5em;
 }
 
 aside.lateral div  {
@@ -166,6 +161,8 @@ div.telaFundo {
 /*RODAPE*/
 
 .rodape {
+    position: absolute;
+    bottom: -100;
     width: 100%;
     background: linear-gradient(to right, #FFFF00, #FF0000);
     text-align: center;
@@ -275,35 +272,33 @@ h2#tituloDoacoes, h2#tituloTrocas, h2#tituloPrincipal, h2#tituloPerfil, h2#titul
 
 
 
-/*icones de reações das transações*/
-a#interacaoEuQuero {
-    color: #000;
+/*INTERAÇÃO DAS POSTAGENS*/
+
+div#interacaoQuantidades {
+    color: #696969;
+}
+div#interacaoQuantidades p#quantidadeCurtidas {
     float: left;
 }
 
-a#interacaoEuQuero:active {
-    color: #fff;
-    background-color: #1E90FF	;
-    border-color: #000;
-}
-
-a#interacaoDeletar, a#interacaoDenunciar {
-    color: #000;
+div#interacaoQuantidades p#quantidadeComentarios {
     float: right;
 }
 
-a#interacaoDeletar:active, a#interacaoDenunciar:active {
-    color: #fff;
-    background-color: #DC143C		;
-    border-color: #000;
+div#interacao {
+    margin-top: 12%;
 }
 
-a#interacaoEuQuero, a#interacaoDeletar, a#interacaoDenunciar {
-    font-size: 3.5vh;
-    font-weight: bold;
-    margin: 5%;
-    padding: 2%;
-    border-radius: 10vh;
-    background-color: #fff;
-    border: 2px solid;
+div#interacao a {
+    color: #000;
+    padding: 1%;
+    padding-left: 9%;
+    padding-right: 9%;
+    margin-left: 3.7%;
+    border-radius: 1vh;
+    cursor: pointer;
+}
+
+div#interacao a:hover {
+    background-color: #DCDCDC;
 }

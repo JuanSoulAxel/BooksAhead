@@ -6,7 +6,7 @@ section.corpo {
     margin-left: 28%;
     padding: 1%; /*Para jogar os itens que estavam um pouco para fora*/
     background: #fff;
-    border-radius: 2vh;
+    border-radius: 1vh;
 }
 
 section.corpo div#postagem-parte1 img#imagemUsuario-postagem {
@@ -56,20 +56,20 @@ section.corpo div#postagem-parte2 {
 
 section.corpo2 {
     width: 38%;
-    height: 80vh;
+    height: 85vh;
     margin-left: 28%;
     padding: 1%; /*Para jogar os itens que estavam um pouco para fora*/
     background: #fff;
-    border-radius: 2vh;
+    border-radius: 1vh;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 section.corpo2 img#imagemUsuario-postagem {
     float: left;
-    max-width: 8%;
-    max-height: 8%;
-    min-width: 8%;
-    min-height: 8%;
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     border-radius: 10vh;
 }
 
@@ -105,38 +105,29 @@ section.corpo2 p#bordaCorpo2 {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-
-/*icones de reações das ações*/
-a#interacaoEuQuero {
-    color: #000;
-    float: left;
-}
-
-a#interacaoEuQuero:active {
-    color: #fff;
-    background-color: #1E90FF	;
-    border-color: #000;
-}
-
-a#interacaoDeletar, a#interacaoDenunciar {
-    color: #000;
-    float: right;
-}
-
-a#interacaoDeletar:active, a#interacaoDenunciar:active {
-    color: #fff;
-    background-color: #DC143C;
-    border-color: #000;
-}
-
-a#interacaoEuQuero, a#interacaoDeletar, a#interacaoDenunciar {
-    font-size: 3.5vh;
-    font-weight: bold;
-    margin: 5%;
-    padding: 2%;
+section.corpo2 div#comentario img#imagemUsuario-comentario {
+    position: absolute;
+    max-width: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    min-height: 35px;
     border-radius: 10vh;
-    background-color: #fff;
-    border: 2px solid;
+}
+
+section.corpo2 div#comentario input#txtComentario {
+    width: 80%;
+    background-color: #DCDCDC;
+    border-radius: 10vh;
+    padding: 1%;
+    margin-left: 8.5%;
+}
+
+section.corpo2 div#comentario input#btnComentario {
+    width: 10%;
+    background-color: #8B0000;
+    color: #FFF;
+    padding: 1%; 
+    border-radius: 10vh;
 }
 
 /*Listagem de Transações por Abas*/
@@ -223,15 +214,19 @@ a#voltarPaginacao, a#passarPaginacao, a#primeiraPaginacao, a#ultimaPaginacao {
 }
 
 div#paginacaoPerfilTrocas {
-    position: relative;
+    display: inline-flex;
     margin-top: 5%;
-    left: -18%;
+    margin-left: -14%;
 }
 
 div#paginacaoPerfilDoacoes {
-    position: relative;
+    display: inline-flex;
     margin-top: 5%;
-    left: 82.59%;
+    margin-left: 85%;
+}
 
+div#paginacaoPerfilTrocas a, div#paginacaoPerfilDoacoes a{
+    padding: 5%;
+    margin-right: 20%;
 }
 

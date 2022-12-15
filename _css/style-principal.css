@@ -1,45 +1,72 @@
 /*Corpo - imagens doar e trocar*/
 
-section.corpo-principal, section.pdfsLinkados-dc, section.pdfsLinkados-marvel{
+section.pdfsLinkados-dc, section.pdfsLinkados-marvel{
     width: 50%;
     margin-left: 23%;
     color: #fff;
     text-align: center;
 }
 
+section.corpo-principal {
+    width: 50%;
+    height: 45vh;
+    margin-left: 23%;
+}
+
+section.corpo-principal p {
+    width: 60%;
+    padding: 8%;
+    float: left;
+    font-size: 1.5em;
+    font-family: 'Averia Serif Libre', sans-serif;
+}
+
+section.corpo-principal img {
+    margin-right: 1%;
+    float: right;
+    max-width: 250px;
+    padding: 5%;
+}
+
 section.pdfsLinkados-dc, section.pdfsLinkados-marvel {
     background-color: #fff;
 }
 
-#doarTrocar h1 {
-    font-family: Anton, sans-serif;
-    background-color: #FF0000;
-    font-size: 2em;
-    margin-bottom: 2.5%;
+div#doarTrocar {
+    margin-top: 30%;
 }
 
-#doarTrocar p {
-    display: inline-block;
-    width: 53%;
-    font-family: 'Averia Serif Libre', sans-serif;
-    font-size: 1.4em;
-    color: #000;
-    margin-left: 2%;
+#doarTrocar h1 {
+    background-color: #FF0000;
+    color: #fff;
+    font-family: Anton, sans-serif;
+    font-size: 2em;
+    margin-bottom: 5%;
+    text-align: center;
 }
 
 #imgDoar, #imgTrocar {
-    float: right;
     background: linear-gradient(to right,#FF0000, #FFFF00);
     border-radius: 2vh;
     padding: 1.5%;
-    margin-right: 5%;
-    margin-bottom: 1%;
+}
+
+#imgDoar {
+    float: left;
 }
 
 #imgDoar:hover, #imgTrocar:hover {
-    transition: 0.6s;
+    transition: 1s;
     background: linear-gradient(to right, #FFFF00, #FF0000);
     border-radius: 10vh;
+}
+
+#doarTrocar h2 {
+    float: right;
+}
+img#setaDireita, img#setaEsquerda {
+    max-width: 120px;
+    max-height: 120px;
 }
 
 #leiaPDFTitulo {

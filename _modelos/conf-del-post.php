@@ -13,42 +13,38 @@ body { background-color: rgba(0, 0, 0, 0.7); }
     width: 40%;
     height: 25vh;
     background: linear-gradient(to right, #FFFF00, #FF0000);
-    border-radius: 10vh;    
+    border-radius: 1vh;    
     color: #000;
 }   
 
 #telaDeConfirmacaoDeletar p {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    font-weight: bold;
+    margin-top: 2%;
+    border-bottom: 1px solid #363636;
+    margin-bottom: 10%;
     color: #000;
-    text-decoration: underline;
     font-family: Oswald, sans-serif;
     font-size: 1.5em;
 }
 
 #telaDeConfirmacaoDeletar a {
+    text-decoration: none;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: right;
     width: 20%;
-    margin-bottom: 3%;
-    padding: 2.5%;
+    padding: 1%;
     background-color: #8B0000;
-    color: #000;
-    border-radius: 10px;
+    color: #fff;
+    border-radius: 1vh;
     border: 2px solid #000;
 }
 
-#telaDeConfirmacaoDeletar a#botaoSimDeletar {
-    float: left;
-    margin-left: 20%;
-}
-
-#telaDeConfirmacaoDeletar a#botaoNaoDeletar {
-    float: right;
-    margin-right: 20%;
-}
 
 #telaDeConfirmacaoDeletar a#botaoNaoDeletar:hover, #telaDeConfirmacaoDeletar a#botaoSimDeletar:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: 1s;
+    background-color: #800000;
 }
 </style>
 
